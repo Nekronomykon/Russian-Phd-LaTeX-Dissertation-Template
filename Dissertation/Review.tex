@@ -1,10 +1,10 @@
 \chapter{Конформационное поведение производных и гетероаналогов бицикло[3.3.1]нонана (обзор литературы)}
 
-Конформационный анализ молекулярных структур часто включает их разбиение на~подструктуры с дальнейшим выражением конформации структуры в~целом как суперпозиции конформаций подструктур. Система бицикло[3.3.1]нонана допускает несколько подобных разбиений~(рис.~\ref{fig:Decomposition:331}):
+Конформационный анализ молекулярных структур часто включает их разбиение на~подструктуры с дальнейшим выражением конформации структуры в~целом как суперпозиции конформаций подструктур. Система бицикло[3.3.1]нонана~\cmpd{Bicycle331} допускает несколько вариантов подобных разбиений~(рис.~\ref{fig:Decomposition:331}):
 
 \begin{enumerate}
-\item\label{item:331:Decomposition:6:6} Два 1,3-конденсированных шестичленных цикла (здесь и~в~дальнейшем циклы будем обозначать вместе с~направлением обхода): $\text{\CycleFirst} = \left(1\rightarrow 2\rightarrow 3\rightarrow 4\rightarrow 5\rightarrow 9\right)$ и~$\text{\CycleSecond} = \left(5\rightarrow 6\rightarrow 7\rightarrow 8\rightarrow 1\rightarrow 9\right)$;
-\item\label{item:331:Decomposition:8:1} Восьмичленный цикл~$\text{\CycleThird} = \left(8\rightarrow 7\rightarrow 6\rightarrow 5\rightarrow 4\rightarrow 3\rightarrow 2\rightarrow 1\right)$ с одноатомным мостиком $\cdots9\cdots$ между положениями 1 и 5;
+\item\label{item:331:Decomposition:6:6} Два 1,3-конденсированных шестичленных цикла (здесь и~в~дальнейшем циклы будем обозначать вместе с~направлением обхода): $\text{\CycleFirst} = \left(5\rightarrow 9\rightarrow 1\rightarrow 2\rightarrow 3\rightarrow 4\right)$ и~$\text{\CycleSecond} = \left(1\rightarrow 9\rightarrow 5\rightarrow 6\rightarrow 7\rightarrow 8\right)$;
+\item\label{item:331:Decomposition:8:1} Восьмичленный цикл~$\text{\CycleThird} = \left(8\rightarrow 7\rightarrow 6\rightarrow 5\rightarrow 4\rightarrow 3\rightarrow 2\rightarrow 1\right)$ с одноатомным мостиком $-9-$ между положениями 1 и 5;
 \item\label{item:331:Decomposition:2x2:2} Три взаимодействующих трёхатомных фрагмента: $2-3-4$, $8-7-6$ (т.\,н. \tqt{крылья}) и $1-9-5$;
 \end{enumerate}
 
@@ -26,59 +26,59 @@ $\leftarrow$\qquad$\longleftarrow$ & $\longrightarrow$ & \\
 \caption{\label{fig:Decomposition:331} Номенклатура положений и подструктурные декомпозиции системы бицикло[3.3.1]нонана}
 \end{figure}
 
-Конформация данного бициклического скелета традиционно определяется согласно разбиению~\ref{item:331:Decomposition:6:6}, т.\,е. из двух составляющих его конформаций шестичленных циклов~(рис.~\ref{fig:Conformations:Six}). Для насыщенных производных выделяются конформации \tqt{двойное кресло}~(\CC{}), \tqt{ванна-кресло}~(\BC{}), \tqt{кресло-ванна} (\CB{}), \tqt{кресло-ванна}~(\CB{}) и~\tqt{двойной ванны} (\BB{})~(рис.~\ref{fig:System331:379XYZ:Conf}). В случае структурной эквивалентности \tqt{крыльев} наблюдается \emph{конформационное вырождение} "--- формы \CB{} и \BC{} становятся структурно и~энергетически неразличимыми.
-
 \begin{figure}
-  \centering
-  \begin{tabular}{rccc}
-    &\chemfig{?-[:-150,0.75]<[:-30,0.75]-[:+30,1.5,,,line width=\boldbondwidth]>[:-30,0.75]-[:-150,0.75]?} &
-    \chemfig{(-[:-35]?)<[:-60]-[:+0,1.5,,,line width=\boldbondwidth]>[:+60]-[:-145]?} &
-    \chemfig{?<[:-60]-[:+20,,,,line width=\boldbondwidth]>[:-20]-[:+120]-[:-160]?} \\
-    &\ConfName{Т} & \ConfName{В} & \ConfName{К}\\
-\CycleFirst: & \chemfig{X?-[:-150,0.75]<[:-30,0.75]-[:+30,1.5,,,line width=\boldbondwidth]Z>[:-30,0.75]-[:-150,0.75]?} &
-    \chemfig{X(-[:-35]?)<[:-60]-[:+0,1.5,,,line width=\boldbondwidth]>[:+60]Z-[:-145]?} &
-    \chemfig{X?<[:-60]-[:+20,,,,line width=\boldbondwidth]>[:-20]Z-[:+120]-[:-160]?} \\
-\CycleSecond: & \chemfig{Y?-[:-150,0.75]<[:-30,0.75]-[:+30,1.5,,,line width=\boldbondwidth]Z>[:-30,0.75]-[:-150,0.75]?} &
-    \chemfig{Y(-[:-35]?)<[:-60]-[:+0,1.5,,,line width=\boldbondwidth]>[:+60]Z-[:-145]?} &
-    \chemfig{Y?<[:-60]-[:+20,,,,line width=\boldbondwidth]>[:-20]Z-[:+120]-[:-160]?} \\
-  \end{tabular}
+\centering
+\begin{tabular}{c|ccc}
+\toprule\cmpd{Bicycle331:XYZ}: & 
+\multicolumn{3}{c}{\chemfig{[:-30]Z*6(-(-[:180]-[:120]X-[:+60]-[:0]?)--Y---)}} \\
+\midrule{}\CycleFirst: & 
+\chemfig{X?<[:-60]-[:+20,,,,line width=\boldbondwidth]>[:-20]Z-[:+120]-[:-160]?} & 
+\chemfig{X?-[:-150,0.75]<[:-30,0.75]-[:+30,1.5,,,line width=\boldbondwidth]Z>[:-30,0.75]-[:-150,0.75]?} &
+\chemfig{X(-[:-35]?)<[:-60]-[:+0,1.5,,,line width=\boldbondwidth]>[:+60]Z-[:-145]?}  \\
+\chemfig{[:-30]X*6(---Z---)} &
+&
+\chemfig{?-[:-150,0.75]X<[:-30,0.75]-[:+30,1.5,,,line width=\boldbondwidth]>[:-30,0.75]Z-[:-150,0.75]?} &
+\chemfig{(-[:-35]?)<[:-60]X-[:+0,1.5,,,line width=\boldbondwidth]>[:+60]-[:-145]Z?} \\
+\midrule\CycleSecond: & 
+\chemfig{Y?<[:-60]-[:+20,,,,line width=\boldbondwidth]>[:-20]Z-[:+120]-[:-160]?}&
+\chemfig{Y?-[:-150,0.75]<[:-30,0.75]-[:+30,1.5,,,line width=\boldbondwidth]Z>[:-30,0.75]-[:-150,0.75]?} &
+\chemfig{Y(-[:-35]?)<[:-60]-[:+0,1.5,,,line width=\boldbondwidth]>[:+60]Z-[:-145]?}  \\
+\chemfig{[:-30]Y*6(---Z---)} & 
+&
+\chemfig{?-[:-150,0.75]Y<[:-30,0.75]-[:+30,1.5,,,line width=\boldbondwidth]>[:-30,0.75]Z-[:-150,0.75]?} &
+\chemfig{(-[:-35]?)<[:-60]Y-[:+0,1.5,,,line width=\boldbondwidth]>[:+60]-[:-145]Z?} \\
+\midrule\cmpd{Cyclohexane}: &
+\ChemPicture{?<[:-60]-[:+20,,,,line width=\boldbondwidth]>[:-20]-[:+120]-[:-160]?} & 
+\ChemPicture{?-[:-150,0.75]<[:-30,0.75]-[:+30,1.5,,,line width=\boldbondwidth]>[:-30,0.75]-[:-150,0.75]?} &
+\ChemPicture{(-[:-35]?)<[:-60]-[:+0,1.5,,,line width=\boldbondwidth]>[:+60]-[:-145]?} \\
+& \ConfName{К}~($\SymGroup{D}{3d}$) & \ConfName{Т}~($\SymGroup{D}{2}$) & \ConfName{В}~($\SymGroup{C}{2v}$) \\
+\bottomrule
+\end{tabular}
   \vspace{\medskipamount}
-  \caption{\label{fig:Conformations:Six}Базисные конформации шестичленных циклов}
+  \caption{\label{fig:Conformations:Six}Базисные конформации шестичленных циклов на примере 1,4-дизамещённых аналогов циклогексана~\cmpd{Cyclohexane}}
 \end{figure}
 
+Конформация бициклического скелета~\cmpd{Bicycle331} традиционно определяется согласно разбиению~\ref{item:331:Decomposition:6:6}, т.\,е. из двух составляющих его конформаций шестичленных циклов~(рис.~\ref{fig:Conformations:Six}). 
 
 \begin{figure}
 \centering
 \begin{tabular}{c|c}
 \multicolumn{2}{c}{
-\begin{tikzpicture}
-\node(Bicyclo331) at(0,0) {%
-\chemfig{[,0.75]X?[a]<[:-30,1.5]-[:+30,,,,line width=\boldbondwidth](>[:+120]Z-[:-120](-[:-150]?[a])(-[:-30]-[:+30,1.25]Y?[b]))-[:-+30,,,,line width=\boldbondwidth]?[b,{<}]} };
-\end{tikzpicture}
+\ChemPicture{[,0.75]X?[a]<[:-30,1.5]-[:+30,,,,line width=\boldbondwidth](>[:+120]Z-[:-120](-[:-150]?[a])(-[:-30]-[:+30,1.25]Y?[b]))-[:-+30,,,,line width=\boldbondwidth]?[b,{<}]} 
 }
 \\
 \multicolumn{2}{c}{\BB{}~(\TT{})} \\
 \midrule
-\begin{tikzpicture}
-\node(Bicyclo331) at(0,0) {%
-\chemfig{X?[a]<[:-30,1.25]-[:+30,,,,line width=\boldbondwidth](>[:+120]Z-[:-120](-[:-150]?[a])(-[:-30]-[:-60]Y?[b]))-[:-+30,,,,line width=\boldbondwidth]?[b,{<}]} };
-\end{tikzpicture}
+\ChemPicture{X?[a]<[:-30,1.25]-[:+30,,,,line width=\boldbondwidth](>[:+120]Z-[:-120](-[:-150]?[a])(-[:-30]-[:-60]Y?[b]))-[:-+30,,,,line width=\boldbondwidth]?[b,{<}]
+}
 & 
-\begin{tikzpicture}
-\node(Bicyclo331) at(0,0) {%
-\chemfig{X?[a]<[:+60]-[:+30,,,,line width=\boldbondwidth](>[:+120]Z-[:-120](-[:-150]?[a])(-[:-30]-[:+30,1.25]Y?[b]))-[:-+30,,,,line width=\boldbondwidth]?[b,{<}]} 
-};
-\end{tikzpicture}
+\ChemPicture{X?[a]<[:+60]-[:+30,,,,line width=\boldbondwidth](>[:+120]Z-[:-120](-[:-150]?[a])(-[:-30]-[:+30,1.25]Y?[b]))-[:-+30,,,,line width=\boldbondwidth]?[b,{<}]}
 \\
 \BC{} & \CB{}
 \\
 \midrule
-\multicolumn{2}{c}{%
-\begin{tikzpicture}
-\node(Bicyclo331) at(0,0) {%
-\chemfig{X?[a]<[:+60]-[:+30,,,,line width=\boldbondwidth](>[:+120]Z-[:-120](-[:-150]?[a])(-[:-30]-[:-60]Y?[b]))-[:-+30,,,,line width=\boldbondwidth]?[b,{<}]} 
-};
-\end{tikzpicture}
+\multicolumn{2}{c}{ %
+\ChemPicture{X?[a]<[:+60]-[:+30,,,,line width=\boldbondwidth](>[:+120]Z-[:-120](-[:-150]?[a])(-[:-30]-[:-60]Y?[b]))-[:-+30,,,,line width=\boldbondwidth]?[b,{<}]} % 
 }
 \\
 \multicolumn{2}{c}{\CC{}}
@@ -87,7 +87,11 @@ $\leftarrow$\qquad$\longleftarrow$ & $\longrightarrow$ & \\
 \caption{\label{fig:System331:379XYZ:Conf}Основные конформации 3X,~7Y,~9Z-аналогов бицикло[3.3.1]нонана}
 \end{figure}
 
-Для пространственных форм насыщенных шестичленных циклов оптимальной является структура \tqt{кресла}~(\ConfName{К}); форма \tqt{ванна}~(\ConfName{В}) обычно является переходным состоянием в процессе пседовращения между двумя конформерами с \tqt{твист}-структурой~(\ConfName{Т}). Причиной этого признано сильное повышение энергии структур с ординарными связями в заслонённой конформации (так называемое \emph{питцеровское напряжение}). По этой же причине форма \BB{} у~производных бицикло[3.3.1]нонана встречается очень редко (характерна для сильно затруднённых и напряжённых молекул), и в этих случаях обычно наблюдается экспериментально в виде формы «двойного твиста» (\TT{}).
+Для насыщенных производных~\cmpd{Bicycle331} выделяются конформации \tqt{двойное кресло}~(\CC{}), \tqt{ванна-кресло}~(\BC{}), \tqt{кресло-ванна} (\CB{}), \tqt{кресло-ванна}~(\CB{}) и~\tqt{двойной ванны} (\BB{})~(рис.~\ref{fig:System331:379XYZ:Conf}). В случае структурной эквивалентности \tqt{крыльев} наблюдается \emph{конформационное вырождение} "--- формы \CB{} и \BC{} становятся структурно и~энергетически неразличимыми.
+
+Для пространственных форм насыщенных шестичленных циклов оптимальной является структура \tqt{кресла}~(\ConfName{К}); форма \tqt{ванна}~(\ConfName{В}) обычно является переходным состоянием в процессе пседовращения между двумя конформерами с \tqt{твист}-структурой~(\ConfName{Т}). Причиной этого признано сильное повышение энергии структур с ординарными связями в заслонённой конформации (так называемое \emph{питцеровское напряжение}). 
+
+Форма \BB{} у~производных бицикло[3.3.1]нонана из-за питцеровских напряжений встречается очень редко (характерна для сильно затруднённых и напряжённых молекул), и в этих случаях обычно наблюдается экспериментально в виде формы «двойного твиста» (\TT{}).
 
 Торсионные напряжения также являются фактором устойчивости и для формы \CB{}, содержащей подструктуру \tqt{ванны}, в которой, однако, заслонённые конформации связей незначительно отклоняются от идеальной формы \ConfName{В} с эндоциклическими двугранными углами $\tau_{9123}\simeq 0$ и $\tau_{9543}\simeq 0$. Часто эти отклонения симметричны, т. е., $\tau_{9123} = - \tau_{9543}$. Всё это является, в частности, показателем стереохимической (конформационной) жёсткости формы \tqt{кресла} насыщенного шестичленного цикла. Такая жёсткость образуется из сочетания низкой энергии и высоких собственных частот колебания структуры. Жёсткие конформации одной из подструктур молекулы могут стабилизировать менее энергетически выгодные формы других как термодинамически, так и кинетически.
 

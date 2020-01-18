@@ -283,11 +283,11 @@
 %%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% chemfig setup
-\newcommand{\boldbondwidth}{3.5pt}
+\newcommand{\boldbondwidth}{3pt}
 \setchemfig{bond join=true}
 \setchemfig{atom sep=1.75em}
 \setchemfig{bond style={line width=1pt}}
-\setchemfig{bond offset=2pt}
+\setchemfig{bond offset=2.75pt}
 \setchemfig{cram width =\boldbondwidth}
 \setchemfig{cram dash width=1pt}
 \setchemfig{cram dash sep=2pt}
@@ -313,7 +313,7 @@
     \node[shift=(\anglestart:#2+1pt)#4,anchor=\anglestart+180,rotate=\anglestart+90,inner sep=0pt, outer sep=0pt]at(#4){#6};}
 }
 %%
-\newcommand{\ChemPicture}[1]{\begin{tikzpicture}\chemfig{#1}\end{tikzpicture}}
+\newcommand{\ChemPicture}[1]{\begin{tikzpicture}\node (ChemFormula) at (0,0){\chemfig{#1}};\end{tikzpicture} }
 %%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% Немного математических символов
