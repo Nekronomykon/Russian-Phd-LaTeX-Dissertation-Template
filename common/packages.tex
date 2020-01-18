@@ -245,7 +245,12 @@
     \fi
 }{}
 
-%% --> ScrewDriver te Blackheadborough 
+%% --> ScrewDriver te Blackheadborough:
+%\usepackage{pxfonts}
+\usepackage{pifont}
+\newcommand{\CycleFirst}{\ding{172}}
+\newcommand{\CycleSecond}{\ding{173}}
+\newcommand{\CycleThird}{\ding{174}}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% Пакет, обеспечивающий адекватную расстановку "русских" кавычек
 \usepackage[russian]{quotmark}
@@ -278,10 +283,10 @@
 %%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% chemfig setup
-\newcommand{\boldbondwidth}{3pt}
+\newcommand{\boldbondwidth}{3.5pt}
 \setchemfig{bond join=true}
 \setchemfig{atom sep=1.75em}
-\setchemfig{bond style={line width=1.15pt}}
+\setchemfig{bond style={line width=1pt}}
 \setchemfig{bond offset=2pt}
 \setchemfig{cram width =\boldbondwidth}
 \setchemfig{cram dash width=1pt}
