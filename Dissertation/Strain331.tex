@@ -1,0 +1,80 @@
+\chapter{Исследование напряжений в производных бицикло[3.3.1]нонана}
+
+Реакции разделения связей. Наименьшую погрешность обеспечивают \emph{гипергомодесмотические} реакции, сохраняющие не только состав, как гомодесмические... но и число связей различных типов. В частности, для 3,7,9-замещённых аналогов бицикло[3.3.1]нонана выводится уравнение
+\begin{center}
+  \chemfig{[:-30]Z*6(-(-[:180]-[:120]X-[:+60]-[:0]?)--Y---)}
+  + \chemfig{H_3C-[:-30]X-[:+30]CH_3} + \chemfig{H_3C-[:-30]Y-[:+30]CH_3} + \chemfig{H_3C-[:-30]Z-[:+30]CH_3} + 4\(\cdot\) \chemfig{H_3C-[:-30]-[:+30]CH_3}
+  + 4\(\cdot\)\chemfig{H_3C-[:+30](-[:+90]CH_3)-[:-30]CH_3}
+  \(\longrightarrow\)
+  
+  \(\longrightarrow\) 
+  2\(\cdot\)\chemfig{H_3C-[:+30]X-[:-30]-[:+30]CH_3} + 2\(\cdot\)\chemfig{H_3C-[:+30]Y-[:-30]-[:+30]CH_3} + 4\(\cdot\)\chemfig{H_3C-[:+30](-[:+90]CH_3)-[:-30]-[:+30]CH_3} + 
+  2\(\cdot\)\chemfig{H_3C-[:+30](-[:+90]CH_3)-[:-30]Z-[:+30]CH_3}
+\end{center}
+
+Для 1,3,5,7-аналогов исследуемой бициклической системы
+\begin{center}
+  \chemfig{[:-30]*6(-A(-[:180]-[:120]X-[:+60]-[:0]\phantom{B}?)--Y--B-)}
+  + \chemfig{H_3C-[:-30]X-[:+30]CH_3} + \chemfig{H_3C-[:-30]Y-[:+30]CH_3} + 5\(\cdot\) \chemfig{H_3C-[:-30]-[:+30]CH_3}
+  + 2\(\cdot\)\chemfig{H_3C-[:+30]A(-[:+90]CH_3)-[:-30]CH_3}
+  + 2\(\cdot\)\chemfig{H_3C-[:+30]B(-[:+90]CH_3)-[:-30]CH_3}
+  \(\longrightarrow\)
+  
+  \(\longrightarrow\) 
+  2\(\cdot\)\chemfig{H_3C-[:+30]X-[:-30]-[:+30]CH_3} + 2\(\cdot\)\chemfig{H_3C-[:+30]Y-[:-30]-[:+30]CH_3} + 3\(\cdot\)\chemfig{H_3C-[:+30]A(-[:+90]CH_3)-[:-30]-[:+30]CH_3} + 3\(\cdot\)\chemfig{H_3C-[:+30]B(-[:+90]CH_3)-[:-30]-[:+30]CH_3}
+\end{center}
+
+Энергетический эффект этих реакций, взятый с обратным знаком, оценивает общее напряжение молекулы относительно ациклических форм, считающихся свободными от напряжения. 
+
+Для более подробного рассмотрения отдельных взаимодействий необходимо комбинировать эти уравнения с другими.
+
+Результаты расчёта реагентов приведены\dots
+\begin{longtabu}to \textwidth {ccr X}
+\toprule\cmpd{Propane} & \chemfig{H_3C-[:-30]-[:+30]CH_3} & \(\SymGroup{C}{2v}\) & \\
+\midrule\cmpd{Dimethylether} & \chemfig{H_3C-[:-30]O-[:+30]CH_3} & \(\SymGroup{C}{2v}\) & \\
+\midrule\cmpd{Dimethylsulfide} & \chemfig{H_3C-[:-30]S-[:+30]CH_3} & \(\SymGroup{C}{2v}\) & \\
+%\midrule\cmpd{Dimethylamine} & \chemfig{H_3C-[:-30]N(-[:-90]H)-[:+30]CH_3} & \(\SymGroup{C}{s}\) & \\
+\midrule\cmpd{Isobutane} & \chemfig{H_3C-[:-30](-[:-90]CH_3)-[:+30]CH_3} & \(\SymGroup{C}{3v}\) & \\
+\midrule\cmpd{Trimethylamine} & \chemfig{H_3C-[:-30]N(-[:-90]CH_3)-[:+30]CH_3} & \(\SymGroup{C}{3v}\) & \\
+\midrule\cmpd{Acetone} & \chemfig{H_3C-[:-30]C(=[:-90]O)-[:+30]CH_3} & \(\SymGroup{C}{2v}\) & \\
+%\midrule
+\midrule\cmpd{Butane} & \chemfig{H_3C-[:+30]-[:-30]-[:+30]CH_3} & \(\SymGroup{C}{2h}\) & \\
+\midrule\cmpd{Methylethylether} & \chemfig{H_3C-[:+30]O-[:-30]-[:+30]CH_3} & \(\SymGroup{C}{s}\) & \\
+\midrule\cmpd{Methylethylthioether} & \chemfig{H_3C-[:+30]S-[:-30]-[:+30]CH_3} & \(\SymGroup{C}{s}\) & \\
+\midrule\cmpd{Butanone} & \chemfig{H_3C-[:+30]-[:-30]C(=[:-90]O)-[:+30]CH_3} & \(\SymGroup{C}{s}\) & \\
+\midrule\cmpd{Isopentane} &\chemfig{H_3C-[:+30](-[:+90]CH_3)-[:-30]-[:+30]CH_3} & \(\SymGroup{C}{1}\) & \\
+\midrule\cmpd{Isopentanone} &\chemfig{H_3C-[:+30](-[:+90]CH_3)-[:-30]C(=[:-90]O)-[:+30]CH_3} & \(\SymGroup{C}{1}\) & \\
+\midrule\cmpd{Methylisopropylether} &\chemfig{H_3C-[:+30](-[:+90]CH_3)-[:-30]O-[:+30]CH_3} & \(\SymGroup{C}{1}\) & \\
+\midrule\cmpd{Methylisopropylthioether} &\chemfig{H_3C-[:+30](-[:+90]CH_3)-[:-30]O-[:+30]CH_3} & \(\SymGroup{C}{1}\) & \\
+\midrule\cmpd{Isopentane} &\chemfig{H_3C-[:+30](-[:+90]CH3)-[:-30]-[:+30]CH_3} & \(\SymGroup{C}{1}\) & \\
+\midrule\cmpd{Dimethylethylamine} & \chemfig{H_3C-[:+30]N(-[:+90]CH_3)-[:-30]-[:+30]CH_3} & \(\SymGroup{C}{1}\) & \\
+\bottomrule
+\end{longtabu}
+
+В частности, для 3,7-аналогов 1-азабицикло[3.3.1]нонана
+\begin{center}
+  \chemfig{[:-30]*6(-N(-[:180]-[:120]X-[:+60]-[:0]?)--Y---)}
+  + \chemfig{H_3C-[:-30]X-[:+30]CH_3} + \chemfig{H_3C-[:-30]Y-[:+30]CH_3} + 5\(\cdot\) \chemfig{H_3C-[:-30]-[:+30]CH_3}
+  + 2\(\cdot\)\chemfig{H_3C-[:-30](-[:-90]CH_3)-[:+30]CH_3}
+  + 2\(\cdot\)\chemfig{H_3C-[:-30]N(-[:-90]CH_3)-[:+30]CH_3}
+  \(\longrightarrow\)
+  
+  \(\longrightarrow\) 
+  2\(\cdot\)\chemfig{H_3C-[:+30]X-[:-30]-[:+30]CH_3} + 2\(\cdot\)\chemfig{H_3C-[:+30]Y-[:-30]-[:+30]CH_3} + 3\(\cdot\)\chemfig{H_3C-[:+30](-[:+90]CH_3)-[:-30]-[:+30]CH_3} + 
+  3\(\cdot\)\chemfig{H_3C-[:+30]N(-[:+90]CH_3)-[:-30]-[:+30]CH_3}
+\end{center}
+
+и 1,5-диаазабицикло[3.3.1]нонана:
+\begin{center}
+  \chemfig{[:-30]*6(-N(-[:180]-[:120]X-[:+60]-[:0]\phantom{N}?)--Y--N-)}
+  + \chemfig{H_3C-[:-30]X-[:+30]CH_3} + \chemfig{H_3C-[:-30]Y-[:+30]CH_3} + 5\(\cdot\) \chemfig{H_3C-[:-30]-[:+30]CH_3}
+  + 2\(\cdot\)\chemfig{H_3C-[:+30](-[:+90]CH_3)-[:-30]CH_3}
+  + 2\(\cdot\)\chemfig{H_3C-[:+30]N(-[:+90]CH_3)-[:-30]CH_3}
+  \(\longrightarrow\)
+  
+  \(\longrightarrow\) 
+  2\(\cdot\)\chemfig{H_3C-[:+30]X-[:-30]-[:+30]CH_3} + 2\(\cdot\)\chemfig{H_3C-[:+30]Y-[:-30]-[:+30]CH_3} + 
+  6\(\cdot\)\chemfig{H_3C-[:+30]N(-[:+90]CH_3)-[:-30]-[:+30]CH_3}
+\end{center}
+
+ 

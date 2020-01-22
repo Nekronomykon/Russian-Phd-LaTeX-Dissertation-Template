@@ -137,3 +137,44 @@ $\leftarrow$\qquad$\longleftarrow$ & $\longrightarrow$ & $\leftarrow$\quad$\righ
 Максимальная симметрия бициклического скелета~\cmpd{Bicycle331}, порождённая из~симметрической группы $\SymGroup{S}{9}$ как группа автоморфизмов соответствующего молекулярного графа, порождается системой орбит (эквивалентных вершин) вида $\left\langle(2\,4\,6\,8)(1\,5)(3\,7)(9)\right\rangle\subset\SymGroup{S}{9}$. В эвклидовом трёхмерном (\tqt{мировом}) пространстве $\SymGroup{E}{3}\left(\AGroup{R}\right)\simeq\AGroup{R}^3$ эта группа (изоморфно реализуется) представлена (?)  в~виде точечной группы симметрии \(\SymGroup{C}{2v}\) для~\CC{} и~\BB{}. Для других конформаций симметрия снижается до~подгрупп \(\SymGroup{C}{s}\) у~\BC{}/\CB{} и~$\SymGroup{C}{2}$ у~\TT{}.
 
 Конформационное поведение производных бицикло[3.3.1]нонана в общем случае определяется взаимопревращением конформеров, в которых бициклический скелет приобретает либо конформации \CC{}, либо \BC{}/\CB{}.
+
+\begin{figure}
+  \centering
+  %\vspace{\bigskipamount}
+  (I)~Двухкоординированнные:
+  
+  \vspace{\medskipamount}
+  \begin{tabular}{cc|cc|}
+    \chemfig{>[:+30]B(-H)-[:+150]} & 
+    \chemfig{>[:+30]B(-R)-[:+150]} &
+    \chemfig{>[:+30]C(-[:+55]R)(-[:-55]R)-[:+150]} &
+    \chemfig{>[:+30]C(=X)-[:+150]} \\
+  \end{tabular}
+  ~
+  \begin{tabular}{cc|c|}
+    \chemfig{>[:+30]N(-H)-[:+150]} & 
+    \chemfig{>[:+30]N(-R)-[:+150]} & 
+    \chemfig{>[:+30]O-[:+150]} \\
+  \end{tabular}
+  ~
+  \begin{tabular}{c|ccc|}
+    \chemfig{>[:+30]Si(-[:+55]R)(-[:-55]R)-[:+150]} &
+    \chemfig{>[:+30]P(-H)-[:+150]} & \chemfig{>[:+30]P(-R)-[:+150]} & \chemfig{>[:+30]P(-[:+55]R)(=[:-55]O)-[:+150]} \\
+  \end{tabular}
+  ~
+  \begin{tabular}{ccc|}
+    \chemfig{>[:+30]S-[:+150]} & \chemfig{>[:+30]S(=O)-[:+150]} &
+    \chemfig{>[:+30]S(=[:+55]O)(=[:-55]O)-[:+150]} \\
+  \end{tabular}
+  \vspace{\bigskipamount}
+  
+  (II)~Трёхкоординированные
+  
+  \vspace{\medskipamount}
+  \begin{tabular}{c|c|c|c|cc}
+    \chemfig{B(<[:-120])(<:[:-60])-[:+90]} & \chemfig{C(<[:-120])(<:[:-60])(-[:+150]R)-[:+30]} &   \chemfig{N(<[:-120])(<:[:-60])-[:+30]} & \chemfig{Si(<[:-120])(<:[:-60])(-[:+150]R)-[:+30]} &  \chemfig{P(<[:-120])(<:[:-60])-[:+30]} & \chemfig{P(<[:-120])(<:[:-60])(=[:+150]O)-[:+30]}
+  \end{tabular}
+  \vspace{\bigskipamount}
+  \caption{\label{fig:Atom:Types}А вот как бы назвать эту картинку получше?}
+\end{figure}
+
