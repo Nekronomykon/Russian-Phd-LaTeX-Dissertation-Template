@@ -31,33 +31,32 @@
 Расчёты 
 
 \begin{equation}
-E = E_A^\infty + E_{ZPE} + E_k
+\Func{E} = \underbrace{E_\infty  + E_k}_{\sim E_{el}} + E_{ZPE}
 \end{equation}
 
-Результаты расчёта реагентов
+Результаты расчёта реагентов в приближении MP2/aug-cc-pVTZ~(А)\dots Если группа симметрии не указана, она тривиальна~(\SymGroup{C}{1}).
 
 %\caption{\label{tab:Desmotic:Reagents}Результаты расчёта реагентов для реакций разделения связей}
-\begin{longtabu} to \textwidth {rlrr X}
+\begin{longtabu} to \textwidth {rl|SS|X}
 \toprule
-\# & Молекула / Симм. & \(E_{tot}\)(A),~\si{\hartree} & \(E_{ZPE}\),~\si{\hartree} & Геометрия \\
-\midrule\cmpd{Propane} & \chemfig{H_3C-[:-30]-[:+30]CH_3} / \(\SymGroup{C}{2v}\) & & & \\
-\midrule\cmpd{Dimethylether} & \chemfig{H_3C-[:-30]O-[:+30]CH_3} / \(\SymGroup{C}{2v}\) & & & \\
-\midrule\cmpd{Dimethylsulfide} & \chemfig{H_3C-[:-30]S-[:+30]CH_3} / \(\SymGroup{C}{2v}\) & & & \\
+\multicolumn{2}{c|}{Структура / симметрия} & \(E_{tot}\)(A),~\si{\hartree} & \(E_{ZPE}\)(A),~\si{\hartree} & Геометрия \\
+\midrule\cmpd{Propane} & \chemfig{H_3C-[:-30]-[:+30]CH_3} / \(\SymGroup{C}{2v}\) & \num{-118.859638} & \num{0.104589} & \ce{C-C}~\num{1.523}\,\si{\angstrom}; $\angle$\ce{CCC}~\ang{112.3} \\
+\midrule\cmpd{Dimethylether} & \chemfig{H_3C-[:-30]O-[:+30]CH_3} / \(\SymGroup{C}{2v}\) & \num{-154.737526} & \num{0.080693} & \ce{C-O}~\num{1.411}\,\si{\angstrom}; $\angle$\ce{COC}~\ang{110.5} \\
+\midrule\cmpd{Dimethylsulfide} & \chemfig{H_3C-[:-30]S-[:+30]CH_3} / \(\SymGroup{C}{2v}\) & \num{-477.351949} & \num{0.076641} & \ce{C-S}~\num{1.804}\,\si{\angstrom}; $\angle$\ce{CSC}~\ang{97.9} \\
 %\midrule\cmpd{Dimethylamine} & \chemfig{H_3C-[:-30]N(-[:-90]H)-[:+30]CH_3} & \(\SymGroup{C}{s}\) & \\
-\midrule\cmpd{Isobutane} & \chemfig{H_3C-[:-30](-[:-90]CH_3)-[:+30]CH_3} / \(\SymGroup{C}{3v}\) & & & \\
+\midrule\cmpd{Isobutane} & \chemfig{H_3C-[:-30](-[:-90]CH_3)-[:+30]CH_3} / \(\SymGroup{C}{3v}\) & \num{-158.087267} & \num{0.132478} & \ce{C-C}~\num{1.524}\,\si{\angstrom}; $\angle$\ce{CCC}~\ang{110.7}\\
 \midrule\cmpd{Trimethylamine} & \chemfig{H_3C-[:-30]N(-[:-90]CH_3)-[:+30]CH_3} / \(\SymGroup{C}{3v}\) & & & \\
-\midrule\cmpd{Acetone} & \chemfig{H_3C-[:-30]C(=[:-90]O)-[:+30]CH_3} / \(\SymGroup{C}{2v}\) & & & \\
+\midrule\cmpd{Acetone} & \chemfig{H_3C-[:-30]C(=[:-90]O)-[:+30]CH_3} / \(\SymGroup{C}{2v}\) & \num{-192.789711} & & \ce{C=O}~\num{1.220}\,\si{\angstrom}; \ce{C-C}~\num{1.508}\,\si{\angstrom}; $\angle$\ce{OCC}~\ang{122.05}; $\angle$\ce{CCC}~\ang{115.9}\\
 %\midrule
-\midrule\cmpd{Butane} & \chemfig{H_3C-[:+30]-[:-30]-[:+30]CH_3} / \(\SymGroup{C}{2h}\) & & & \\
-\midrule\cmpd{Methylethylether} & \chemfig{H_3C-[:+30]O-[:-30]-[:+30]CH_3} / \(\SymGroup{C}{s}\) & & & \\
-\midrule\cmpd{Methylethylthioether} & \chemfig{H_3C-[:+30]S-[:-30]-[:+30]CH_3} / \(\SymGroup{C}{s}\) & & & \\
-\midrule\cmpd{Butanone} & \chemfig{H_3C-[:+30]-[:-30]C(=[:-90]O)-[:+30]CH_3} / \(\SymGroup{C}{s}\) & & & \\
-\midrule\cmpd{Isopentane} &\chemfig{H_3C-[:+30](-[:+90]CH_3)-[:-30]-[:+30]CH_3} / \(\SymGroup{C}{1}\) & & & \\
-\midrule\cmpd{Isopentanone} &\chemfig{H_3C-[:+30](-[:+90]CH_3)-[:-30]C(=[:-90]O)-[:+30]CH_3} / \(\SymGroup{C}{1}\) & & & \\
-\midrule\cmpd{Methylisopropylether} &\chemfig{H_3C-[:+30](-[:+90]CH_3)-[:-30]O-[:+30]CH_3} / \(\SymGroup{C}{1}\) & & & \\
-\midrule\cmpd{Methylisopropylthioether} &\chemfig{H_3C-[:+30](-[:+90]CH_3)-[:-30]S-[:+30]CH_3} / \(\SymGroup{C}{1}\) & & & \\
-\midrule\cmpd{Isopentane} &\chemfig{H_3C-[:+30](-[:+90]CH3)-[:-30]-[:+30]CH_3} / \(\SymGroup{C}{1}\) & & & \\
-\midrule\cmpd{Dimethylethylamine} & \chemfig{H_3C-[:+30]N(-[:+90]CH_3)-[:-30]-[:+30]CH_3} / \(\SymGroup{C}{1}\) & & & \\
+\midrule\cmpd{Butane} & \chemfig{H_3C-[:-30]-[:+30]-[:-30]CH_3} / \(\SymGroup{C}{2h}\) & \num{-158.084303} & \num{0.133309} & \ce{H_3C-CH_2}~\num{1.524}\,\si{\angstrom}; \ce{H_2C-CH_2}~\num{1.523}\,\si{\angstrom}; $\angle$\ce{CCC}~\ang{112.3} \\
+\midrule\cmpd{Methylethylether} & \chemfig{H_3C-[:-30]O-[:+30]-[:-30]CH_3} / \(\SymGroup{C}{s}\) & & & \\
+\midrule\cmpd{Methylethylthioether} & \chemfig{H_3C-[:-30]S-[:+30]-[:-30]CH_3} / \(\SymGroup{C}{s}\) & & & \\
+\midrule\cmpd{Butanone} & \chemfig{H_3C-[:-30]C(=[:-90]O)-[:+30]-[:-30]CH_3} / \(\SymGroup{C}{s}\) & & & \\
+\midrule\cmpd{Isopentane} &\chemfig{H_3C-[:-30](-[:-90]CH_3)-[:+30]-[:-30]CH_3} & \num{-197.311142} & \num{0.161457} & \\
+\midrule\cmpd{Dimethylethylamine} & \chemfig{H_3C-[:-30]N(-[:-90]CH_3)-[:+30]-[:-30]CH_3} & & & \\
+\midrule\cmpd{Methylisopropylether} &\chemfig{H_3C-[:-30](-[:-90]CH_3)-[:+30]O-[:-30]CH_3} & \num{-233.195233} & \num{0.137450} &  \\
+\midrule\cmpd{Methylisopropylthioether} &\chemfig{H_3C-[:-30](-[:-90]CH_3)-[:+30]S-[:-30]CH_3} & & & \\
+\midrule\cmpd{Isopentanone} &\chemfig{H_3C-[:+30](-[:+90]CH_3)-[:-30]C(=[:-90]O)-[:+30]CH_3} & & & \\
 \bottomrule
 \end{longtabu}
 
@@ -87,7 +86,9 @@ E = E_A^\infty + E_{ZPE} + E_k
   6\(\cdot\)\chemfig{H_3C-[:+30]N(-[:+90]CH_3)-[:-30]-[:+30]CH_3}
 \end{center}
 
-Шестичленные циклы 
+\section{Напряжения свободных шестичленных циклов}
+
+Реакция разделения связей
 
 \begin{center}
   \chemfig{[:-30]X*6(---Y---)} + \chemfig{H_3C-[:-30]X-[:+30]CH_3} + \chemfig{H_3C-[:-30]Y-[:+30]CH_3} + 4\(\cdot\) \chemfig{H_3C-[:-30]-[:+30]CH_3} \(\longrightarrow\)
@@ -96,3 +97,9 @@ E = E_A^\infty + E_{ZPE} + E_k
     2\(\cdot\)\chemfig{H_3C-[:+30]X-[:-30]-[:+30]CH_3} +     2\(\cdot\)\chemfig{H_3C-[:+30]-[:-30]-[:+30]CH_3} + 2\(\cdot\)\chemfig{H_3C-[:+30]Y-[:-30]-[:+30]CH_3}
 \end{center}
 
+Реакции \emph{позиционного диспропорционирования} дизамещённых аналогов циклогексана
+
+\begin{center}
+  \chemfig{*6(-X---Y--)} + \chemfig{*6(------)} \(\longrightarrow\) \chemfig{*6(-X-----)} + \chemfig{*6(----Y--)}
+\end{center}
+  
