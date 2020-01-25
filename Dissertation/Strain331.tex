@@ -1,3 +1,5 @@
+% !TeX spellcheck = ru_RU
+% !TeX encoding = UTF-8
 \chapter{Исследование напряжений в производных бицикло[3.3.1]нонана}
 
 Реакции разделения связей. Наименьшую погрешность обеспечивают \emph{гипергомодесмотические} реакции, сохраняющие не только состав, как гомодесмические... но и число связей различных типов. В частности, для 3,7,9-замещённых аналогов бицикло[3.3.1]нонана выводится уравнение
@@ -34,19 +36,25 @@
 \Func{E} = \underbrace{E_\infty  + E_k}_{\sim E_{el}} + E_{ZPE}
 \end{equation}
 
-Результаты расчёта реагентов в приближении MP2/aug-cc-pVTZ~(А)\dots Если группа симметрии не указана, она тривиальна~(\SymGroup{C}{1}).
+Ниже в таблице~\ref{tab:Reagents:Opt} на с.~\pageref{tab:Reagents:Opt:Begin}--\pageref{tab:Reagents:Opt:End} приводятся результаты оптимизации молекул-\tqt{реагентов} в приближении MP2/aug-cc-pVTZ. Если группа симметрии оптимальной структуры не указана явно, она является тривиальной~(\SymGroup{C}{1}).
 
 %\caption{\label{tab:Desmotic:Reagents}Результаты расчёта реагентов для реакций разделения связей}
+\label{tab:Reagents:Opt:Begin}
 \begin{longtabu} to \textwidth {rl|SS|X}
-\toprule
-\multicolumn{2}{c|}{Структура / симметрия} & \(E_{tot}\)(A),~\si{\hartree} & \(E_{ZPE}\)(A),~\si{\hartree} & Геометрия \\
+%\caption{Оптимизированные энергии и структурные параметры молекул}
+%\caption{Оптимизированные (MP2 / aug-cc-pVTZ) энергии и геометрические параметры молекул}
+\toprule\multicolumn{2}{c|}{\label{tab:Reagents:Opt} Структура / симметрия}  & \(E_{2}\),~\si{\hartree} & \(E_{ZPE}\),~\si{\hartree} & Геометрия молекулы \endfirsthead
+\multicolumn{5}{p{\textwidth}}{\emph{продолжение таблицы}~\arabic{table}} \\
+\toprule\multicolumn{2}{c|}{Структура / симметрия} & \(E_{2}\),~\si{\hartree} & \(E_{ZPE}\),~\si{\hartree} & Геометрия молекулы \endhead
+\multicolumn{5}{l}{\emph{продолжение на следующей странице}} \endfoot
+\multicolumn{5}{l}{} \endlastfoot
 \midrule\cmpd{Propane} & \chemfig{H_3C-[:-30]-[:+30]CH_3} / \(\SymGroup{C}{2v}\) & \num{-118.859638} & \num{0.104589} & \ce{C-C}~\num{1.523}\,\si{\angstrom}; $\angle$\ce{CCC}~\ang{112.3} \\
 \midrule\cmpd{Dimethylether} & \chemfig{H_3C-[:-30]O-[:+30]CH_3} / \(\SymGroup{C}{2v}\) & \num{-154.737526} & \num{0.080693} & \ce{C-O}~\num{1.411}\,\si{\angstrom}; $\angle$\ce{COC}~\ang{110.5} \\
 \midrule\cmpd{Dimethylsulfide} & \chemfig{H_3C-[:-30]S-[:+30]CH_3} / \(\SymGroup{C}{2v}\) & \num{-477.351949} & \num{0.076641} & \ce{C-S}~\num{1.804}\,\si{\angstrom}; $\angle$\ce{CSC}~\ang{97.9} \\
 %\midrule\cmpd{Dimethylamine} & \chemfig{H_3C-[:-30]N(-[:-90]H)-[:+30]CH_3} & \(\SymGroup{C}{s}\) & \\
 \midrule\cmpd{Isobutane} & \chemfig{H_3C-[:-30](-[:-90]CH_3)-[:+30]CH_3} / \(\SymGroup{C}{3v}\) & \num{-158.087267} & \num{0.132478} & \ce{C-C}~\num{1.524}\,\si{\angstrom}; $\angle$\ce{CCC}~\ang{110.7}\\
-\midrule\cmpd{Trimethylamine} & \chemfig{H_3C-[:-30]N(-[:-90]CH_3)-[:+30]CH_3} / \(\SymGroup{C}{3v}\) & & & \\
-\midrule\cmpd{Acetone} & \chemfig{H_3C-[:-30]C(=[:-90]O)-[:+30]CH_3} / \(\SymGroup{C}{2v}\) & \num{-192.789711} & & \ce{C=O}~\num{1.220}\,\si{\angstrom}; \ce{C-C}~\num{1.508}\,\si{\angstrom}; $\angle$\ce{OCC}~\ang{122.05}; $\angle$\ce{CCC}~\ang{115.9}\\
+\midrule\cmpd{Trimethylamine} & \chemfig{H_3C-[:-30]N(-[:-90]CH_3)-[:+30]CH_3} / \(\SymGroup{C}{3v}\) & \num{-174.100139} & \num{0.121385} & \ce{C-N}~\num{1.451}\,\si{\angstrom}; $\angle$\ce{CNC}~\ang{110.2} \\
+\midrule\cmpd{Acetone} & \chemfig{H_3C-[:-30]C(=[:-90]O)-[:+30]CH_3} / \(\SymGroup{C}{2v}\) & \num{-192.789711} & \num{0.084256} & \ce{C=O}~\num{1.220}\,\si{\angstrom}; \ce{C-C}~\num{1.508}\,\si{\angstrom}; $\angle$\ce{OCC}~\ang{122.05}; $\angle$\ce{CCC}~\ang{115.9}\\
 %\midrule
 \midrule\cmpd{Butane} & \chemfig{H_3C-[:-30]-[:+30]-[:-30]CH_3} / \(\SymGroup{C}{2h}\) & \num{-158.084303} & \num{0.133309} & \ce{H_3C-CH_2}~\num{1.524}\,\si{\angstrom}; \ce{H_2C-CH_2}~\num{1.523}\,\si{\angstrom}; $\angle$\ce{CCC}~\ang{112.3} \\
 \midrule\cmpd{Methylethylether} & \chemfig{H_3C-[:-30]O-[:+30]-[:-30]CH_3} / \(\SymGroup{C}{s}\) & & & \\
@@ -58,7 +66,7 @@
 \midrule\cmpd{Methylisopropylthioether} &\chemfig{H_3C-[:-30](-[:-90]CH_3)-[:+30]S-[:-30]CH_3} & & & \\
 \midrule\cmpd{Isopentanone} &\chemfig{H_3C-[:+30](-[:+90]CH_3)-[:-30]C(=[:-90]O)-[:+30]CH_3} & & & \\
 \bottomrule
-\end{longtabu}
+\end{longtabu}\label{tab:Reagents:Opt:End}
 
 В частности, для 3,7-аналогов 1-азабицикло[3.3.1]нонана
 \begin{center}
