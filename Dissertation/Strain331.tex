@@ -36,30 +36,60 @@
 \Func{E} = \underbrace{E_\infty  + E_k}_{\sim E_{el}} + E_{ZPE}
 \end{equation}
 
-Ниже в таблице~\ref{tab:Reagents:Opt} на с.~\pageref{tab:Reagents:Opt:Begin}--\pageref{tab:Reagents:Opt:End} приводятся результаты оптимизации молекул-\tqt{реагентов} в приближении MP2/aug-cc-pVTZ. Если группа симметрии оптимальной структуры не указана явно, она является тривиальной~(\SymGroup{C}{1}).
+Ниже в таблице~\ref{tab:Reagents:Opt} на с.~\pageref{tab:Reagents:Opt:Begin}--\pageref{tab:Reagents:Opt:End} приводятся результаты оптимизации молекул-\tqt{реагентов} в приближении MP2/aug-cc-pVTZ. Если группа симметрии оптимальной структуры не указана явно, она является тривиальной~(\SymGroup{C}{1}). Все полученные в ходе расчёта собственные частоты молекул действительны.
 
 %\caption{\label{tab:Desmotic:Reagents}Результаты расчёта реагентов для реакций разделения связей}
 \label{tab:Reagents:Opt:Begin}
-\begin{longtabu} to \textwidth {rl|SS|X}
+\begin{longtabu} to \textwidth {rl|SS|X[l]}
 %\caption{Оптимизированные энергии и структурные параметры молекул}
 %\caption{Оптимизированные (MP2 / aug-cc-pVTZ) энергии и геометрические параметры молекул}
-\toprule\multicolumn{2}{c|}{\label{tab:Reagents:Opt} Структура / симметрия}  & \(E_{2}\),~\si{\hartree} & \(E_{ZPE}\),~\si{\hartree} & Геометрия молекулы \endfirsthead
+%\small
+\toprule\multicolumn{2}{c|}{\label{tab:Reagents:Opt} Структура / симметрия}  & \(E_{2}\),~\si{\hartree} & \(E_{ZPE}\),~\si{\hartree} & Геометрия \endfirsthead
 \multicolumn{5}{p{\textwidth}}{\emph{продолжение таблицы}~\arabic{table}} \\
-\toprule\multicolumn{2}{c|}{Структура / симметрия} & \(E_{2}\),~\si{\hartree} & \(E_{ZPE}\),~\si{\hartree} & Геометрия молекулы \endhead
+\toprule\multicolumn{2}{c|}{Структура / симметрия} & \(E_{2}\),~\si{\hartree} & \(E_{ZPE}\),~\si{\hartree} & Геометрия \endhead
 \multicolumn{5}{l}{\emph{продолжение на следующей странице}} \endfoot
 \multicolumn{5}{l}{} \endlastfoot
-\midrule\cmpd{Propane} & \chemfig{H_3C-[:-30]-[:+30]CH_3} / \(\SymGroup{C}{2v}\) & \num{-118.859638} & \num{0.104589} & \ce{C-C}~\num{1.523}\,\si{\angstrom}; $\angle$\ce{CCC}~\ang{112.3} \\
-\midrule\cmpd{Dimethylether} & \chemfig{H_3C-[:-30]O-[:+30]CH_3} / \(\SymGroup{C}{2v}\) & \num{-154.737526} & \num{0.080693} & \ce{C-O}~\num{1.411}\,\si{\angstrom}; $\angle$\ce{COC}~\ang{110.5} \\
-\midrule\cmpd{Dimethylsulfide} & \chemfig{H_3C-[:-30]S-[:+30]CH_3} / \(\SymGroup{C}{2v}\) & \num{-477.351949} & \num{0.076641} & \ce{C-S}~\num{1.804}\,\si{\angstrom}; $\angle$\ce{CSC}~\ang{97.9} \\
+\midrule\cmpd{Propane} & \chemfig{H_3C-[:-30]-[:+30]CH_3} / \(\SymGroup{C}{2v}\) & \num{-118.859638} & \num{0.104589} &
+\ce{C-C}~\SI{1.523}{\angstrom}; $\angle$\ce{CCC}~\ang{112.3} \\
+\midrule\cmpd{Dimethylether} & \chemfig{H_3C-[:-30]O-[:+30]CH_3} / \(\SymGroup{C}{2v}\) & \num{-154.737526} & \num{0.080693} & 
+\ce{C-O}~\SI{1.411}{\angstrom};
+$\angle$\ce{COC}~\ang{110.5} \\
+\midrule\cmpd{Dimethylsulfide} & \chemfig{H_3C-[:-30]S-[:+30]CH_3} / \(\SymGroup{C}{2v}\) & \num{-477.351949} & \num{0.076641} & 
+\ce{C-S}~\SI{1.804}{\angstrom}; 
+$\angle$\ce{CSC}~\ang{97.9} \\
 %\midrule\cmpd{Dimethylamine} & \chemfig{H_3C-[:-30]N(-[:-90]H)-[:+30]CH_3} & \(\SymGroup{C}{s}\) & \\
-\midrule\cmpd{Isobutane} & \chemfig{H_3C-[:-30](-[:-90]CH_3)-[:+30]CH_3} / \(\SymGroup{C}{3v}\) & \num{-158.087267} & \num{0.132478} & \ce{C-C}~\num{1.524}\,\si{\angstrom}; $\angle$\ce{CCC}~\ang{110.7}\\
-\midrule\cmpd{Trimethylamine} & \chemfig{H_3C-[:-30]N(-[:-90]CH_3)-[:+30]CH_3} / \(\SymGroup{C}{3v}\) & \num{-174.100139} & \num{0.121385} & \ce{C-N}~\num{1.451}\,\si{\angstrom}; $\angle$\ce{CNC}~\ang{110.2} \\
-\midrule\cmpd{Acetone} & \chemfig{H_3C-[:-30]C(=[:-90]O)-[:+30]CH_3} / \(\SymGroup{C}{2v}\) & \num{-192.789711} & \num{0.084256} & \ce{C=O}~\num{1.220}\,\si{\angstrom}; \ce{C-C}~\num{1.508}\,\si{\angstrom}; $\angle$\ce{OCC}~\ang{122.05}; $\angle$\ce{CCC}~\ang{115.9}\\
+\midrule\cmpd{Isobutane} & \chemfig{H_3C-[:-30](-[:-90]CH_3)-[:+30]CH_3} / \(\SymGroup{C}{3v}\) & \num{-158.087267} & \num{0.132478} & \ce{C-C}~\SI{1.524}{\angstrom}; $\angle$\ce{CCC}~\ang{110.7}\\
+\midrule\cmpd{Trimethylamine} & \chemfig{H_3C-[:-30]N(-[:-90]CH_3)-[:+30]CH_3} / \(\SymGroup{C}{3v}\) & \num{-174.100139} & \num{0.121385} & 
+\ce{C-N}~\SI{1.451}{\angstrom};
+$\angle$\ce{CNC}~\ang{110.2} \\
+\midrule\cmpd{Acetone} & \chemfig{H_3C-[:-30]C(=[:-90]O)-[:+30]CH_3} / \(\SymGroup{C}{2v}\) & \num{-192.789711} & \num{0.084256} & \ce{C=O}~\SI{1.220}{\angstrom}; 
+\ce{C-C}~\SI{1.508}{\angstrom};
+$\angle$\ce{OCC}~\ang{122.05}; $\angle$\ce{CCC}~\ang{115.9}\\
 %\midrule
-\midrule\cmpd{Butane} & \chemfig{H_3C-[:-30]-[:+30]-[:-30]CH_3} / \(\SymGroup{C}{2h}\) & \num{-158.084303} & \num{0.133309} & \ce{H_3C-CH_2}~\num{1.524}\,\si{\angstrom}; \ce{H_2C-CH_2}~\num{1.523}\,\si{\angstrom}; $\angle$\ce{CCC}~\ang{112.3} \\
-\midrule\cmpd{Methylethylether} & \chemfig{H_3C-[:-30]O-[:+30]-[:-30]CH_3} / \(\SymGroup{C}{s}\) & \num{-193.966394} & \num{0.108895} & \ce{H3C-O}~\num{1.412}\,\si{\angstrom}; \ce{H_2C-O}~\num{1.417}\,\si{\angstrom}; \ce{H2C-CH_3}~\num{1.509}\,\si{\angstrom}; $\angle$\ce{COC}~\ang{111.2}; $\angle$\ce{OCC}~\ang{108.1} \\
-\midrule\cmpd{Methylethylthioether} & \chemfig{H_3C-[:-30]S-[:+30]-[:-30]CH_3} / \(\SymGroup{C}{s}\) & \num{-516.576661} & \num{0.105402} & \ce{H_3C-S}~\num{1.805}\,\si{\angstrom}; \ce{H_2C-S}~\num{1.809}\,\si{\angstrom}; \ce{H_2C-CH_3}~\num{1.519}\,\si{\angstrom}; $\angle$\ce{CSC}~\ang{98.7}; $\angle$\ce{SCC}~\ang{109.3}\\
-\midrule\cmpd{Butanone} & \chemfig{H_3C-[:-30]C(=[:-90]O)-[:+30]-[:-30]CH_3} / \(\SymGroup{C}{s}\) & & & \\
+\midrule\cmpd{Butane} & \chemfig{H_3C-[:-30]-[:+30]-[:-30]CH_3} / \(\SymGroup{C}{2h}\) & \num{-158.084303} & \num{0.133309} & 
+\ce{H_3C-CH_2}~\SI{1.524}{\angstrom}; 
+\ce{H_2C-CH_2}~\SI{1.523}{\angstrom}; 
+$\angle$\ce{CCC}~\ang{112.3} \\
+\midrule\cmpd{Methylethylether} & \chemfig{H_3C-[:-30]O-[:+30]-[:-30]CH_3} / \(\SymGroup{C}{s}\) & \num{-193.966394} & \num{0.108895} & 
+\ce{H3C-O}~\SI{1.412}{\angstrom};
+\ce{H_2C-O}~\SI{1.417}{\angstrom};
+\ce{H2C-CH_3}~\SI{1.509}{\angstrom};
+$\angle$\ce{COC}~\ang{111.2};
+$\angle$\ce{OCC}~\ang{108.1} \\
+\midrule\cmpd{Methylethylthioether} & \chemfig{H_3C-[:-30]S-[:+30]-[:-30]CH_3} / \(\SymGroup{C}{s}\) & \num{-516.576661} & \num{0.105402} &
+\ce{H_3C-S}~\SI{1.805}{\angstrom}; 
+\ce{H_2C-S}~\SI{1.809}{\angstrom}; 
+\ce{H_2C-CH_3}~\SI{1.519}{\angstrom}; 
+$\angle$\ce{CSC}~\ang{98.7}; 
+$\angle$\ce{SCC}~\ang{109.3} \\
+\midrule\cmpd{Butanone} & \chemfig{H_3C-[:-30]C(=[:-90]O)-[:+30]-[:-30]CH_3} / \(\SymGroup{C}{s}\) & \num{-232.014552} & \num{0.113700} & \ce{C=O}~\SI{1.220}{\angstrom};
+\ce{H_3C-CO}~\SI{1.509}{\angstrom}; 
+\ce{H_2C-CO}~\SI{1.513}{\angstrom}; 
+\ce{H_3C-CH_2}~\SI{1.517}{\angstrom};
+$\angle$\ce{OCCH_3}~\ang{121.9};
+$\angle$\ce{OCC(H_2)}~\ang{122.1}; 
+$\angle$\ce{CC(O)C}~\ang{116.0}; 
+$\angle$\ce{C(O)CC}~\ang{113.4} \\
 \midrule\cmpd{Isopentane} &\chemfig{H_3C-[:-30](-[:-90]CH_3)-[:+30]-[:-30]CH_3} & \num{-197.311142} & \num{0.161457} & \\
 \midrule\cmpd{Dimethylethylamine} & \chemfig{H_3C-[:-30]N(-[:-90]CH_3)-[:+30]-[:-30]CH_3} & & & \\
 \midrule\cmpd{Methylisopropylether} &\chemfig{H_3C-[:-30](-[:-90]CH_3)-[:+30]O-[:-30]CH_3} & \num{-233.195233} & \num{0.137450} &  \\
