@@ -47,8 +47,8 @@
 \toprule\multicolumn{2}{c|}{\label{tab:Reagents:Opt} Структура / симметрия}  & \(E_{2}\),~\si{\hartree} & \(E_{ZPE}\),~\si{\hartree} & Геометрия \endfirsthead
 \multicolumn{5}{p{\textwidth}}{\emph{продолжение таблицы}~\arabic{table}} \\
 \toprule\multicolumn{2}{c|}{Структура / симметрия} & \(E_{2}\),~\si{\hartree} & \(E_{ZPE}\),~\si{\hartree} & Геометрия \endhead
-\multicolumn{5}{l}{\emph{продолжение на следующей странице}} \endfoot
-\multicolumn{5}{l}{} \endlastfoot
+  \bottomrule\multicolumn{5}{l}{\emph{продолжение на следующей странице}} \endfoot
+  \bottomrule\multicolumn{5}{l}{} \endlastfoot
 \midrule\chemfig{H_3C-[:-30]-[:+30]CH_3} / \(\SymGroup{C}{2v}\) &\cmpd{Propane} & \num{-118.859638} & \num{0.104589} &
 \ce{C-C}~\SI{1.523}{\angstrom}; $\angle$\ce{CCC}~\ang{112.3} \\
 \midrule \chemfig{H_3C-[:-30]O-[:+30]CH_3} / \(\SymGroup{C}{2v}\) &\cmpd{Dimethylether} & \num{-154.737526} & \num{0.080693} & 
@@ -96,7 +96,6 @@ $\angle$\ce{C(O)CC}~\ang{113.4} \\
 \midrule\chemfig{H_3C-[:-30](-[:-90]CH_3)-[:+30]O-[:-30]CH_3} & \cmpd{Methylisopropylether} & \num{-233.195233} & \num{0.137450} &  \\
 \midrule\chemfig{H_3C-[:-30](-[:-90]CH_3)-[:+30]S-[:-30]CH_3} & \cmpd{Methylisopropylthioether} & & & \\
 %\midrule\cmpd{Isopentanone} &\chemfig{H_3C-[:+30](-[:+90]CH_3)-[:-30]C(=[:-90]O)-[:+30]CH_3} & & & \\
-\bottomrule
 \end{longtabu}\label{tab:Reagents:Opt:End}
 
 В частности, для 3,7-аналогов 1-азабицикло[3.3.1]нонана
@@ -148,7 +147,7 @@ $\angle$\ce{C(O)CC}~\ang{113.4} \\
   
 B таблице~\ref{tab:Cycle:Six:Opt} на с.~\pageref{tab:Cycle:Six:Opt:Begin}--\pageref{tab:Cycle:Six:Opt:End} приводятся результаты оптимизации молекул производных циклогексана, включая эндоциклические торсионные углы $\tau$.
 
-\label{tab:Cycle:Six:Opt:Begin}\begin{longtabu} to \textwidth {rr|SS|X[l]}
+\label{tab:Cycle:Six:Opt:Begin}\begin{longtabu} to \textwidth {cr|SS|X[l]}
   %\caption{Оптимизированные энергии и структурные параметры молекул}
   %\caption{Оптимизированные (MP2 / aug-cc-pVTZ) энергии и геометрические параметры молекул}
   %\small
@@ -156,13 +155,19 @@ B таблице~\ref{tab:Cycle:Six:Opt} на с.~\pageref{tab:Cycle:Six:Opt:Beg
   \multicolumn{2}{c|}{\label{tab:Cycle:Six:Opt} Структура / симметрия}  & \(E_{2}\),~\si{\hartree} & \(E_{ZPE}\),~\si{\hartree} & Геометрия \endfirsthead
   \multicolumn{5}{p{\textwidth}}{\emph{продолжение таблицы}~\arabic{table}} \\
   \toprule\multicolumn{2}{c|}{Структура / симметрия} & \(E_{2}\),~\si{\hartree} & \(E_{ZPE}\),~\si{\hartree} & Геометрия \endhead
-  \multicolumn{5}{l}{\emph{продолжение на следующей странице}} \endfoot
-  \multicolumn{5}{l}{} \endlastfoot
-  \midrule\chemfig{?-[:+160]-[:-120]<[:+20]-[:-20,,,,line width=\boldbondwidth]>[:+60]?} / \SymGroup{D}{3d} & \cmpd{Cyclohexane} & & & \ce{C-C} \\
+  \midrule\multicolumn{5}{l}{\emph{продолжение на следующей странице}} \endfoot
+  \bottomrule\multicolumn{5}{l}{} \endlastfoot
+  \midrule\chemfig{?-[:+160]-[:-120]<[:+20]-[:-20,,,,line width=\boldbondwidth]>[:+60]?} / \SymGroup{D}{3d} & \cmpd{Cyclohexane} & \num{-235.344605} & & \ce{C-C}~\SI{1.526}{\angstrom}; $\angle$\ce{CCC}~\ang{110.7}; $\tau=\pm\ang{56.9}$ \\
+  \midrule\chemfig{?-[:+160]-[:-120]O<[:+20]-[:-20,,,,line width=\boldbondwidth]>[:+60]O?} / \SymGroup{C}{2h} & \cmpd{Dioxane14} & & & \ce{C-C} \\
+  \midrule\chemfig{?-[:+160]-[:-120]S<[:+20]-[:-20,,,,line width=\boldbondwidth]>[:+60]S?} / \SymGroup{C}{2h} & \cmpd{Dithiane} & & & \ce{C-C} \\
+  \midrule\chemfig{?-[:-120]C(=[:-135]O)<[:+20]-[:-20,,,,line width=\boldbondwidth]>[:+60]C(=[:+45]O)-[:-160]?} / \SymGroup{C}{2h} & \cmpd{Cyclohexandione14} & & & \ce{C-C} \\
+  \midrule\chemfig{?-[:-120](-[:+155]H_3C)(-[:-90,0.75]H)<[:+20]-[:-20,,,,line width=\boldbondwidth]>[:+60](-[:+90,0.75]H)(-[:-25]CH_3)-[:-160]?} / \SymGroup{C}{2h} & \cmpd{Me2CyclohexaneEE} & & & \ce{C-C} \\
+  \midrule\chemfig{?-[:-120]N(-[:+155]H_3C)<[:+20]-[:-20,,,,line width=\boldbondwidth]>[:+60]N(-[:-25]CH_3)-[:-160]?} / \SymGroup{C}{2h} & \cmpd{N2Me2PiperazineEE} & & & \ce{C-C} \\
   \midrule\chemfig{?-[:+160]-[:-120]O<[:+20]-[:-20,,,,line width=\boldbondwidth]>[:+60]?} / \SymGroup{C}{s} & \cmpd{Pyran} & & & \ce{C-C} \\
   \midrule\chemfig{?-[:+160]-[:-120]S<[:+20]-[:-20,,,,line width=\boldbondwidth]>[:+60]?} / \SymGroup{C}{s} & \cmpd{Thiopyran} & & & \ce{C-C} \\
   \midrule\chemfig{?-[:+160]-[:-120]C(=[:-135]O)<[:+20]-[:-20,,,,line width=\boldbondwidth]>[:+60]?} / \SymGroup{C}{s} & \cmpd{Cyclohexanone} & & & \ce{C-C} \\
   \midrule\chemfig{?-[:+160]-[:-120](-[:+155]H_3C)(-[:-90,0.75]H)<[:+20]-[:-20,,,,line width=\boldbondwidth]>[:+60]?} / \SymGroup{C}{s} & \cmpd{NMeCyclohexaneEq} & & & \ce{C-C} \\
   \midrule\chemfig{?-[:+160]-[:-120]N(-[:+155]H_3C)<[:+20]-[:-20,,,,line width=\boldbondwidth]>[:+60]?} / \SymGroup{C}{s} & \cmpd{NMePiperidineEq} & & & \ce{C-C} \\
-\bottomrule
 \end{longtabu}\label{tab:Cycle:Six:Opt:End}
+
+Энергии напряжения... \EStrain
