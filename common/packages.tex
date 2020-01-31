@@ -250,7 +250,9 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% --> ScrewDriver te Blackheadborough:
 %% \usepackage{fouriernc}
-%% \newcommand{\Func}[1]{{\ensuremath{\mathcal #1}}}
+\newcommand{\Func}[1]{{\ensuremath{\mathcal #1}}}
+\newcommand{\AGroup}[1]{{\ensuremath{\mathbb #1}}}
+%% ------------------------------------------------| ????
 \usepackage{epigraph}
 \renewcommand{\epigraphwidth}{8.5cm}
 %\usepackage{pxfonts}
@@ -277,7 +279,6 @@
     \ensuremath{\CF@node@strut}%
 }
 \makeatother
-%\renewcommand*{\printatom}[1]{{\ce{#1}}}
 \renewcommand*\printatom[1]{\ensuremath{\mathsf{#1}}} % from the ChemFig manual
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% Relied upon \compoundstyle from *chemcompounds*
@@ -326,9 +327,7 @@
 %%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% Немного математических символов
-\newcommand{\Func}[1]{\ensuremath{\mathcal #1}}
 \newcommand{\EStrain}{\ensuremath{\Func{E}_\varsigma}}
-\newcommand{\AGroup}[1]{{\ensuremath{\mathbb {#1}}}}
 \newcommand{\SymGroup}[2]{\ensuremath{\AGroup{#1}_{#2}}}
 %%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
