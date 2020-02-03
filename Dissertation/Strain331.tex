@@ -244,11 +244,48 @@ create col/assign/.code={%
 ]{Erel}\ScanIsoPentane %
 \pgfplotstablesave[columns={Tau,Etot,Erel}]{\ScanIsoPentane}{Results/ScanIsoPentane.save.dat}
 
+\pgfplotstablecreatecol[%
+create col/assign/.code={%
+  \getthisrow{Etot}\entry%
+  \ifnum\pgfplotstablerow>0
+  \pgfmathsetmacro{\entry}{min(\entry,\pgfmathaccuma)}%
+  \fi
+  \edef\pgfmathaccuma{\entry}
+  \pgfkeyslet{/pgfplots/table/create col/next content}\entry
+}]{Emin}\ScanIPrOMe %
+\pgfplotstablecreatecol[%
+create col/assign/.code={%
+  \getthisrow{Etot}\entryval%
+  \getthisrow{Emin}\refval%
+  %\ifnum\pgfplotstablerow>0
+  \pgfmathsetmacro{\entryval}{\entryval - \refval}%
+  \pgfmathsetmacro{\entryval}{\AUtoKJM * \entryval}%
+  %\fi
+  \edef\pgfmathaccuma{\entryval}
+  \pgfkeyslet{/pgfplots/table/create col/next content}\entryval
+}
+]{Erel}\ScanIPrOMe %
+\pgfplotstablesave[columns={Tau,Etot,Erel}]{\ScanIPrOMe}{Results/ScanIPrOMe.save.dat}
+
 %\begin{tikzpicture}
 %\begin{axis}[xlabel=$\tau$,ylabel=$\Delta\Func{E}$% table
 %\addplot table[x=Tau,y=Erel,]{Results/ScanButane.save.dat};
 %\end{axis}
 %\end{tikzpicture}
+
+\begin{tikzpicture}
+  \begin{axis}[
+    title={Внутреннее вращение},
+    xlabel={\chemfig{H_3C-[:+30]\circ-[:-30]\bullet-[:+30]CH_3}}, xmin=-180, xmax=180,
+    ylabel={$\Delta\Func{E}$}, ymin=-0.5, ymax=27.5
+    ]
+    \addplot [blue,thick,smooth,domain=-180:180%, domain y=-0.5:27.5] 
+    ] table [x=Tau,y=Erel] {Results/ScanButane.save.dat};
+    \addplot [red,thick,dotted,smooth,domain=-180:180, domain y=-1:27] table [x=Tau,y=Erel] {Results/ScanMeOEt.save.dat};
+    \addplot [yellow,thick,dashed,smooth,domain=-180:180, domain y=-1:27] table [x=Tau,y=Erel] {Results/ScanMeSEt.save.dat};
+    \addplot [green,thick,smooth,domain=-180:180, domain y=-1:27] table [x=Tau,y=Erel] {Results/ScanMeCOEt.save.dat};
+  \end{axis}
+\end{tikzpicture}
 
 \begin{table}
 \caption{\label{tab:InternalRotation:Butane}Внутреннее вращение молекулы \emph{н}-бутана~\cmpd{Butane}, MP2/aug-cc-pVTZ}
@@ -271,7 +308,7 @@ create col/assign/.code={%
 \end{table}
 
 \begin{table}
-  \caption{\label{tab:InternalRotation:Isopentane}Внутреннее вращение молекулы изопентана~\cmpd{Isopentane}, MP2/aug-cc-pVTZ}
+\caption{\label{tab:InternalRotation:Isopentane}Внутреннее вращение молекулы изопентана~\cmpd{Isopentane}, MP2/aug-cc-pVTZ}
 \pgfplotstabletypeset[column type=r,columns={Tau,Etot,Erel}]\ScanIsoPentane
 \end{table}
 
@@ -280,7 +317,8 @@ create col/assign/.code={%
 \end{table}
 
 \begin{table}
-  \caption{\label{tab:InternalRotation:Me2CHOMe}Внутреннее вращение молекулы метил-\emph{изо}-пропилового эфира~\cmpd{Me2CHOMe}, MP2/aug-cc-pVTZ}
+\caption{\label{tab:InternalRotation:Me2CHOMe}Внутреннее вращение молекулы метил-\emph{изо}-пропилового эфира~\cmpd{Me2CHOMe}, MP2/aug-cc-pVTZ}
+\pgfplotstabletypeset[column type=r,columns={Tau,Etot,Erel}]\ScanIPrOMe
 \end{table}
 
 \begin{table}
