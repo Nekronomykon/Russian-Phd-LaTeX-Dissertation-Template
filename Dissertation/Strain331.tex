@@ -125,7 +125,7 @@ $\tau_{\ce{OCCC}}\approx\ang{0}$ \\
 %\midrule\cmpd{Isopentanone} &\chemfig{H_3C-[:+30](-[:+90]CH_3)-[:-30]C(=[:-90]O)-[:+30]CH_3} & & & \\
 \end{longtabu}\label{tab:Reagents:Opt:Ends}
 
-За исключением простейших структур, молекулы реагентов также обладают конформационной подвижностью. В частности, инверсия атома азота триметиламина~\cmpd{Trimethylamine} взаимодействует со внутренним вращением метильных групп, а внутреннее вращение \emph{н}-бутана~\cmpd{Butane}\dots
+За исключением простейших структур, молекулы реагентов также обладают конформационной подвижностью. В частности, инверсия атома азота триметиламина~\cmpd{Trimethylamine} взаимодействует со внутренним вращением метильных групп. Внутреннее вращение \emph{н}-бутана~\cmpd{Butane} и его аналогов\dots
 
 
 \pgfplotstablecreatecol[%
@@ -142,8 +142,8 @@ create col/assign/.code={%
 %% a minimal value over the Emin column?
 %%
 \pgfplotstablecreatecol[%
-create col/assign/.code={%
 \pgfmathsetmacro{\minvalue}{-158.084303}
+create col/assign/.code={%
 \pgfkeyslet{/pgfplots/table/create col/next content}{{\getthisrow{Etot} - \minvalue} * \AUtoKJM}%
 }]{Erel}{\ScanButane} 
 %
