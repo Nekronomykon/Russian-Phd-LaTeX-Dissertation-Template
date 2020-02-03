@@ -143,16 +143,11 @@ create col/assign/.code={%
 %%
 \pgfplotstablecreatecol[%
 create col/assign/.code={%
-%\edef\pgfmathaccumb{\pgfmathaccuma}
-  \getthisrow{Etot}\entryval %
-  \getthisrow{Emin}\minval %
-\ifnum\pgfplotstablerow>0
-\pgfmathsetmacro{\entryval}{\AUtoKJM * {\entryval - \minval}}%
-\fi
-%\edef\pgfmathaccuma{\minval}
-\pgfkeyslet{/pgfplots/table/create col/next content}\entryval
-}]{Erel}\ScanButane %
-\pgfplotstabletypeset[column type=r,columns={Tau,Etot,Emin,Erel}
+\pgfmathsetmacro{\minvalue}{-158.084303}
+\pgfkeyslet{/pgfplots/table/create col/next content}{{\getthisrow{Etot} - \minvalue} * \AUtoKJM}%
+}]{Erel}{\ScanButane} 
+%
+\pgfplotstabletypeset[column type=r,columns={Tau,Etot,Erel}
 ]
 \ScanButane
 
