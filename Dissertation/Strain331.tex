@@ -42,7 +42,7 @@
   3\(\cdot\)\chemfig{H_3C-[:+30]N(-[:+90]CH_3)-[:-30]-[:+30]CH_3}
 \end{center}
 
-А для аналогов 1,5-диаазабицикло[3.3.1]нонана
+Для аналогов 1,5-диаазабицикло[3.3.1]нонана
 \begin{center}
   \chemfig{[:-30]*6(-N(-[:180]-[:120]X-[:+60]-[:0]\phantom{N}?)--Y--N-)}
   + \chemfig{H_3C-[:-30]X-[:+30]CH_3} + \chemfig{H_3C-[:-30]Y-[:+30]CH_3} + 5\(\cdot\) \chemfig{H_3C-[:-30]-[:+30]CH_3}
@@ -120,9 +120,9 @@ $\angle\ce{C(O)CC}~\ang{113.4}$;
 %$\tau_{\ce{OCCC}}\approx\ang{0}$ 
 \\
 \midrule\chemfig{H_3C-[:-30](-[:-90]CH_3)-[:+30]-[:-30]CH_3}  & \cmpd{Isopentane} & \num{-197.311142} & \num{0.161457} & \\
-\midrule \chemfig{H_3C-[:-30]N(-[:-90]CH_3)-[:+30]-[:-30]CH_3} & \cmpd{Me2NEt} & & & \\
 \midrule\chemfig{H_3C-[:-30](-[:-90]CH_3)-[:+30]O-[:-30]CH_3} & \cmpd{Me2CHOMe} & \num{-233.195233} & \num{0.137450} &  \\
 \midrule\chemfig{H_3C-[:-30](-[:-90]CH_3)-[:+30]S-[:-30]CH_3} & \cmpd{Me2CHSMe} & & & \\
+\midrule \chemfig{H_3C-[:-30]N(-[:-90]CH_3)-[:+30]-[:-30]CH_3} & \cmpd{Me2NEt} & & & \\
 %\midrule\cmpd{Isopentanone} &\chemfig{H_3C-[:+30](-[:+90]CH_3)-[:-30]C(=[:-90]O)-[:+30]CH_3} & & & \\
 \end{longtabu}\label{tab:Reagents:Opt:Ends}
 
@@ -273,19 +273,40 @@ create col/assign/.code={%
 %\end{axis}
 %\end{tikzpicture}
 
+\begin{figure}
+\centering
 \begin{tikzpicture}
   \begin{axis}[
-    title={Внутреннее вращение},
-    xlabel={\chemfig{H_3C-[:+30]\circ-[:-30]\bullet-[:+30]CH_3}}, xmin=-180, xmax=180,
+    %title={Внутреннее вращение},
+    xlabel={\chemfig{H_3C-[:+30]\circ-[:-30]\circ-[:+30]CH_3}}, xmin=-180, xmax=180,
     ylabel={$\Delta\Func{E}$}, ymin=-0.5, ymax=27.5
     ]
-    \addplot [blue,thick,smooth,domain=-180:180%, domain y=-0.5:27.5] 
+    \addplot [black,thick,smooth,domain=-180:180%, domain y=-0.5:27.5] 
     ] table [x=Tau,y=Erel] {Results/ScanButane.save.dat};
     \addplot [red,thick,dotted,smooth,domain=-180:180, domain y=-1:27] table [x=Tau,y=Erel] {Results/ScanMeOEt.save.dat};
     \addplot [yellow,thick,dashed,smooth,domain=-180:180, domain y=-1:27] table [x=Tau,y=Erel] {Results/ScanMeSEt.save.dat};
     \addplot [green,thick,smooth,domain=-180:180, domain y=-1:27] table [x=Tau,y=Erel] {Results/ScanMeCOEt.save.dat};
   \end{axis}
 \end{tikzpicture}
+\caption{\label{fig:Internal:Rotation:Butanes}Потенциалы внутреннего вращения молекул \cmpd{Butane}--\cmpd{Butanone}}
+\end{figure}
+
+\begin{figure}
+  \centering
+\begin{tikzpicture}
+  \begin{axis}[
+    xlabel={\chemfig{H_3C-[:+30]\circ-[:-30]\bullet(-[:-90]CH_3)-[:+30]CH_3}}, xmin=-180, xmax=180,
+ylabel={$\Delta\Func{E}$}, ymin=-0.5, ymax=27.5
+]
+\addplot [black,thick,smooth,domain=-180:180%, domain y=-0.5:27.5] 
+] table [x=Tau,y=Erel] {Results/ScanIsopentane.save.dat};
+\addplot [red,thick,dotted,smooth,domain=-180:180, domain y=-1:27] table [x=Tau,y=Erel] {Results/ScanIPrOMe.save.dat};
+%\addplot [yellow,thick,dashed,smooth,domain=-180:180, domain y=-1:27] table [x=Tau,y=Erel] {Results/ScanIPrSMe.save.dat};
+%\addplot [blue,thick,smooth,domain=-180:180, domain y=-1:27] table [x=Tau,y=Erel] {Results/ScanMeMeNEt.save.dat};
+\end{axis}
+\end{tikzpicture}
+\caption{\label{fig:Internal:Rotation:Isopentanes}Потенциалы внутреннего вращения молекул \cmpd{Isopentane}--\cmpd{Me2NEt}}
+\end{figure}
 
 \begin{table}
 \caption{\label{tab:InternalRotation:Butane}Внутреннее вращение молекулы \emph{н}-бутана~\cmpd{Butane}, MP2/aug-cc-pVTZ}
