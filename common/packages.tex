@@ -130,6 +130,7 @@
 \usetikzlibrary{shapes.geometric}   % Для примера tikz рисунка
 \usetikzlibrary{shapes.symbols}     % Для примера tikz рисунка
 \usetikzlibrary{arrows}             % Для примера tikz рисунка
+\usetikzlibrary{datavisualization}
 
 %%% Гиперссылки %%%
 \usepackage{hyperref}[2012/11/06]
@@ -334,50 +335,20 @@
 %%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \usepackage{pgfplotstable}
-\pgfplotsset{compat=1.16}
+\pgfplotsset{width=8cm,compat=1.16}
 %\pgfkeys{/pgf/fpu=true}
-\newcommand{\findmax}[2]{
-  % Starting value for max : 0
-  \pgfmathtruncatemacro{\mymax}{0}
-  
-  % Parsing each element of the first column
-  \pgfplotsinvokeforeach {0,...,5}{
-    \pgfplotstablegetelem{##1}{#1}\of{\mytable}
-    \ifthenelse{ \pgfplotsretval > \mymax }
-    {\pgfmathtruncatemacro{\mymax}{\pgfplotsretval}} % valid
-    {}  %invalid
-  }
-  \let\ymax=\mymax%
-}
-\newcommand{\findmin}[2]{
-  % Starting value for min : 0
-  \pgfmathtruncatemacro{\mymin}{0}
-  
-  % Parsing each element of the first column
-  \pgfplotsinvokeforeach {0,...,5}{
-    \pgfplotstablegetelem{##1}{#1}\of{\mytable}
-    \ifthenelse{ \pgfplotsretval < \mymin }
-    {\pgfmathtruncatemacro{\mymin}{\pgfplotsretval}} % valid
-    {}  %invalid
-  }
-  \let\ymin=\mymin%
-}
 \pgfplotstableset{%
   1000 sep={},
   empty cells with = {\ensuremath{-}},
   every head row/.style = {before row=\toprule,after row=\midrule},
   every last row/.style = {after row=\bottomrule},
-  columns/Tau/.style={int detect,column type=r,column name={$\tau,~\si{\degree}$}},
-  columns/Etot/.style={fixed,fixed zerofill,precision=6,column type=r,column name={$E_{tot},~\si{\hartree}$}},
-  % columns/Erel/.style={}
-  %create on use/Emin/.style={create col/copy=Etot},
+  columns/Tau/.style={int detect,column type=r,column name={$\tau$}},
+  columns/Etot/.style={fixed,fixed zerofill,precision=6,column name={$E_{tot}$}},
   columns/Emin/.style={fixed,fixed zerofill,precision=6,
-    column name={$E_0,~\si{\hartree}$},
-    % create col/expr accum={\ifthenelse{\thisrow{Etot} < \pgfmathaccuma}{\thisrow{Etot}}{\pgfmathaccuma}}{0}
+    column name={$E_0$},
   },
-  %create on use/Erel/.style={create col/copy=Emin},
-  columns/Erel/.style={fixed,fixed zerofill,precision=6,showpos,
-    column name={$\Delta\Func{E},~\si{\kilo\joule\per\mole}$},
+  columns/Erel/.style={fixed,fixed zerofill,precision=2,%showpos,
+    column name={$\Delta\Func{E}$},
     %create on use={create col/expr={2625.5 * {\thisrow{Etot} - \thisrow{Emin}} } },
   }
 }

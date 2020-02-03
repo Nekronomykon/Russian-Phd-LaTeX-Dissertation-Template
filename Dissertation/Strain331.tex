@@ -70,18 +70,18 @@
 %\caption{\label{tab:Desmotic:Reagents}Результаты расчёта реагентов для реакций разделения связей}
 
 \begin{longtabu} to \textwidth {rr|SS|X[l]}
-\multicolumn{5}{p{\textwidth}}{Таблица\label{tab:Reagents:Opt}~\arabic{table}. Строение молекул-\tqt{реагентов} для гипергомодесмотических реакций разделения связей} \\ %
+\multicolumn{5}{p{\textwidth}}{Таблица\label{tab:Reagents:Opt}~\arabic{table}. Строение молекул-\tqt{реагентов} для реакций разделения связей по данным неэмпирических расчётов} \\ %
 \toprule\multicolumn{2}{c|}{Структура / симметрия}  & \(E_{2}\),~\si{\hartree} & \(E_{ZPE}\),~\si{\hartree} & Геометрия \endfirsthead
 \multicolumn{5}{p{\textwidth}}{\emph{продолжение таблицы}~\arabic{table}} \\
 \toprule\multicolumn{2}{c|}{Структура / симметрия} & \(E_{2}\),~\si{\hartree} & \(E_{ZPE}\),~\si{\hartree} & Геометрия \endhead
-  \bottomrule\multicolumn{5}{l}{\emph{продолжение на следующей странице}} \endfoot
+  \midrule\multicolumn{5}{l}{\emph{продолжение на следующей странице}} \endfoot
   \bottomrule\multicolumn{5}{l}{} \endlastfoot
 \midrule\chemfig{H_3C-[:-30]-[:+30]CH_3} / \(\SymGroup{C}{2v}\) &\cmpd{Propane} & \num{-118.859638} & \num{0.104589} &
 \ce{C-C}~\SI{1.523}{\angstrom}; $\angle$\ce{CCC}~\ang{112.3} \\
-\midrule \chemfig{H_3C-[:-30]O-[:+30]CH_3} / \(\SymGroup{C}{2v}\) &\cmpd{Dimethylether} & \num{-154.737526} & \num{0.080693} & 
+\midrule \chemfig{H_3C-[:-30]O-[:+30]CH_3} / \(\SymGroup{C}{2v}\) &\cmpd{Me2O} & \num{-154.737526} & \num{0.080693} & 
 \ce{C-O}~\SI{1.411}{\angstrom};
 $\angle$\ce{COC}~\ang{110.5} \\
-\midrule \chemfig{H_3C-[:-30]S-[:+30]CH_3} / \(\SymGroup{C}{2v}\) & \cmpd{Dimethylsulfide} & \num{-477.351949} & \num{0.076641} & 
+\midrule \chemfig{H_3C-[:-30]S-[:+30]CH_3} / \(\SymGroup{C}{2v}\) & \cmpd{Me2S} & \num{-477.351949} & \num{0.076641} & 
 \ce{C-S}~\SI{1.804}{\angstrom}; 
 $\angle$\ce{CSC}~\ang{97.9} \\
 %\midrule\cmpd{Dimethylamine} & \chemfig{H_3C-[:-30]N(-[:-90]H)-[:+30]CH_3} & \(\SymGroup{C}{s}\) & \\
@@ -97,13 +97,13 @@ $\angle$\ce{CNC}~\ang{110.2} \\
 \ce{H_3C-CH_2}~\SI{1.524}{\angstrom}; 
 \ce{H_2C-CH_2}~\SI{1.523}{\angstrom}; 
 $\angle$\ce{CCC}~\ang{112.3} \\
-\midrule\chemfig{H_3C-[:-30]O-[:+30]-[:-30]CH_3} / \(\SymGroup{C}{s}\) & \cmpd{Methylethylether} &  \num{-193.966394} & \num{0.108895} & 
+\midrule\chemfig{H_3C-[:-30]O-[:+30]-[:-30]CH_3} / \(\SymGroup{C}{s}\) & \cmpd{MeOEt} &  \num{-193.966394} & \num{0.108895} & 
 \ce{H3C-O}~\SI{1.412}{\angstrom};
 \ce{H_2C-O}~\SI{1.417}{\angstrom};
 \ce{H2C-CH_3}~\SI{1.509}{\angstrom};
 $\angle$\ce{COC}~\ang{111.2};
 $\angle$\ce{OCC}~\ang{108.1} \\
-\midrule\chemfig{H_3C-[:-30]S-[:+30]-[:-30]CH_3} / \(\SymGroup{C}{s}\) & \cmpd{Methylethylthioether} &  \num{-516.576661} & \num{0.105402} &
+\midrule\chemfig{H_3C-[:-30]S-[:+30]-[:-30]CH_3} / \(\SymGroup{C}{s}\) & \cmpd{MeSEt} &  \num{-516.576661} & \num{0.105402} &
 \ce{H_3C-S}~\SI{1.805}{\angstrom}; 
 \ce{H_2C-S}~\SI{1.809}{\angstrom}; 
 \ce{H_2C-CH_3}~\SI{1.519}{\angstrom}; 
@@ -113,43 +113,44 @@ $\angle$\ce{SCC}~\ang{109.3} \\
 \ce{H_3C-CO}~\SI{1.509}{\angstrom}; 
 \ce{H_2C-CO}~\SI{1.513}{\angstrom}; 
 \ce{H_3C-CH_2}~\SI{1.517}{\angstrom};
-$\angle$\ce{OCC(H_3)}~\ang{121.9};
-$\angle$\ce{OCC(H_2)}~\ang{122.1}; 
-$\angle$\ce{CC(O)C}~\ang{116.0}; 
+$\angle\ce{OCC(H_3)}~\ang{121.9}$;
+$\angle\ce{OCC(H_2)}~\ang{122.1}$; 
+$\angle\ce{CC(O)C}~\ang{116.0}$; 
 $\angle\ce{C(O)CC}~\ang{113.4}$;
-$\tau_{\ce{OCCC}}\approx\ang{0}$ \\
+%$\tau_{\ce{OCCC}}\approx\ang{0}$ 
+\\
 \midrule\chemfig{H_3C-[:-30](-[:-90]CH_3)-[:+30]-[:-30]CH_3}  & \cmpd{Isopentane} & \num{-197.311142} & \num{0.161457} & \\
-\midrule \chemfig{H_3C-[:-30]N(-[:-90]CH_3)-[:+30]-[:-30]CH_3} & \cmpd{Dimethylethylamine} & & & \\
-\midrule\chemfig{H_3C-[:-30](-[:-90]CH_3)-[:+30]O-[:-30]CH_3} & \cmpd{Methylisopropylether} & \num{-233.195233} & \num{0.137450} &  \\
-\midrule\chemfig{H_3C-[:-30](-[:-90]CH_3)-[:+30]S-[:-30]CH_3} & \cmpd{Methylisopropylthioether} & & & \\
+\midrule \chemfig{H_3C-[:-30]N(-[:-90]CH_3)-[:+30]-[:-30]CH_3} & \cmpd{Me2NEt} & & & \\
+\midrule\chemfig{H_3C-[:-30](-[:-90]CH_3)-[:+30]O-[:-30]CH_3} & \cmpd{Me2CHOMe} & \num{-233.195233} & \num{0.137450} &  \\
+\midrule\chemfig{H_3C-[:-30](-[:-90]CH_3)-[:+30]S-[:-30]CH_3} & \cmpd{Me2CHSMe} & & & \\
 %\midrule\cmpd{Isopentanone} &\chemfig{H_3C-[:+30](-[:+90]CH_3)-[:-30]C(=[:-90]O)-[:+30]CH_3} & & & \\
 \end{longtabu}\label{tab:Reagents:Opt:Ends}
 
 За исключением простейших структур, молекулы реагентов также обладают конформационной подвижностью. В частности, инверсия атома азота триметиламина~\cmpd{Trimethylamine} взаимодействует со внутренним вращением метильных групп. Внутреннее вращение \emph{н}-бутана~\cmpd{Butane} и его аналогов\dots
 
-
 \pgfplotstablecreatecol[%
 create col/assign/.code={%
 \getthisrow{Etot}\entryval%
-\ifnum\pgfplotstablerow>0
+%\ifnum\pgfplotstablerow>0
 \pgfmathsetmacro{\entryval}{min(\entryval,\pgfmathaccuma)}%
-\fi
+%\fi
 \edef\pgfmathaccuma{\entryval}
 \pgfkeyslet{/pgfplots/table/create col/next content}\entryval
-}]{Emin}\ScanButane %
-%%
-%% does \pgfmathaccuma still contain here
-%% a minimal value over the Emin column?
-%%
+}
+]{Emin}\ScanButane %
 \pgfplotstablecreatecol[%
-\pgfmathsetmacro{\minvalue}{-158.084303}
 create col/assign/.code={%
-\pgfkeyslet{/pgfplots/table/create col/next content}{{\getthisrow{Etot} - \minvalue} * \AUtoKJM}%
-}]{Erel}{\ScanButane} 
-%
-\pgfplotstabletypeset[column type=r,columns={Tau,Etot,Erel}
-]
-\ScanButane
+  \getthisrow{Etot}\entryval%
+  \getthisrow{Emin}\refval%
+  %\ifnum\pgfplotstablerow>0
+  \pgfmathsetmacro{\entryval}{\entryval - \refval}%
+  \pgfmathsetmacro{\entryval}{\AUtoKJM * \entryval}%
+  %\fi
+  \edef\pgfmathaccuma{\entryval}
+  \pgfkeyslet{/pgfplots/table/create col/next content}\entryval
+}
+]{Erel}\ScanButane %
+\pgfplotstablesave[columns={Tau,Etot,Erel}]{\ScanButane}{Results/ScanButane.save.dat}
 
 \pgfplotstablecreatecol[%
 create col/assign/.code={%
@@ -160,9 +161,19 @@ create col/assign/.code={%
   \edef\pgfmathaccuma{\entry}
   \pgfkeyslet{/pgfplots/table/create col/next content}\entry
 }]{Emin}\ScanMeOEt %
-\pgfplotstabletypeset[column type=r,columns={Tau,Etot,Emin}%,Erel}
-]
-\ScanMeOEt
+\pgfplotstablecreatecol[%
+create col/assign/.code={%
+  \getthisrow{Etot}\entryval%
+  \getthisrow{Emin}\refval%
+  %\ifnum\pgfplotstablerow>0
+  \pgfmathsetmacro{\entryval}{\entryval - \refval}%
+  \pgfmathsetmacro{\entryval}{\AUtoKJM * \entryval}%
+  %\fi
+  \edef\pgfmathaccuma{\entryval}
+  \pgfkeyslet{/pgfplots/table/create col/next content}\entryval
+}
+]{Erel}\ScanMeOEt %
+\pgfplotstablesave[columns={Tau,Etot,Erel}]{\ScanMeOEt}{Results/ScanMeOEt.save.dat}
 
 \pgfplotstablecreatecol[%
 create col/assign/.code={%
@@ -173,9 +184,19 @@ create col/assign/.code={%
   \edef\pgfmathaccuma{\entry}
   \pgfkeyslet{/pgfplots/table/create col/next content}\entry
 }]{Emin}\ScanMeSEt %
-\pgfplotstabletypeset[column type=r,columns={Tau,Etot,Emin}%,Erel}
-]
-\ScanMeSEt
+\pgfplotstablecreatecol[%
+create col/assign/.code={%
+  \getthisrow{Etot}\entryval%
+  \getthisrow{Emin}\refval%
+  %\ifnum\pgfplotstablerow>0
+  \pgfmathsetmacro{\entryval}{\entryval - \refval}%
+  \pgfmathsetmacro{\entryval}{\AUtoKJM * \entryval}%
+  %\fi
+  \edef\pgfmathaccuma{\entryval}
+  \pgfkeyslet{/pgfplots/table/create col/next content}\entryval
+}
+]{Erel}\ScanMeSEt %
+\pgfplotstablesave[columns={Tau,Etot,Erel}]{\ScanMeOEt}{Results/ScanMeSEt.save.dat}
 
 \pgfplotstablecreatecol[%
 create col/assign/.code={%
@@ -186,9 +207,86 @@ create col/assign/.code={%
   \edef\pgfmathaccuma{\entry}
   \pgfkeyslet{/pgfplots/table/create col/next content}\entry
 }]{Emin}\ScanMeCOEt %
-\pgfplotstabletypeset[column type=r,columns={Tau,Etot,Emin}%,Erel}
-]
-\ScanMeCOEt
+\pgfplotstablecreatecol[%
+create col/assign/.code={%
+  \getthisrow{Etot}\entryval%
+  \getthisrow{Emin}\refval%
+  %\ifnum\pgfplotstablerow>0
+  \pgfmathsetmacro{\entryval}{\entryval - \refval}%
+  \pgfmathsetmacro{\entryval}{\AUtoKJM * \entryval}%
+  %\fi
+  \edef\pgfmathaccuma{\entryval}
+  \pgfkeyslet{/pgfplots/table/create col/next content}\entryval
+}
+]{Erel}\ScanMeCOEt %
+\pgfplotstablesave[columns={Tau,Etot,Erel}]{\ScanMeCOEt}{Results/ScanMeCOEt.save.dat}
+
+\pgfplotstablecreatecol[%
+create col/assign/.code={%
+  \getthisrow{Etot}\entry%
+  \ifnum\pgfplotstablerow>0
+  \pgfmathsetmacro{\entry}{min(\entry,\pgfmathaccuma)}%
+  \fi
+  \edef\pgfmathaccuma{\entry}
+  \pgfkeyslet{/pgfplots/table/create col/next content}\entry
+}]{Emin}\ScanIsoPentane %
+\pgfplotstablecreatecol[%
+create col/assign/.code={%
+  \getthisrow{Etot}\entryval%
+  \getthisrow{Emin}\refval%
+  %\ifnum\pgfplotstablerow>0
+  \pgfmathsetmacro{\entryval}{\entryval - \refval}%
+  \pgfmathsetmacro{\entryval}{\AUtoKJM * \entryval}%
+  %\fi
+  \edef\pgfmathaccuma{\entryval}
+  \pgfkeyslet{/pgfplots/table/create col/next content}\entryval
+}
+]{Erel}\ScanIsoPentane %
+\pgfplotstablesave[columns={Tau,Etot,Erel}]{\ScanIsoPentane}{Results/ScanIsoPentane.save.dat}
+
+%\begin{tikzpicture}
+%\begin{axis}[xlabel=$\tau$,ylabel=$\Delta\Func{E}$% table
+%\addplot table[x=Tau,y=Erel,]{Results/ScanButane.save.dat};
+%\end{axis}
+%\end{tikzpicture}
+
+\begin{table}
+\caption{\label{tab:InternalRotation:Butane}Внутреннее вращение молекулы \emph{н}-бутана~\cmpd{Butane}, MP2/aug-cc-pVTZ}
+\pgfplotstabletypeset[column type=r,columns={Tau,Etot,Erel}]\ScanButane
+\end{table}
+
+\begin{table}
+\caption{\label{tab:InternalRotation:MeOEt}Внутреннее вращение молекулы метиэтилового эфира~\cmpd{MeOEt}, MP2/aug-cc-pVTZ}
+\pgfplotstabletypeset[column type=r,columns={Tau,Etot,Erel}]\ScanMeOEt
+\end{table}
+
+\begin{table}
+\caption{\label{tab:InternalRotation:MeSEt}Внутреннее вращение молекулы метилэтилсульфида~\cmpd{MeSEt}, MP2/aug-cc-pVTZ}
+\pgfplotstabletypeset[column type=r,columns={Tau,Etot,Erel}]\ScanMeSEt
+\end{table}
+
+\begin{table}
+\caption{\label{tab:InternalRotation:Butanone}Внутреннее вращение молекулы бутанона-2~\cmpd{Butanone}, MP2/aug-cc-pVTZ}
+\pgfplotstabletypeset[column type=r,columns={Tau,Etot,Erel}]\ScanMeCOEt
+\end{table}
+
+\begin{table}
+  \caption{\label{tab:InternalRotation:Isopentane}Внутреннее вращение молекулы изопентана~\cmpd{Isopentane}, MP2/aug-cc-pVTZ}
+\pgfplotstabletypeset[column type=r,columns={Tau,Etot,Erel}]\ScanIsoPentane
+\end{table}
+
+\begin{table}
+  \caption{\label{tab:InternalRotation:Me2NEt}Внутреннее вращение молекулы \ce{N},\ce{N}-диметилэтиламина~\cmpd{Me2NEt}, MP2/aug-cc-pVTZ}
+\end{table}
+
+\begin{table}
+  \caption{\label{tab:InternalRotation:Me2CHOMe}Внутреннее вращение молекулы метил-\emph{изо}-пропилового эфира~\cmpd{Me2CHOMe}, MP2/aug-cc-pVTZ}
+\end{table}
+
+\begin{table}
+\caption{\label{tab:InternalRotation:Me2CHSMe}Внутреннее вращение молекулы метил-\emph{изо}-пропилсульфида~\cmpd{Me2CHSMe}, MP2/aug-cc-pVTZ}
+\end{table}
+
 
 \section{Напряжения свободных шестичленных циклов}
 
@@ -214,13 +312,13 @@ B таблице~\ref{tab:Cycle:Six:Opt} на с.~\pageref{tab:Cycle:Six:Opt}--\
   \chemfig{*6(------)} \quad\chemfig{*6(-X-----)} \quad\chemfig{*6(---Y--X-)} \quad\chemfig{*6(-X---Y--)} \quad\chemfig{*6(-Z--Y--X-)}
 \end{center}
 
-\begin{longtabu} to \textwidth {rl|SS|X[l]}
-\multicolumn{5}{p{\textwidth}}{Таблица\label{tab:Cycle:Six:Opt}~\arabic{table}. Расчётное строение молекул циклогексана и его аналогов} \\ %  
+\begin{longtabu} to \textwidth {rc|SS|X[l]}
+\multicolumn{5}{p{\textwidth}}{Таблица\label{tab:Cycle:Six:Opt}~\arabic{table}. Строение молекул циклогексана и его аналогов по данным неэмпирических расчётов} \\ %  
 \toprule\multicolumn{2}{c|}{Структура}  & \(E_{2}\),~\si{\hartree} & \(E_{ZPE}\),~\si{\hartree} & Геометрия \endfirsthead
   \multicolumn{5}{p{\textwidth}}{\emph{продолжение таблицы}~\arabic{table}:} \\
   \toprule\multicolumn{2}{c|}{Структура} & \(E_{2}\),~\si{\hartree} & \(E_{ZPE}\),~\si{\hartree} & Геометрия\endhead
-  \multicolumn{5}{l}{\emph{продолжение на следующей странице}}\endfoot
-  \endlastfoot\bottomrule
+  \midrule\multicolumn{5}{l}{\emph{продолжение на следующей странице}}\endfoot
+  \bottomrule\multicolumn{5}{l}{}\endlastfoot
   \midrule\cmpd{Cyclohexane} & \chemfig{?-[:+160]-[:-120]<[:+20]-[:-20,,,,line width=\boldbondwidth]>[:+60]?} / \SymGroup{D}{3d} &  \num{-235.344605} & \num{0.171358}& \ce{C-C}~\SI{1.526}{\angstrom}; $\angle$\ce{CCC}~\ang{110.7}; $\tau=\pm\ang{56.9}$ 
   \\ \bottomrule \multicolumn{5}{l}{Монозамещённые (\emph{пентаметиленовые}) производные~(\SymGroup{C}{s}) } \\
 \toprule\cmpd{Pyran} & \chemfig{?-[:+160]-[:-120]O<[:+20]-[:-20,,,,line width=\boldbondwidth]>[:+60]?} &  \num{-271.229641} & & \ce{C-C} \\
@@ -231,6 +329,7 @@ B таблице~\ref{tab:Cycle:Six:Opt} на с.~\pageref{tab:Cycle:Six:Opt}--\
 \multicolumn{5}{l}{Симметричные 1,3-дизамещённые производные~(\ce{X}=\ce{Y},~\SymGroup{C}{s}) } \\ 
 \toprule\cmpd{Dioxane13} & \chemfig{?-[:+160]-[:-120]O<[:+20]-[:-20,,,,line width=\boldbondwidth]O>[:+60]?} & & & \ce{C-C} \\ 
 \midrule\cmpd{Dithiane13} & \chemfig{?-[:+160]-[:-120]S<[:+20]-[:-20,,,,line width=\boldbondwidth]S>[:+60]?} & & & \ce{C-C} \\
+\midrule\cmpd{N2Me2Diazine13} & \chemfig{?-[:+160]-[:-120]N(-[:+160]H_3C)<[:+20]-[:-20,,,,line width=\boldbondwidth]N(-[:+20]CH_3)>[:+60]?} & & & \ce{C-C} \\
 \bottomrule
 \multicolumn{5}{l}{Симметричные 1,4-дизамещённые производные~(\ce{X}=\ce{Y},~\SymGroup{C}{2h}) } \\
 \toprule\cmpd{Dioxane14} & \chemfig{?-[:+160]-[:-120]O<[:+20]-[:-20,,,,line width=\boldbondwidth]>[:+60]O?} & & & \ce{C-C} \\
@@ -253,7 +352,10 @@ B таблице~\ref{tab:Cycle:Six:Opt} на с.~\pageref{tab:Cycle:Six:Opt}--\
 \toprule\cmpd{STrioxane} & \chemfig{O?-[:+160]-[:-120]O<[:+20]-[:-20,,,,line width=\boldbondwidth]O>[:+60]?} & \num{} & & \ce{C-O} \\
 \midrule\cmpd{STrithiane} & \chemfig{S?-[:+160]-[:-120]S<[:+20]-[:-20,,,,line width=\boldbondwidth]S>[:+60]?} & & & \ce{C-S} \\
 \bottomrule\multicolumn{5}{l}{Несимметричные 1,3,5-тризамещённые производные~(\ce{X}=\ce{Y},~\SymGroup{C}{s}) } \\
-\toprule
+\toprule\cmpd{Thiodioxane35} & \chemfig{S?-[:+160]-[:-120]O<[:+20]-[:-20,,,,line width=\boldbondwidth]O>[:+60]?} & & & \ce{C-C} \\ 
+\midrule\cmpd{Oxa5dithiane13} & \chemfig{O?-[:+160]-[:-120]S<[:+20]-[:-20,,,,line width=\boldbondwidth]S>[:+60]?} & & & \ce{C-C} \\
+\midrule\cmpd{N2Me2Oxa5diazine13} & \chemfig{O?-[:+160]-[:-120]N(-[:+160]H_3C)<[:+20]-[:-20,,,,line width=\boldbondwidth]N(-[:+20]CH_3)>[:+60]?} & & & \ce{C-C} \\
+\midrule\cmpd{N2Me2Thia5diazine13} & \chemfig{S?-[:+160]-[:-120]N(-[:+160]H_3C)<[:+20]-[:-20,,,,line width=\boldbondwidth]N(-[:+20]CH_3)>[:+60]?} & & & \ce{C-C} \\
 \bottomrule
 \end{longtabu}\label{tab:Cycle:Six:Opt:Ends}
 
