@@ -4,15 +4,16 @@
 
 \epigraph{Quia igitur huius mundi machina sphaerica est, dicendum est in primis quid sit sphaera?}{De sphaera Lincolniensem Secundum tractatus, cap. I}
 
-Под термином \tqt{\emph{циклическая система}} здесь и в дальнейшем мы подразумеваем циклы и полициклические каркасы в общем, рассматривая прежде всего их остовы, состоящие обычно из тяжёлых (неводородных) атомов.
+Под термином \tqt{\emph{циклическая система}} здесь и в дальнейшем мы подразумеваем молекулярные циклы и полициклические каркасы, рассматриваемые как часть молекулы, и прежде всего "--- их остовы, состоящие обычно из тяжёлых (неводородных) атомов.
 
 \begin{figure}
-  \centering
+  \centerfloat{
   %\vspace{\bigskipamount}
   \vspace{\bigskipamount}
   Двухкоординированнные~(тип~I)
-  
-  \chemfig{>[:+30]CH_2-[:+150]}
+  \vspace{\medskipamount}
+
+  \chemfig{[,1.25]>[:+30]\circ-[:+150]}
 
   \vspace{\medskipamount}
   \begin{tabular}{cc|cc|}
@@ -27,7 +28,7 @@
     \chemfig{>[:+30]N(-R)-[:+150]} & 
     \chemfig{>[:+30]O-[:+150]} \\
   \end{tabular}
-  ~
+
   \begin{tabular}{c|ccc|}
     \chemfig{>[:+30]Si(-[:+55]R)(-[:-55]R{'})-[:+150]} &
     \chemfig{>[:+30]P(-H)-[:+150]} & \chemfig{>[:+30]P(-R)-[:+150]} & \chemfig{>[:+30]P(-[:+55]R)(=[:-55]O)-[:+150]} \\
@@ -39,45 +40,50 @@
   \end{tabular}
   
   \vspace{\bigskipamount}
-  Трёхкоординированные~(тип~II)
+  Трёх- и четырёхкоординированные~(тип~II)
+  \vspace{\medskipamount}
   
-  \chemfig{C(<[:-120])(<:[:-60])(-[:+150]H)-[:+30]}
+  \chemfig{[,1.25]\bullet(<[:-120])(<:[:-60])(-[:+150])-[:+30]}
 
   \vspace{\medskipamount}
   \begin{tabular}{c|c|cc|c|cc}
     \chemfig{B(<[:-120])(<:[:-60])-[:+90]} & \chemfig{C(<[:-120])(<:[:-60])(-[:+150]R)-[:+30]} &   \chemfig{N(<[:-120])(<:[:-60])-[:+30]} & \chemfig{N^+(<[:-120])(<:[:-60])(-[:+150]R)-[:+30]} & \chemfig{Si(<[:-120])(<:[:-60])(-[:+150]R)-[:+30]} &  \chemfig{P(<[:-120])(<:[:-60])-[:+30]} & \chemfig{P(<[:-120])(<:[:-60])(=[:+150]O)-[:+30]}
   \end{tabular}
+}
   \vspace{\medskipamount}
   \caption{\label{fig:Atom:Types}Стереохимическая типизация атомов в циклических системах}
 \end{figure}
 
 Мы используем широкое понятие о \tqt{замещении} в циклических системах; то есть, если дополнительно не оговаривается иное, мы имеем в виду под замещением не только введение или изменение заместителя (\emph{замещение} в~узком смысле слова), но и \emph{гетероаналогию} или \emph{гетероаналогичное замещение} атома \ce{C} соответствующего циклического углеводорода на~гетероатом того же стереохимического типа~(рис.~\ref{fig:Atom:Types}). 
 
-Конформационный анализ молекулярных структур часто включает их разбиение на~подструктуры с дальнейшим выражением конформации структуры в~целом как суперпозиции конформаций подструктур. Система бицикло[3.3.1]нонана~\cmpd{Bicycle331} допускает несколько вариантов подобных разбиений~(рис.~\ref{fig:Decomposition:331}):
+Различие между типами состоит в том, что простые, свободные циклы состоят только из атомов типа~I, а~би- и полициклические каркасы обнаруживают в своём составе не~менее двух атомов типа~II.
+
+Конформационный анализ молекулярных структур часто включает их разбиение на~подструктуры с~дальнейшим выражением конформации структуры в~целом как суперпозиции конформаций подструктур. Система бицикло[3.3.1]нонана~\cmpd{Bicycle331} допускает несколько вариантов подобных разбиений~(рис.~\ref{fig:Decomposition:331}):
 
 \begin{enumerate}
 \item\label{item:331:Decomposition:6:6} Два 1,3-конденсированных шестичленных цикла (здесь и~в~дальнейшем циклы будем обозначать вместе с~направлением обхода): $\text{\CycleFirst} = \left(5\rightarrow 9\rightarrow 1\rightarrow 2\rightarrow 3\rightarrow 4\right)$ и~$\text{\CycleSecond} = \left(1\rightarrow 9\rightarrow 5\rightarrow 6\rightarrow 7\rightarrow 8\right)$;
 \item\label{item:331:Decomposition:8:1} Восьмичленный цикл~$\text{\CycleThird} = \left(8\rightarrow 7\rightarrow 6\rightarrow 5\rightarrow 4\rightarrow 3\rightarrow 2\rightarrow 1\right)$ с одноатомным мостиком $-9-$ между положениями 1 и 5;
 \item\label{item:331:Decomposition:2x5:3} Два пятичленных \emph{псевдоцикла} (группы из атомов, трактуемых как цикл, но не обязательно соединённых связями в соответствующем порядке) $\text{\CyclePseudoFirst}=(1\rightarrow 2\rightarrow 3\rightarrow 4\rightarrow 5)$ и $\text{\CyclePseudoSecond}=(5\rightarrow 6\rightarrow 7\rightarrow 8\rightarrow 1)$, примыкающих к трёхчленному псевдоциклу $(1\rightarrow 9\rightarrow 5)$;
-\item\label{item:331:Decomposition:2x2:2} Три связанных трёхатомных фрагмента: $2-3-4$, $8-7-6$ (т.\,н. \tqt{крылья}) и $1-9-5$;
+\item\label{item:331:Decomposition:2x2:2} Три связанных трёхатомных фрагмента: $2-3-4$, $8-7-6$ (т.\,н.~\tqt{крылья}) и \tqt{мостик} $1-9-5$;
 \end{enumerate}
 
 \begin{figure}
 \centerfloat{
 \begin{tabular}{|c|c|c|c|}
 %\toprule
-\multicolumn{4}{c}{\chemfig{[:-30,1.25]9*6(-1(-[:180]2-[:120]3-[:+60]4-[:0]\phantom{5}?)-8-7-6-5-)}} \\
-\multicolumn{4}{c}{\cmpd{Bicycle331} } \\
-\midrule
+\multicolumn{4}{c}{\chemfig{[:-30,1.125]\circ*6(-\bullet(-[:180]\circ-[:120]\circ-[:+60]\circ-[:0]\phantom{\bullet}?)-\circ-\circ-\circ-\bullet-)} \qquad = \qquad \chemfig{[:-30,1.25]9*6(-1(-[:180]2-[:120]3-[:+60]4-[:0]\phantom{5}?)-8-7-6-5-)}} \\
+\multicolumn{4}{c}{%\cmpd{Bicycle331} } \\
+} \\
+%\midrule
 \ref{item:331:Decomposition:6:6} & \ref{item:331:Decomposition:8:1} &
 \ref{item:331:Decomposition:2x5:3} & \ref{item:331:Decomposition:2x2:2} \\
 \chemfig{[:-30]3?-[:-60]2-[:0]1-[:+120]9-[:+60]5-[:+180]4?}\chemfig{[:-30]9*6(-1-8-7-6-5-)} &
 \chemfig{[:-30]9*6(-[,,,,dash pattern=on 1pt off 1pt]1(-[:180]2-[:120]3-[:+60]4-[:0]\phantom{5}?)-8-7-6-5-[,,,,dash pattern=on 1pt off 1pt])} & 
 \chemfig{[:-30]9*6(-1?[a](-[:180]2-[:120]3-[:+60]4-[:0]\phantom{5}?[a,1,{dash pattern=on 1pt off 1pt}])-8-7-6-5-)} &
 \chemfig{[:-30]9*6(-1(-[:180,,,,dash pattern=on 1pt off 1pt]2-[:120]3-[:+60]4-[:0,,,,dash pattern=on 1pt off 1pt]\phantom{5}?)-[,,,,dash pattern=on 1pt off 1pt]8-7-6-[,,,,dash pattern=on 1pt off 1pt]5-)} \\
-$\leftarrow$\qquad$\longleftarrow$ & $\longrightarrow$ & $\leftarrow$\quad$\rightarrow$ & \\
+$\leftarrow$ \qquad $\leftarrow$ & $\longrightarrow$ & $\leftarrow$\quad$\rightarrow$ & \\
 \CycleFirst \qquad \CycleSecond & \CycleThird & \CyclePseudoFirst\quad\CyclePseudoSecond & \\ 
-\bottomrule
+%\bottomrule
 \end{tabular}
 \vspace{\bigskipamount}
 }
@@ -127,16 +133,6 @@ $\leftarrow$\qquad$\longleftarrow$ & $\longrightarrow$ & $\leftarrow$\quad$\righ
 
 \begin{figure}
   \centerfloat{
-    \begin{tabular}{cc}
-      \multicolumn{2}{c}{\ChemPicture{?[a]<[:-30,1.5]-[:+30,,,,line width=\boldbondwidth](>[:+120]-[:-120](-[:-150]?[a])(-[:-30]-[:+30,1.25]?[b]))-[:-+30,,,,line width=\boldbondwidth]?[b,{<}]}} \\
-      \multicolumn{2}{c}{\BB{}~(\TT{})} \\
-      \midrule\ChemPicture{?[a]<[:-30,1.25]-[:+30,,,,line width=\boldbondwidth](>[:+120]-[:-120](-[:-150]?[a])(-[:-30]-[:-60]?[b]))-[:-+30,,,,line width=\boldbondwidth]?[b,{<}]} & 
-      \ChemPicture{?[a]<[:+60]-[:+30,,,,line width=\boldbondwidth](>[:+120]-[:-120](-[:-150]?[a])(-[:-30]-[:+30,1.25]?[b]))-[:-+30,,,,line width=\boldbondwidth]?[b,{<}]} \\
-      \multicolumn{2}{c}{\BC{} \(\equiv\) \CB{}} \\
-      \midrule\multicolumn{2}{c}{\ChemPicture{?[a]<[:+60]-[:+30,,,,line width=\boldbondwidth](>[:+120]-[:-120](-[:-150]?[a])(-[:-30]-[:-60]?[b]))-[:-+30,,,,line width=\boldbondwidth]?[b,{<}]} } \\
-      \multicolumn{2}{c}{\CC{}} \\
-    \end{tabular}
-~
 \begin{tabular}{c|c}
 \multicolumn{2}{c}{
 \ChemPicture{X?[a]<[:-30,1.5]-[:+30,,,,line width=\boldbondwidth](>[:+120]Z-[:-120](-[:-150]?[a])(-[:-30]-[:+30,1.25]Y?[b]))-[:-+30,,,,line width=\boldbondwidth]?[b,{<}]} 
@@ -159,12 +155,37 @@ $\leftarrow$\qquad$\longleftarrow$ & $\longrightarrow$ & $\leftarrow$\quad$\righ
 \multicolumn{2}{c}{\CC{}}
 \\
 \end{tabular}
+~
+    \begin{tabular}{cc}
+  \multicolumn{2}{c}{\ChemPicture{?[a]<[:-30,1.5]-[:+30,,,,line width=\boldbondwidth](>[:+120]-[:-120](-[:-150]?[a])(-[:-30]-[:+30,1.25]?[b]))-[:-+30,,,,line width=\boldbondwidth]?[b,{<}]}} \\
+  \multicolumn{2}{c}{\BB{}~(\TT{})} \\
+  \midrule\ChemPicture{?[a]<[:-30,1.25]-[:+30,,,,line width=\boldbondwidth](>[:+120]-[:-120](-[:-150]?[a])(-[:-30]-[:-60]?[b]))-[:-+30,,,,line width=\boldbondwidth]?[b,{<}]} & 
+  \ChemPicture{?[a]<[:+60]-[:+30,,,,line width=\boldbondwidth](>[:+120]-[:-120](-[:-150]?[a])(-[:-30]-[:+30,1.25]?[b]))-[:-+30,,,,line width=\boldbondwidth]?[b,{<}]} \\
+  \multicolumn{2}{c}{\BC{} \(\equiv\) \CB{}} \\
+  \midrule\multicolumn{2}{c}{\ChemPicture{?[a]<[:+60]-[:+30,,,,line width=\boldbondwidth](>[:+120]-[:-120](-[:-150]?[a])(-[:-30]-[:-60]?[b]))-[:-+30,,,,line width=\boldbondwidth]?[b,{<}]} } \\
+  \multicolumn{2}{c}{\CC{}} \\
+\end{tabular}
 }
 \vspace{\medskipamount}
 \caption{\label{fig:System331:379XYZ:Conf}Основные конформации  бицикло[3.3.1]нонана и его 3X,~7Y,~9Z-аналогов}
 \end{figure}
 
-Форма \BB{} у~производных бицикло[3.3.1]нонана из-за питцеровских напряжений встречается очень редко (характерна для сильно затруднённых и напряжённых молекул), и в этих случаях обычно наблюдается экспериментально в виде формы «двойного твиста» (\TT{}).
+Антибредтовские структуры: бицикло[3.3.1]нонан-$\Delta^{1(2)}$, 1-азабицикло\-[3.3.1]нонанон-2
+
+\begin{center}
+  \chemfig{[:-30]*6(-(-[:180]-[:120]-[:+60]-[:0]?)---=-)} \quad
+  \chemfig{[:-30]*6(-N(-[:180]C(=[:-120]O)-[:120]-[:+60]-[:0]?)-----)} \quad 
+\end{center}
+
+
+Форма \BB{} экспериментально наблюдается очень редко. Из-за значительных напряжений она характерна для сильно затруднённых молекул. В этих случаях она обычно обнаруживается в виде формы «двойного твиста» (\TT{}).
+
+Дважды антибредтовские структуры на основе бицикло[3.3.1]нонана-$\Delta^{1(2),5(6)}$  и\,т.\,п.
+
+\begin{center}
+  \chemfig{[:-30]*6(-(=_[:180]-[:120]-[:+60]-[:0]?)---=-)} \quad
+  \chemfig{[:-30]*6(-N(-[:180]C(=[:-120]O)-[:120]-[:+60]-[:0]?)---=-)} \quad \chemfig{[:-30]*6(-N(-[:180]C(=[:-120]O)-[:120]-[:+60]-[:0]?)--C(=[:0]O)-=-)}
+\end{center}
 
 Торсионные напряжения также являются фактором устойчивости и для формы \CB{}, содержащей подструктуру \tqt{ванны}, в которой, однако, заслонённые конформации связей незначительно отклоняются от идеальной формы \ConfName{В} с эндоциклическими двугранными углами $\tau_{9123}\simeq 0$ и $\tau_{9543}\simeq 0$. Часто эти отклонения симметричны, т. е., $\tau_{9123} = - \tau_{9543}$. Всё это является, в частности, показателем стереохимической (конформационной) жёсткости формы \tqt{кресла} насыщенного шестичленного цикла. Такая жёсткость образуется из сочетания низкой энергии и высоких собственных частот колебания структуры. Жёсткие конформации одной из подструктур молекулы могут стабилизировать менее энергетически выгодные формы других как термодинамически, так и кинетически.
 

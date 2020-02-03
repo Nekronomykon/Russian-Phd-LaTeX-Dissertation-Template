@@ -51,6 +51,12 @@
 %
 % Если все команды закомментированы, то документ будет выведен в PDF файл полностью
 
+%%% Данные в виде таблиц:
+\pgfplotstableread{Results/CCCC-Scan.dat}{\ScanButane}
+\pgfplotstableread{Results/CCOC-Scan.dat}{\ScanMeOEt}
+\pgfplotstableread{Results/CCSC-Scan.dat}{\ScanMeSEt}
+\pgfplotstableread{Results/CCQC-Scan.dat}{\ScanMeCOEt}
+
 \begin{document}
 
 \input{common/renames}                 % Переопределение именований
