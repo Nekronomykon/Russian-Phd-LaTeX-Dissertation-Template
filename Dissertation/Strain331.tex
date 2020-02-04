@@ -126,7 +126,7 @@ $\angle\ce{C(O)CC}~\ang{113.4}$;
 %\midrule\cmpd{Isopentanone} &\chemfig{H_3C-[:+30](-[:+90]CH_3)-[:-30]C(=[:-90]O)-[:+30]CH_3} & & & \\
 \end{longtabu}\label{tab:Reagents:Opt:Ends}
 
-За исключением простейших структур, молекулы реагентов также обладают конформационной подвижностью. В частности, инверсия атома азота триметиламина~\cmpd{Trimethylamine} взаимодействует со внутренним вращением метильных групп. Внутреннее вращение \emph{н}-бутана~\cmpd{Butane} и его аналогов\dots
+За исключением простейших структур \cmpd{Propane}--\cmpd{Acetone}, молекулы реагентов также обладают конформационной подвижностью. В частности, инверсия атома азота триметиламина~\cmpd{Trimethylamine} взаимодействует со внутренним вращением метильных групп. Внутреннее вращение \emph{н}-бутана~\cmpd{Butane} и его аналогов\dots
 
 \pgfplotstablecreatecol[%
 create col/assign/.code={%
@@ -265,7 +265,33 @@ create col/assign/.code={%
   \pgfkeyslet{/pgfplots/table/create col/next content}\entryval
 }
 ]{Erel}\ScanIPrOMe %
-\pgfplotstablesave[columns={Tau,Etot,Erel}]{\ScanIPrOMe}{Results/ScanIPrOMe.save.dat}
+\pgfplotstablesave[columns={Tau,Etot,Erel}]
+{\ScanIPrOMe}{Results/ScanIPrOMe.save.dat}
+
+\pgfplotstablecreatecol[%
+create col/assign/.code={%
+  \getthisrow{Etot}\entry%
+  \ifnum\pgfplotstablerow>0
+  \pgfmathsetmacro{\entry}{min(\entry,\pgfmathaccuma)}%
+  \fi
+  \edef\pgfmathaccuma{\entry}
+  \pgfkeyslet{/pgfplots/table/create col/next content}\entry
+}]{Emin}\ScanIPrSMe %
+\pgfplotstablecreatecol[%
+create col/assign/.code={%
+  \getthisrow{Etot}\entryval%
+  \getthisrow{Emin}\refval%
+  %\ifnum\pgfplotstablerow>0
+  \pgfmathsetmacro{\entryval}{\entryval - \refval}%
+  \pgfmathsetmacro{\entryval}{\AUtoKJM * \entryval}%
+  %\fi
+  \edef\pgfmathaccuma{\entryval}
+  \pgfkeyslet{/pgfplots/table/create col/next content}\entryval
+}
+]{Erel}\ScanIPrSMe %
+\pgfplotstablesave[columns={Tau,Etot,Erel}]
+{\ScanIPrSMe}{Results/ScanIPrSMe.save.dat}
+
 
 %\begin{tikzpicture}
 %\begin{axis}[xlabel=$\tau$,ylabel=$\Delta\Func{E}$% table
@@ -305,7 +331,7 @@ create col/assign/.code={%
 ]
 \addplot [black,thick,smooth,domain=-180:180] table [x=Tau,y=Erel] {Results/ScanIsopentane.save.dat};
 \addplot [red,thick,smooth,domain=-180:180] table [x=Tau,y=Erel] {Results/ScanIPrOMe.save.dat};
-%\addplot [brown,thick,smooth,domain=-180:180, domain y=-1:27] table [x=Tau,y=Erel] {Results/ScanIPrSMe.save.dat};
+\addplot [brown,thick,smooth,domain=-180:180, domain y=-1:27] table [x=Tau,y=Erel] {Results/ScanIPrSMe.save.dat};
 %\addplot [blue,thick,smooth,domain=-180:180, domain y=-1:27] table [x=Tau,y=Erel] {Results/ScanMeMeNEt.save.dat};
 \end{axis}
 \end{tikzpicture}%
@@ -313,41 +339,42 @@ create col/assign/.code={%
 \end{figure}
 
 \begin{table}
-\caption{\label{tab:InternalRotation:Butane}Внутреннее вращение молекулы \emph{н}-бутана~\cmpd{Butane}, MP2/aug-cc-pVTZ}
+\caption{\label{tab:InternalRotation:Butane}Внутреннее вращение молекулы \emph{н}-бутана~\cmpd{Butane}, MP2/aug-cc-pVTZ}\centering
 \pgfplotstabletypeset[column type=r,columns={Tau,Etot,Erel}]\ScanButane
 \end{table}
 
 \begin{table}
-\caption{\label{tab:InternalRotation:MeOEt}Внутреннее вращение молекулы метиэтилового эфира~\cmpd{MeOEt}, MP2/aug-cc-pVTZ}
+\caption{\label{tab:InternalRotation:MeOEt}Внутреннее вращение молекулы метиэтилового эфира~\cmpd{MeOEt}, MP2/aug-cc-pVTZ}\centering
 \pgfplotstabletypeset[column type=r,columns={Tau,Etot,Erel}]\ScanMeOEt
 \end{table}
 
 \begin{table}
-\caption{\label{tab:InternalRotation:MeSEt}Внутреннее вращение молекулы метилэтилсульфида~\cmpd{MeSEt}, MP2/aug-cc-pVTZ}
+\caption{\label{tab:InternalRotation:MeSEt}Внутреннее вращение молекулы метилэтилсульфида~\cmpd{MeSEt}, MP2/aug-cc-pVTZ}\centering
 \pgfplotstabletypeset[column type=r,columns={Tau,Etot,Erel}]\ScanMeSEt
 \end{table}
 
 \begin{table}
-\caption{\label{tab:InternalRotation:Butanone}Внутреннее вращение молекулы бутанона-2~\cmpd{Butanone}, MP2/aug-cc-pVTZ}
+\caption{\label{tab:InternalRotation:Butanone}Внутреннее вращение молекулы бутанона-2~\cmpd{Butanone}, MP2/aug-cc-pVTZ}\centering
 \pgfplotstabletypeset[column type=r,columns={Tau,Etot,Erel}]\ScanMeCOEt
 \end{table}
 
 \begin{table}
-\caption{\label{tab:InternalRotation:Isopentane}Внутреннее вращение молекулы изопентана~\cmpd{Isopentane}, MP2/aug-cc-pVTZ}
+\caption{\label{tab:InternalRotation:Isopentane}Внутреннее вращение молекулы изопентана~\cmpd{Isopentane}, MP2/aug-cc-pVTZ}\centering
 \pgfplotstabletypeset[column type=r,columns={Tau,Etot,Erel}]\ScanIsoPentane
 \end{table}
 
 \begin{table}
-  \caption{\label{tab:InternalRotation:Me2NEt}Внутреннее вращение молекулы \ce{N},\ce{N}-диметилэтиламина~\cmpd{Me2NEt}, MP2/aug-cc-pVTZ}
-\end{table}
-
-\begin{table}
-\caption{\label{tab:InternalRotation:Me2CHOMe}Внутреннее вращение молекулы метил-\emph{изо}-пропилового эфира~\cmpd{Me2CHOMe}, MP2/aug-cc-pVTZ}
+\caption{\label{tab:InternalRotation:Me2CHOMe}Внутреннее вращение молекулы метил-\emph{изо}-пропилового эфира~\cmpd{Me2CHOMe}, MP2/aug-cc-pVTZ}\centering
 \pgfplotstabletypeset[column type=r,columns={Tau,Etot,Erel}]\ScanIPrOMe
 \end{table}
 
 \begin{table}
-\caption{\label{tab:InternalRotation:Me2CHSMe}Внутреннее вращение молекулы метил-\emph{изо}-пропилсульфида~\cmpd{Me2CHSMe}, MP2/aug-cc-pVTZ}
+\caption{\label{tab:InternalRotation:Me2CHSMe}Внутреннее вращение молекулы метил-\emph{изо}-пропилсульфида~\cmpd{Me2CHSMe}, MP2/aug-cc-pVTZ}\centering
+\pgfplotstabletypeset[column type=r,columns={Tau,Etot,Erel}]\ScanIPrSMe
+\end{table}
+
+\begin{table}
+  \caption{\label{tab:InternalRotation:Me2NEt}Внутреннее вращение молекулы \ce{N},\ce{N}-диметилэтиламина~\cmpd{Me2NEt}, MP2/aug-cc-pVTZ}\centering
 \end{table}
 
 
