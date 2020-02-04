@@ -326,7 +326,7 @@
     \node[shift=(\anglestart:#2+1pt)#4,anchor=\anglestart+180,rotate=\anglestart+90,inner sep=0pt, outer sep=0pt]at(#4){#6};}
 }
 %%
-\newcommand{\ChemPicture}[1]{\begin{tikzpicture}\node (ChemFormula) at (0,0){\chemfig{#1}};\end{tikzpicture} }
+\newcommand{\ChemPicture}[1]{\begin{tikzpicture}\node (ChemFormula) at (0,0){\chemfig{#1}};\end{tikzpicture}}%
 %%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% Немного математических символов
@@ -335,7 +335,7 @@
 %%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \usepackage{pgfplotstable}
-\pgfplotsset{width=11.5cm,compat=1.16}
+\pgfplotsset{width=12.5cm,compat=1.16}
 %\pgfkeys{/pgf/fpu=true}
 \pgfplotstableset{%
   1000 sep={},

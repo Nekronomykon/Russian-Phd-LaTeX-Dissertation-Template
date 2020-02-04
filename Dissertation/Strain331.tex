@@ -196,7 +196,7 @@ create col/assign/.code={%
   \pgfkeyslet{/pgfplots/table/create col/next content}\entryval
 }
 ]{Erel}\ScanMeSEt %
-\pgfplotstablesave[columns={Tau,Etot,Erel}]{\ScanMeOEt}{Results/ScanMeSEt.save.dat}
+\pgfplotstablesave[columns={Tau,Etot,Erel}]{\ScanMeSEt}{Results/ScanMeSEt.save.dat}
 
 \pgfplotstablecreatecol[%
 create col/assign/.code={%
@@ -276,35 +276,39 @@ create col/assign/.code={%
 \begin{figure}
 \centering
 \begin{tikzpicture}
-  \begin{axis}[
-    %title={Внутреннее вращение},
-    xlabel={\chemfig{H_3C-[:+30]\circ-[:-30]\circ-[:+30]CH_3}}, xmin=-180, xmax=180,
-    ylabel={$\Delta\Func{E}$}, ymin=-0.5, ymax=27.5
+  \begin{axis} [%
+    %title={\chemfig{H_3C-[:+30]\circ-[:-30]\circ-[:+30]CH_3}},
+    xlabel={\chemfig{H_3C-[:+30]\circ-[:-30]\circ-[:+30]CH_3} / $\tau$,~\textdegree},
+    xmin=-180, xmax=180,
+    xtick={-180,-120,...,180},
+    ylabel={$\Delta\Func{E}$,~\si{\kilo\joule\per\mole}}, ymin=-1, ymax=27
     ]
-    \addplot [black,thick,smooth,domain=-180:180%, domain y=-0.5:27.5] 
-    ] table [x=Tau,y=Erel] {Results/ScanButane.save.dat};
-    \addplot [red,thick,dotted,smooth,domain=-180:180, domain y=-1:27] table [x=Tau,y=Erel] {Results/ScanMeOEt.save.dat};
-    \addplot [yellow,thick,dashed,smooth,domain=-180:180, domain y=-1:27] table [x=Tau,y=Erel] {Results/ScanMeSEt.save.dat};
-    \addplot [green,thick,smooth,domain=-180:180, domain y=-1:27] table [x=Tau,y=Erel] {Results/ScanMeCOEt.save.dat};
+    \addplot [black,thick,smooth,domain=-180:180] table [x=Tau,y=Erel] {Results/ScanButane.save.dat};
+    \addplot [red,thick,smooth,domain=-180:180] table [x=Tau,y=Erel] {Results/ScanMeOEt.save.dat};
+    \addplot [brown,thick,smooth,domain=-180:180] table [x=Tau,y=Erel] {Results/ScanMeSEt.save.dat};
+    \addplot [green,thick,smooth,domain=-180:180] table [x=Tau,y=Erel] {Results/ScanMeCOEt.save.dat};
   \end{axis}
-\end{tikzpicture}
+\end{tikzpicture}%
 \caption{\label{fig:Internal:Rotation:Butanes}Потенциалы внутреннего вращения молекул \cmpd{Butane}--\cmpd{Butanone}}
 \end{figure}
 
 \begin{figure}
   \centering
 \begin{tikzpicture}
-  \begin{axis}[
-    xlabel={\chemfig{H_3C-[:+30]\circ-[:-30]\bullet(-[:-90]CH_3)-[:+30]CH_3}}, xmin=-180, xmax=180,
-ylabel={$\Delta\Func{E}$}, ymin=-0.5, ymax=27.5
+  \begin{axis} [%
+    %title={\chemfig{H_3C-[:+30]\circ-[:-30]\bullet(-[:-90]CH_3)-[:+30]CH_3}},
+    xlabel={\chemfig{H_3C-[:+30]\circ-[:-30]\bullet(-[:-90]CH_3)-[:+30]CH_3} / $\tau$,~\textdegree},
+    xmin=-180, xmax=180,
+    xtick={-180,-120,...,180},
+    ylabel={$\Delta\Func{E}$,~\si{\kilo\joule\per\mole}},
+    ymin=-1, ymax=27
 ]
-\addplot [black,thick,smooth,domain=-180:180%, domain y=-0.5:27.5] 
-] table [x=Tau,y=Erel] {Results/ScanIsopentane.save.dat};
-\addplot [red,thick,dotted,smooth,domain=-180:180, domain y=-1:27] table [x=Tau,y=Erel] {Results/ScanIPrOMe.save.dat};
-%\addplot [yellow,thick,dashed,smooth,domain=-180:180, domain y=-1:27] table [x=Tau,y=Erel] {Results/ScanIPrSMe.save.dat};
+\addplot [black,thick,smooth,domain=-180:180] table [x=Tau,y=Erel] {Results/ScanIsopentane.save.dat};
+\addplot [red,thick,smooth,domain=-180:180] table [x=Tau,y=Erel] {Results/ScanIPrOMe.save.dat};
+%\addplot [brown,thick,smooth,domain=-180:180, domain y=-1:27] table [x=Tau,y=Erel] {Results/ScanIPrSMe.save.dat};
 %\addplot [blue,thick,smooth,domain=-180:180, domain y=-1:27] table [x=Tau,y=Erel] {Results/ScanMeMeNEt.save.dat};
 \end{axis}
-\end{tikzpicture}
+\end{tikzpicture}%
 \caption{\label{fig:Internal:Rotation:Isopentanes}Потенциалы внутреннего вращения молекул \cmpd{Isopentane}--\cmpd{Me2NEt}}
 \end{figure}
 
