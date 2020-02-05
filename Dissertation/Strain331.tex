@@ -326,13 +326,13 @@ create col/assign/.code={%
     ylabel={$\Delta\Func{E}$,~\si{\kilo\joule\per\mole}},
     ymin=-1, ymax=32]
     \addplot [black,thick,smooth,domain=-180:180] table [x=Tau,y=Erel] 
-    {Results/ScanButane.save.dat};
+    {Results/ScanButane.save.dat};\addlegendentry{\chemfig{[,0.7]-[:+30]-[:-30]-[:+30]}~\cmpd{Butanone}}
     \addplot [red,thick,smooth,domain=-180:180] table [x=Tau,y=Erel]
     {Results/ScanMeOEt.save.dat};
     \addplot [brown,thick,smooth,domain=-180:180] table [x=Tau,y=Erel] 
     {Results/ScanMeSEt.save.dat};
     \addplot [green,thick,smooth,domain=-180:180] table [x=Tau,y=Erel] 
-    {Results/ScanMeCOEt.save.dat};
+    {Results/ScanMeCOEt.save.dat}; \addlegendentry{\chemfig{[,0.7]-[:+30](=[:+90]O)-[:-30]-[:+30]}~\cmpd{Butanone}}
   \end{axis}
 \end{tikzpicture}%
 \caption{\label{fig:Internal:Rotation:Butanes}Потенциалы внутреннего вращения молекул \cmpd{Butane}--\cmpd{Butanone}~(легенда???)}
@@ -348,13 +348,13 @@ create col/assign/.code={%
     ylabel={$\Delta\Func{E}$,~\si{\kilo\joule\per\mole}},
     ymin=-1, ymax=32]
     \addplot [black,thick,smooth,domain=-180:180] table [x=Tau,y=Erel] 
-    {Results/ScanIsopentane.save.dat};
+    {Results/ScanIsopentane.save.dat};\addlegendentry{\chemfig{[,0.7]-[:+30](-[:+90])-[:-30]-[:+30]}~\cmpd{Isopentane}}
     \addplot [red,thick,smooth,domain=-180:180] table [x=Tau,y=Erel] 
-    {Results/ScanIPrOMe.save.dat};
+    {Results/ScanIPrOMe.save.dat};\addlegendentry{\chemfig{[,0.7]-[:+30](-[:+90])-[:-30]O-[:+30]}~\cmpd{Me2CHOMe}}
     \addplot [brown,thick,smooth,domain=-180:180] table [x=Tau,y=Erel] 
-    {Results/ScanIPrSMe.save.dat};
+    {Results/ScanIPrSMe.save.dat};\addlegendentry{\chemfig{[,0.7]-[:+30](-[:+90])-[:-30]S-[:+30]}~\cmpd{Me2CHSMe}}
     \addplot [blue,thick,smooth,domain=-180:180] table [x=Tau,y=Erel] 
-    {Results/ScanMeMeNEt.save.dat};
+    {Results/ScanMeMeNEt.save.dat};\addlegendentry{\chemfig{[,0.7]-[:+30]N(-[:+90])-[:-30]-[:+30]}~\cmpd{Me2NEt}}
 \end{axis}
 \end{tikzpicture}%
 \caption{\label{fig:Internal:Rotation:Isopentanes}Потенциалы внутреннего вращения молекул \cmpd{Isopentane}--\cmpd{Me2NEt}~(легенда???)}
