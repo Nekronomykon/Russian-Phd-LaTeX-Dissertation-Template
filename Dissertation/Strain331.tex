@@ -267,7 +267,7 @@ create col/assign/.code={%
 ]{Erel}\ScanIPrOMe %
 \pgfplotstablesave[columns={Tau,Etot,Erel}]
 {\ScanIPrOMe}{Results/ScanIPrOMe.save.dat}
-
+%
 \pgfplotstablecreatecol[%
 create col/assign/.code={%
   \getthisrow{Etot}\entry%
@@ -291,14 +291,30 @@ create col/assign/.code={%
 ]{Erel}\ScanIPrSMe %
 \pgfplotstablesave[columns={Tau,Etot,Erel}]
 {\ScanIPrSMe}{Results/ScanIPrSMe.save.dat}
-
-
-%\begin{tikzpicture}
-%\begin{axis}[xlabel=$\tau$,ylabel=$\Delta\Func{E}$% table
-%\addplot table[x=Tau,y=Erel,]{Results/ScanButane.save.dat};
-%\end{axis}
-%\end{tikzpicture}
-
+%
+\pgfplotstablecreatecol[%
+create col/assign/.code={%
+  \getthisrow{Etot}\entry%
+  \ifnum\pgfplotstablerow>0
+  \pgfmathsetmacro{\entry}{min(\entry,\pgfmathaccuma)}%
+  \fi
+  \edef\pgfmathaccuma{\entry}
+  \pgfkeyslet{/pgfplots/table/create col/next content}\entry
+}]{Emin}\ScanMeMeNEt %
+\pgfplotstablecreatecol[%
+create col/assign/.code={%
+  \getthisrow{Etot}\entryval%
+  \getthisrow{Emin}\refval%
+  %\ifnum\pgfplotstablerow>0
+  \pgfmathsetmacro{\entryval}{\entryval - \refval}%
+  \pgfmathsetmacro{\entryval}{\AUtoKJM * \entryval}%
+  %\fi
+  \edef\pgfmathaccuma{\entryval}
+  \pgfkeyslet{/pgfplots/table/create col/next content}\entryval
+}
+]{Erel}\ScanMeMeNEt %
+\pgfplotstablesave[columns={Tau,Etot,Erel}]
+{\ScanMeMeNEt}{Results/ScanMeMeNEt.save.dat}
 \begin{figure}
 \centering
 \begin{tikzpicture}
@@ -307,36 +323,75 @@ create col/assign/.code={%
     xlabel={\chemfig{H_3C-[:+30]\circ-[:-30]\circ-[:+30]CH_3} / $\tau$,~\textdegree},
     xmin=-180, xmax=180,
     xtick={-180,-120,...,180},
-    ylabel={$\Delta\Func{E}$,~\si{\kilo\joule\per\mole}}, ymin=-1, ymax=27
-    ]
-    \addplot [black,thick,smooth,domain=-180:180] table [x=Tau,y=Erel] {Results/ScanButane.save.dat};
-    \addplot [red,thick,smooth,domain=-180:180] table [x=Tau,y=Erel] {Results/ScanMeOEt.save.dat};
-    \addplot [brown,thick,smooth,domain=-180:180] table [x=Tau,y=Erel] {Results/ScanMeSEt.save.dat};
-    \addplot [green,thick,smooth,domain=-180:180] table [x=Tau,y=Erel] {Results/ScanMeCOEt.save.dat};
+    ylabel={$\Delta\Func{E}$,~\si{\kilo\joule\per\mole}},
+    ymin=-1, ymax=32]
+    \addplot [black,thick,smooth,domain=-180:180] table [x=Tau,y=Erel] 
+    {Results/ScanButane.save.dat};
+    \addplot [red,thick,smooth,domain=-180:180] table [x=Tau,y=Erel]
+    {Results/ScanMeOEt.save.dat};
+    \addplot [brown,thick,smooth,domain=-180:180] table [x=Tau,y=Erel] 
+    {Results/ScanMeSEt.save.dat};
+    \addplot [green,thick,smooth,domain=-180:180] table [x=Tau,y=Erel] 
+    {Results/ScanMeCOEt.save.dat};
   \end{axis}
 \end{tikzpicture}%
-\caption{\label{fig:Internal:Rotation:Butanes}Потенциалы внутреннего вращения молекул \cmpd{Butane}--\cmpd{Butanone}}
+\caption{\label{fig:Internal:Rotation:Butanes}Потенциалы внутреннего вращения молекул \cmpd{Butane}--\cmpd{Butanone}~(легенда???)}
 \end{figure}
 
 \begin{figure}
   \centering
 \begin{tikzpicture}
   \begin{axis} [%
-    %title={\chemfig{H_3C-[:+30]\circ-[:-30]\bullet(-[:-90]CH_3)-[:+30]CH_3}},
-    xlabel={\chemfig{H_3C-[:+30]\circ-[:-30]\bullet(-[:-90]CH_3)-[:+30]CH_3} / $\tau$,~\textdegree},
+    xlabel={\chemfig{H_3C-[:+30]\circ-[:-30]\bullet(-[:-90]CH_3)-[:+30]CH_3}/$\tau$,~\textdegree},
     xmin=-180, xmax=180,
     xtick={-180,-120,...,180},
     ylabel={$\Delta\Func{E}$,~\si{\kilo\joule\per\mole}},
-    ymin=-1, ymax=27
-]
-\addplot [black,thick,smooth,domain=-180:180] table [x=Tau,y=Erel] {Results/ScanIsopentane.save.dat};
-\addplot [red,thick,smooth,domain=-180:180] table [x=Tau,y=Erel] {Results/ScanIPrOMe.save.dat};
-\addplot [brown,thick,smooth,domain=-180:180, domain y=-1:27] table [x=Tau,y=Erel] {Results/ScanIPrSMe.save.dat};
-%\addplot [blue,thick,smooth,domain=-180:180, domain y=-1:27] table [x=Tau,y=Erel] {Results/ScanMeMeNEt.save.dat};
+    ymin=-1, ymax=32]
+    \addplot [black,thick,smooth,domain=-180:180] table [x=Tau,y=Erel] 
+    {Results/ScanIsopentane.save.dat};
+    \addplot [red,thick,smooth,domain=-180:180] table [x=Tau,y=Erel] 
+    {Results/ScanIPrOMe.save.dat};
+    \addplot [brown,thick,smooth,domain=-180:180] table [x=Tau,y=Erel] 
+    {Results/ScanIPrSMe.save.dat};
+    \addplot [blue,thick,smooth,domain=-180:180] table [x=Tau,y=Erel] 
+    {Results/ScanMeMeNEt.save.dat};
 \end{axis}
 \end{tikzpicture}%
-\caption{\label{fig:Internal:Rotation:Isopentanes}Потенциалы внутреннего вращения молекул \cmpd{Isopentane}--\cmpd{Me2NEt}}
+\caption{\label{fig:Internal:Rotation:Isopentanes}Потенциалы внутреннего вращения молекул \cmpd{Isopentane}--\cmpd{Me2NEt}~(легенда???)}
 \end{figure}
+
+\pgfplotstableset{
+%columns/TauAll/.style = {column name = $\tau$,~\textdegree},
+%columns/EButane/.style = {column name = \cmpd{Butane}},
+%columns/EMeOEt/.style = {column name = $\Delta\Func{E}$~(\cmpd{MeOEt})},
+}
+
+\pgfplotstablenew[
+create on use/Tau/.style = {create col/copy column from table={\ScanButane}{Tau}},
+create on use/EButane/.style = {create col/copy column from table={\ScanButane}{Erel}},
+create on use/EMeOEt/.style = {create col/copy column from table={\ScanMeOEt}{Erel}},
+create on use/EMeSEt/.style = {create col/copy column from table={\ScanMeSEt}{Erel}},
+create on use/EMeCOEt/.style = {create col/copy column from table={\ScanMeCOEt}{Erel}},
+create on use/EIsoPentane/.style = {create col/copy column from table={\ScanIsoPentane}{Erel}},
+create on use/EIPrOMe/.style = {create col/copy column from table={\ScanIPrOMe}{Erel}},
+create on use/EIPrSMe/.style = {create col/copy column from table={\ScanIPrSMe}{Erel}},
+create on use/EDMeNEt/.style = {create col/copy column from table={\ScanMeMeNEt}{Erel}},
+columns={Tau,EButane,EMeOEt,EMeSEt,EMeCOEt,EIsoPentane,EIPrOMe,EIPrSMe,EDMeNEt}]{25}\ScanReagents
+
+\begin{table}
+  \caption{\label{tab:Rot:Energy:Reagents}Внутреннее вращение молекул~\cmpd{Butane} -- \cmpd{Me2NEt},~\si{\kilo\joule\per\mole} }
+\centering
+\pgfplotstabletypeset[column type=r,fixed, fixed zerofill, precision=1,
+columns/EButane/.style = {column name = \cmpd{Butane}},
+columns/EMeOEt/.style = {column name = \cmpd{MeOEt}},
+columns/EMeSEt/.style = {column name = \cmpd{MeSEt}},
+columns/EMeCOEt/.style = {column name = \cmpd{Butanone}},
+columns/EIsoPentane/.style = {column name = \cmpd{Isopentane}},
+columns/EIPrOMe/.style = {column name = \cmpd{Me2CHOMe}},
+columns/EIPrSMe/.style = {column name = \cmpd{Me2CHSMe}},
+columns/EDMeNEt/.style = {column name = \cmpd{Me2NEt}},
+]\ScanReagents
+\end{table}
 
 \begin{table}
 \caption{\label{tab:InternalRotation:Butane}Внутреннее вращение молекулы \emph{н}-бутана~\cmpd{Butane}, MP2/aug-cc-pVTZ}\centering
@@ -375,6 +430,7 @@ create col/assign/.code={%
 
 \begin{table}
   \caption{\label{tab:InternalRotation:Me2NEt}Внутреннее вращение молекулы \ce{N},\ce{N}-диметилэтиламина~\cmpd{Me2NEt}, MP2/aug-cc-pVTZ}\centering
+\pgfplotstabletypeset[column type=r,columns={Tau,Etot,Erel}]\ScanMeMeNEt
 \end{table}
 
 
