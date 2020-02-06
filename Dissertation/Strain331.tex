@@ -59,10 +59,10 @@
 
 Для расчётов энергий индивидуальных реагентов применяются неэмпирические (\emph{ab~initio}) методы. Они включают на первом этапе оптимизацию геометрии молекул. Далее расчёт собственных частот колебаний для конформеров. 
 
-Часто несколько методов расчёта комбинируются в виде так называемых \emph{аддитивных схем}
+Часто несколько методов расчёта комбинируются в виде так называемых \emph{аддитивных схем}\dots Полная энергия \Etot и энергия нулевых колебаний \Ezpe
 
 \begin{equation}
-\Func{E} = \underbrace{E_\infty  + E_k}_{\sim E_{el}} + E_{ZPE}
+E_\varpi = \underbrace{{\overbrace{E_0^\infty + E_c^\infty}^{E_\infty}} + E_k}_{\sim\Etot} + E_{ZPE}
 \end{equation}
 
 Ниже в таблице~\ref{tab:Reagents:Opt} на с.~\pageref{tab:Reagents:Opt}--\pageref{tab:Reagents:Opt:Ends} приводятся результаты оптимизации молекул-\tqt{реагентов} в приближении RI-MP2~\cite{MP:1934,RI:MP2:1997} с использованием расширенного корреляционно-согласованного трёхэкспоненциального базисного набора aug-cc-pVTZ.~\cite{Dunning:1989,Peterson:1993,Woon:1993} Если группа симметрии оптимальной структуры не указана явно, она является тривиальной~(\SymGroup{C}{1}). Все полученные в ходе расчёта собственные частоты молекул действительны.
@@ -320,19 +320,19 @@ create col/assign/.code={%
 \begin{tikzpicture}
   \begin{axis} [%
     %title={\chemfig{H_3C-[:+30]\circ-[:-30]\circ-[:+30]CH_3}},
-    xlabel={\chemfig{H_3C-[:+30]\circ-[:-30]\circ-[:+30]CH_3} / $\tau$,~\textdegree},
+    xlabel={\chemfig{[,0.75]H_3C-[:+30]\circ-[:-30]\circ-[:+30]CH_3} / $\tau$,~\textdegree},
     xmin=-180, xmax=180,
     xtick={-180,-120,...,180},
     ylabel={$\Delta\Func{E}$,~\si{\kilo\joule\per\mole}},
     ymin=-1, ymax=32]
     \addplot [black,thick,smooth,domain=-180:180] table [x=Tau,y=Erel] 
-    {Results/ScanButane.save.dat};\addlegendentry{\chemfig{[,0.7]-[:+30]-[:-30]-[:+30]}~\cmpd{Butanone}}
+    {Results/ScanButane.save.dat};\addlegendentry{\chemfig{[,0.625]-[:+30]-[:-30]-[:+30]}~\cmpd{Butanone}}
     \addplot [red,thick,smooth,domain=-180:180] table [x=Tau,y=Erel]
-    {Results/ScanMeOEt.save.dat};\addlegendentry{\chemfig{[,0.7]-[:+30]-[:-30]O-[:+30]}~\cmpd{MeOEt}}
+    {Results/ScanMeOEt.save.dat};\addlegendentry{\chemfig{[,0.625]-[:+30]-[:-30]O-[:+30]}~\cmpd{MeOEt}}
     \addplot [brown,thick,smooth,domain=-180:180] table [x=Tau,y=Erel] 
-    {Results/ScanMeSEt.save.dat};\addlegendentry{\chemfig{[,0.7]-[:+30]-[:-30]S-[:+30]}~\cmpd{MeSEt}}
+    {Results/ScanMeSEt.save.dat};\addlegendentry{\chemfig{[,0.625]-[:+30]-[:-30]S-[:+30]}~\cmpd{MeSEt}}
     \addplot [green,thick,smooth,domain=-180:180] table [x=Tau,y=Erel] 
-    {Results/ScanMeCOEt.save.dat}; \addlegendentry{\chemfig{[,0.7]-[:+30](=[:+90]O)-[:-30]-[:+30]}~\cmpd{Butanone}}
+    {Results/ScanMeCOEt.save.dat}; \addlegendentry{\chemfig{[,0.625]-[:+30]-[:-30](=[:-90]O)-[:+30]}~\cmpd{Butanone}}
   \end{axis}
 \end{tikzpicture}%
 \caption{\label{fig:Internal:Rotation:Butanes}Потенциалы внутреннего вращения молекул \cmpd{Butane}--\cmpd{Butanone}}
@@ -342,19 +342,19 @@ create col/assign/.code={%
   \centering
 \begin{tikzpicture}
   \begin{axis} [%
-    xlabel={\chemfig{H_3C-[:+30]\circ-[:-30]\bullet(-[:-90]CH_3)-[:+30]CH_3}/$\tau$,~\textdegree},
+    xlabel={\chemfig{[,0.75]H_3C-[:+30]\circ-[:-30]\bullet(-[:-90]CH_3)-[:+30]CH_3}/$\tau$,~\textdegree},
     xmin=-180, xmax=180,
     xtick={-180,-120,...,180},
     ylabel={$\Delta\Func{E}$,~\si{\kilo\joule\per\mole}},
     ymin=-1, ymax=32]
     \addplot [black,thick,smooth,domain=-180:180] table [x=Tau,y=Erel] 
-    {Results/ScanIsopentane.save.dat};\addlegendentry{\chemfig{[,0.7]-[:+30](-[:+90])-[:-30]-[:+30]}~\cmpd{Isopentane}}
+    {Results/ScanIsopentane.save.dat};\addlegendentry{\chemfig{[,0.625]-[:+30](-[:+90])-[:-30]-[:+30]}~\cmpd{Isopentane}}
     \addplot [red,thick,smooth,domain=-180:180] table [x=Tau,y=Erel] 
-    {Results/ScanIPrOMe.save.dat};\addlegendentry{\chemfig{[,0.7]-[:+30](-[:+90])-[:-30]O-[:+30]}~\cmpd{Me2CHOMe}}
+    {Results/ScanIPrOMe.save.dat};\addlegendentry{\chemfig{[,0.625]-[:+30](-[:+90])-[:-30]O-[:+30]}~\cmpd{Me2CHOMe}}
     \addplot [brown,thick,smooth,domain=-180:180] table [x=Tau,y=Erel] 
-    {Results/ScanIPrSMe.save.dat};\addlegendentry{\chemfig{[,0.7]-[:+30](-[:+90])-[:-30]S-[:+30]}~\cmpd{Me2CHSMe}}
+    {Results/ScanIPrSMe.save.dat};\addlegendentry{\chemfig{[,0.625]-[:+30](-[:+90])-[:-30]S-[:+30]}~\cmpd{Me2CHSMe}}
     \addplot [blue,thick,smooth,domain=-180:180] table [x=Tau,y=Erel] 
-    {Results/ScanMeMeNEt.save.dat};\addlegendentry{\chemfig{[,0.7]-[:+30]N(-[:+90])-[:-30]-[:+30]}~\cmpd{Me2NEt}}
+    {Results/ScanMeMeNEt.save.dat};\addlegendentry{\chemfig{[,0.625]-[:+30]N(-[:+90])-[:-30]-[:+30]}~\cmpd{Me2NEt}}
 \end{axis}
 \end{tikzpicture}%
 \caption{\label{fig:Internal:Rotation:Isopentanes}Потенциалы внутреннего вращения молекул \cmpd{Isopentane}--\cmpd{Me2NEt}} 
@@ -465,11 +465,11 @@ B таблице~\ref{tab:Cycle:Six:Opt} на с.~\pageref{tab:Cycle:Six:Opt}--\
   \toprule\multicolumn{2}{c|}{Структура} & \(E_{2}\),~\si{\hartree} & \(E_{ZPE}\),~\si{\hartree} & Геометрия\endhead
   \midrule\multicolumn{5}{l}{\emph{продолжение на следующей странице}}\endfoot
   \bottomrule\multicolumn{5}{l}{}\endlastfoot
-  \midrule\cmpd{Cyclohexane} & \chemfig{?-[:+160]-[:-120]<[:+20]-[:-20,,,,line width=\boldbondwidth]>[:+60]?} / \SymGroup{D}{3d} &  \num{-235.344605} & \num{0.171358}& \ce{C-C}~\SI{1.526}{\angstrom}; $\angle$\ce{CCC}~\ang{110.7}; $\tau=\pm\ang{56.9}$ 
+  \midrule\cmpd{Cyclohexane} & \chemfig{?-[:+160]-[:-120]<[:+20]-[:-20,,,,line width=\boldbondwidth]>[:+60]?} / \SymGroup{D}{3d} &  \num{-235.344605} & \num{0.171358}& \ce{C-C}~\SI{1.526}{\angstrom}; $\angle\ce{CCC}~\ang{110.7}$; $\tau=\pm\ang{56.9}$ 
   \\ \bottomrule \multicolumn{5}{l}{Монозамещённые (\emph{пентаметиленовые}) производные~(\SymGroup{C}{s}) } \\
-\toprule\cmpd{Pyran} & \chemfig{?-[:+160]-[:-120]O<[:+20]-[:-20,,,,line width=\boldbondwidth]>[:+60]?} &  \num{-271.229641} & & \ce{C-C} \\
-\midrule\cmpd{Thiopyran} & \chemfig{?-[:+160]-[:-120]S<[:+20]-[:-20,,,,line width=\boldbondwidth]>[:+60]?} &  & & \ce{C-C} \\
-\midrule\cmpd{Cyclohexanone} & \chemfig{?-[:+160]-[:-120]C(=[:-135]O)<[:+20]-[:-20,,,,line width=\boldbondwidth]>[:+60]?} & & & \ce{C-C} \\
+\toprule\cmpd{Pyran} & \chemfig{?-[:+160]-[:-120]O<[:+20]-[:-20,,,,line width=\boldbondwidth]>[:+60]?} &  \num{-271.229641} & \num{0.147833} & $\angle\ce{COC}~\ang{110.9}$; $\angle\ce{OCC}~\ang{111.9}$; $\angle\ce{CC_3C}~\ang{109.9}$; $\angle\ce{CC_4C}~\ang{109.1}$; \\
+\midrule\cmpd{Thiopyran} & \chemfig{?-[:+160]-[:-120]S<[:+20]-[:-20,,,,line width=\boldbondwidth]>[:+60]?} & \num{-593.841537}  & \num{0.143971} & \chemfig{[-30,1.5]*6(@{6}-@{1}S-@{2}-@{3}-@{4}-@{5}-)} \\
+\midrule\cmpd{Cyclohexanone} & \chemfig{?-[:+160]-[:-120]C(=[:-135,0.875]O)<[:+20]-[:-20,,,,line width=\boldbondwidth]>[:+60]?} & & & \ce{C-C} \\
 \midrule\cmpd{MeCyclohexaneEq} & \chemfig{?-[:+160]-[:-120](-[:+155]H_3C)(-[:-90,0.75]H)<[:+20]-[:-20,,,,line width=\boldbondwidth]>[:+60]?} & & & \ce{C-C} \\
 \midrule\cmpd{NMePiperidineEq} & \chemfig{?-[:+160]-[:-120]N(-[:+155]H_3C)<[:+20]-[:-20,,,,line width=\boldbondwidth]>[:+60]?} & & & \ce{C-C} \\ \bottomrule
 \multicolumn{5}{l}{Симметричные 1,3-дизамещённые производные~(\ce{X}=\ce{Y},~\SymGroup{C}{s}) } \\ 
@@ -480,19 +480,19 @@ B таблице~\ref{tab:Cycle:Six:Opt} на с.~\pageref{tab:Cycle:Six:Opt}--\
 \multicolumn{5}{l}{Симметричные 1,4-дизамещённые производные~(\ce{X}=\ce{Y},~\SymGroup{C}{2h}) } \\
 \toprule\cmpd{Dioxane14} & \chemfig{?-[:+160]-[:-120]O<[:+20]-[:-20,,,,line width=\boldbondwidth]>[:+60]O?} & & & \ce{C-C} \\
 \midrule\cmpd{Dithiane14} & \chemfig{?-[:+160]-[:-120]S<[:+20]-[:-20,,,,line width=\boldbondwidth]>[:+60]S?} & & & \ce{C-C} \\
-\midrule\cmpd{Cyclohexandione14} & \chemfig{?-[:-120]C(=[:-135]O)<[:+20]-[:-20,,,,line width=\boldbondwidth]>[:+60]C(=[:+45]O)-[:-160]?} & & & \ce{C-C} \\
+\midrule\cmpd{Cyclohexandione14} & \chemfig{?-[:-120]C(=[:-135,0.875]O)<[:+20]-[:-20,,,,line width=\boldbondwidth]>[:+60]C(=[:+45,0.875]O)-[:-160]?} & & & \ce{C-C} \\
 \midrule\cmpd{Me2CyclohexaneEE} & \chemfig{?-[:-120](-[:+155]H_3C)(-[:-90,0.75]H)<[:+20]-[:-20,,,,line width=\boldbondwidth]>[:+60](-[:+90,0.75]H)(-[:-25]CH_3)-[:-160]?} & & & \ce{C-C} \\
 \midrule\cmpd{N2Me2PiperazineEE} & \chemfig{?-[:-120]N(-[:+155]H_3C)<[:+20]-[:-20,,,,line width=\boldbondwidth]>[:+60]N(-[:-25]CH_3)-[:-160]?} & & & \ce{C-C} \\
 \bottomrule\multicolumn{5}{l}{Несимметричные 1,4-дизамещённые производные~(\ce{X}$\ne$\ce{Y},~\SymGroup{C}{s}) } \\
 \toprule\cmpd{Oxathiane4} & \chemfig{?-[:+160]-[:-120]S<[:+20]-[:-20,,,,line width=\boldbondwidth]>[:+60]O?} & & & \ce{C-C} \\
-\midrule \cmpd{Pyranone4} & \chemfig{?-[:+160]-[:-120]C(=[:-135]O)<[:+20]-[:-20,,,,line width=\boldbondwidth]>[:+60]O?} & & & \ce{C-C} \\
+\midrule \cmpd{Pyranone4} & \chemfig{?-[:+160]-[:-120]C(=[:-135,0.875]O)<[:+20]-[:-20,,,,line width=\boldbondwidth]>[:+60]O?} & & & \ce{C-C} \\
 \midrule\cmpd{Me4PyraneEq} & \chemfig{?-[:+160]-[:-120](-[:+155]H_3C)(-[:-90,0.75]H)<[:+20]-[:-20,,,,line width=\boldbondwidth]>[:+60]O?} & & & \ce{C-C} \\
 \midrule\cmpd{NMeMorpholineEq} & \chemfig{?-[:+160]-[:-120]N(-[:+155]H_3C)<[:+20]-[:-20,,,,line width=\boldbondwidth]>[:+60]O?} & & & \ce{C-C} \\
-\midrule \cmpd{Thiopyranone4} & \chemfig{?-[:+160]-[:-120]C(=[:-135]O)<[:+20]-[:-20,,,,line width=\boldbondwidth]>[:+60]S?} && & \ce{C-C} \\
+\midrule \cmpd{Thiopyranone4} & \chemfig{?-[:+160]-[:-120]C(=[:-135,0.875]O)<[:+20]-[:-20,,,,line width=\boldbondwidth]>[:+60]S?} && & \ce{C-C} \\
 \midrule\cmpd{Me4ThiopyraneEq} & \chemfig{?-[:+160]-[:-120](-[:+155]H_3C)(-[:-90,0.75]H)<[:+20]-[:-20,,,,line width=\boldbondwidth]>[:+60]S?}  & & & \ce{C-C} \\
 \midrule\cmpd{NMeThiomorpholineEq} & \chemfig{?-[:+160]-[:-120]N(-[:+155]H_3C)<[:+20]-[:-20,,,,line width=\boldbondwidth]>[:+60]S?} & & & \ce{C-C} \\
-\midrule\cmpd{Me4CyclohexanoneEq} & \chemfig{?-[:-120]C(=[:-135]O)<[:+20]-[:-20,,,,line width=\boldbondwidth]>[:+60](-[:+90,0.75]H)(-[:-25]CH_3)-[:-160]?} & & & \ce{C-C} \\
-\midrule\cmpd{NMePiperidone4Eq} & \chemfig{?-[:-120]C(=[:-135]O)<[:+20]-[:-20,,,,line width=\boldbondwidth]>[:+60]N(-[:-25]CH_3)-[:-160]?} & & & \ce{C-C} \\
+\midrule\cmpd{Me4CyclohexanoneEq} & \chemfig{?-[:-120]C(=[:-135,0.875]O)<[:+20]-[:-20,,,,line width=\boldbondwidth]>[:+60](-[:+90,0.75]H)(-[:-25]CH_3)-[:-160]?} & & & \ce{C-C} \\
+\midrule\cmpd{NMePiperidone4Eq} & \chemfig{?-[:-120]C(=[:-135,0.875]O)<[:+20]-[:-20,,,,line width=\boldbondwidth]>[:+60]N(-[:-25]CH_3)-[:-160]?} & & & \ce{C-C} \\
 \midrule\cmpd{4MePiperidineEE} & \chemfig{?-[:-120]N(-[:+155]H_3C)<[:+20]-[:-20,,,,line width=\boldbondwidth]>[:+60](-[:+90,0.75]H)(-[:-25]CH_3)-[:-160]?} & & & \ce{C-C} \\
 \bottomrule\multicolumn{5}{l}{Симметричные 1,3,5-тризамещённые производные~(\ce{X}=\ce{Y}=\ce{Z},~\SymGroup{C}{3v}) } \\
 \toprule\cmpd{STrioxane} & \chemfig{O?-[:+160]-[:-120]O<[:+20]-[:-20,,,,line width=\boldbondwidth]O>[:+60]?} & \num{} & & \ce{C-O} \\
@@ -505,5 +505,32 @@ B таблице~\ref{tab:Cycle:Six:Opt} на с.~\pageref{tab:Cycle:Six:Opt}--\
 \bottomrule
 \end{longtabu}\label{tab:Cycle:Six:Opt:Ends}
 
+Длины связей~(\AA) и эндоциклические двугранные углы
+
+\vspace{\medskipamount}
+\chemfig{[,1.75]*6(@{6}-@{1}-@{2}-@{3}-@{4}-@{5}-)} %
+\namebond{3}{4}{\small\ang{56.9}} %
+\namebond{1}{2}{\small\SI{1.526}{\angstrom}} %
+\quad
+\chemfig{[,1.75]*6(@{6}-@{1}O-@{2}-@{3}-@{4}-@{5}-)} %
+\namebond{1}{2}{\small\ang{60.5}} %
+\namebond{2}{3}{\small\ang{-57.4}} %
+\namebond{3}{4}{\small\ang{53.4}} %
+\namebond{5}{4}{\small\SI{1.526}{\angstrom}} % 
+\namebond{6}{5}{\small\SI{1.520}{\angstrom}} % 
+\namebond{6}{1}{\small\SI{1.422}{\angstrom}} %
+\quad 
+\chemfig{[,1.75]*6(@{6}-@{1}S-@{2}-@{3}-@{4}-@{5}-)}
+\namebond{1}{2}{\small\ang{56.3}} 
+\namebond{2}{3}{\small\ang{-62.1}}
+\namebond{3}{4}{\small\ang{59.6}}
+\namebond{5}{4}{\small\SI{1.525}{\angstrom}}
+\namebond{6}{5}{\small\SI{1.521}{\angstrom}}
+\namebond{6}{1}{\small\SI{1.814}{\angstrom}}
+\quad
+
+%\begin{longtabu} to \textwidth {X} \end{longtabu}
+
+\vspace{\medskipamount}
 Энергии напряжения... \EStrain
 

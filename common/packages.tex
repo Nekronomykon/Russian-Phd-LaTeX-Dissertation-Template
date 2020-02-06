@@ -272,9 +272,11 @@
 %% \tqt{а \tqt{б} в} = ,,а <<б>> в''
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% Химические пакеты
+\usepackage[compatibility=latest,language=russian]{chemmacros}
 \usepackage[version=4]{mhchem}
+\chemsetup{modules=all}
 \usepackage{chemfig}
-\usepackage{chemnum}
+%\usepackage{chemnum}
 \makeatletter
 \def\CF@node@content{\expandafter\expandafter\expandafter
     \printatom\expandafter\expandafter\expandafter
@@ -297,22 +299,22 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% chemfig setup
 \newcommand{\boldbondwidth}{3.5pt}
-\setchemfig{bond join=true}
+\setchemfig{angle increment=15}
+\setchemfig{arrow offset=12pt}
 \setchemfig{atom sep=2em}
 \setchemfig{bond style={line width=1pt}}
-\setchemfig{bond offset=2.75pt}
+\setchemfig{bond offset=2.5pt}
+\setchemfig{bond join=true}
+\setchemfig{compound sep=4.5em}
 \setchemfig{cram width =\boldbondwidth}
 \setchemfig{cram dash width=1pt}
 \setchemfig{cram dash sep=2pt}
-\setchemfig{double bond sep=2.5pt}
-\setchemfig{angle increment=15}
 \setchemfig{cycle radius coeff=0.5}
-\setchemfig{compound sep=4.5em}
-\setchemfig{arrow offset=12pt}
+\setchemfig{double bond sep=2.5pt}
 %%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % подпись на связях в молекуле, нарисованной в пакете *chemfig*
-\newcommand\namebond[4][7.5pt]{\chemmove{\path(#2)--(#3)node[midway,sloped,yshift=#1]{#4};}}
+\newcommand\namebond[4][6.5pt]{\chemmove{\path(#2)--(#3)node[midway,sloped,yshift=#1]{#4};}}
 
 \newcommand\arcbetweennodes[3]{%
   \pgfmathanglebetweenpoints{\pgfpointanchor{#1}{center}}{\pgfpointanchor{#2}{center}}%
@@ -330,6 +332,8 @@
 %%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% Немного математических символов
+\newcommand{\Etot}{{\ensuremath{E_{tot}}{}}}
+\newcommand{\Ezpe}{\ensuremath{E_{ZPE}}{}}
 \newcommand{\EStrain}{\ensuremath{\Func{E}_\varsigma}}
 \newcommand{\SymGroup}[2]{\ensuremath{\AGroup{#1}_{#2}}}
 %%
@@ -344,7 +348,7 @@
   every last row/.style = {after row=\bottomrule},
   every first column/.style={column type/.add={}{|}},
   columns/Tau/.style={int detect,column type=r,column name={$\tau$}},
-  columns/Etot/.style={fixed,fixed zerofill,precision=6,column name={$E_{tot}$}},
+  columns/Etot/.style={fixed,fixed zerofill,precision=6,column name=\Etot},
   columns/Emin/.style={fixed,fixed zerofill,precision=6,
     column name={$E_0$},
   },
