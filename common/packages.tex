@@ -272,11 +272,11 @@
 %% \tqt{а \tqt{б} в} = ,,а <<б>> в''
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% Химические пакеты
-\usepackage[compatibility=latest,language=russian]{chemmacros}
+%\usepackage[compatibility=latest,language=russian]{chemmacros}
 \usepackage[version=4]{mhchem}
-\chemsetup{modules=all}
 \usepackage{chemfig}
-%\usepackage{chemnum}
+%\chemsetup{modules=all}
+\usepackage{chemnum}
 \makeatletter
 \def\CF@node@content{\expandafter\expandafter\expandafter
     \printatom\expandafter\expandafter\expandafter
