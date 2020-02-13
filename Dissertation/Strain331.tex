@@ -65,7 +65,7 @@
 E_\varpi = \underbrace{{\overbrace{E_0^\infty + E_c^\infty}^{E_\infty}} + E_k}_{\sim\Etot} + E_{ZPE}
 \end{equation}
 
-Ниже в таблице~\ref{tab:Reagents:Opt} на с.~\pageref{tab:Reagents:Opt}--\pageref{tab:Reagents:Opt:Ends} приводятся результаты оптимизации молекул-\tqt{реагентов} в приближении RI-MP2~\cite{MP:1934,RI:MP2:1997} с использованием расширенного корреляционно-согласованного трёхэкспоненциального базисного набора aug-cc-pVTZ.~\cite{Dunning:1989,Peterson:1993,Woon:1993} Если группа симметрии оптимальной структуры не указана явно, она является тривиальной~(\SymGroup{C}{1}). Все полученные в ходе расчёта собственные частоты молекул действительны.
+Ниже в таблице~\ref{tab:Reagents:Opt} на с.~\pageref{tab:Reagents:Opt}--\pageref{tab:Reagents:Opt:Ends} приводятся результаты оптимизации молекул-\tqt{реагентов} в приближении RI-MP2~\cite{MP:1934,RI:MP2:1997} с использованием расширенного корреляционно-согласованного трёхэкспоненциального базисного набора Даннинга (aug-cc-pVTZ).~\cite{Dunning:1989,Peterson:1993,Woon:1993} Если группа симметрии оптимальной структуры не указана явно, она является тривиальной~(\SymGroup{C}{1}). Все полученные в ходе расчёта собственные частоты молекул действительны.
 
 %\caption{\label{tab:Desmotic:Reagents}Результаты расчёта реагентов для реакций разделения связей}
 
@@ -320,28 +320,31 @@ create col/assign/.code={%
 \begin{tikzpicture}
   \begin{axis} [%
     %title={\chemfig{H_3C-[:+30]\circ-[:-30]\circ-[:+30]CH_3}},
+    %legend pos=outer north east,
+    legend style={draw=none},
     xlabel={\chemfig{[,0.75]H_3C-[:+30]\circ-[:-30]\circ-[:+30]CH_3} / $\tau$,~\textdegree},
     xmin=-180, xmax=180,
     xtick={-180,-120,...,180},
     ylabel={$\Delta\Func{E}$,~\si{\kilo\joule\per\mole}},
     ymin=-1, ymax=32]
     \addplot [black,thick,smooth,domain=-180:180] table [x=Tau,y=Erel] 
-    {Results/ScanButane.save.dat};\addlegendentry{\chemfig{[,0.625]-[:+30]-[:-30]-[:+30]}~\cmpd{Butanone}}
+    {Results/ScanButane.save.dat};\addlegendentry{\chemfig{[,0.75]-[:+30]-[:-30]-[:+30]}~\cmpd{Butane}}
     \addplot [red,thick,smooth,domain=-180:180] table [x=Tau,y=Erel]
-    {Results/ScanMeOEt.save.dat};\addlegendentry{\chemfig{[,0.625]-[:+30]-[:-30]O-[:+30]}~\cmpd{MeOEt}}
+    {Results/ScanMeOEt.save.dat};\addlegendentry{\chemfig{[,0.75]-[:+30]-[:-30]O-[:+30]}~\cmpd{MeOEt}}
     \addplot [brown,thick,smooth,domain=-180:180] table [x=Tau,y=Erel] 
-    {Results/ScanMeSEt.save.dat};\addlegendentry{\chemfig{[,0.625]-[:+30]-[:-30]S-[:+30]}~\cmpd{MeSEt}}
+    {Results/ScanMeSEt.save.dat};\addlegendentry{\chemfig{[,0.75]-[:+30]-[:-30]S-[:+30]}~\cmpd{MeSEt}}
     \addplot [green,thick,smooth,domain=-180:180] table [x=Tau,y=Erel] 
-    {Results/ScanMeCOEt.save.dat}; \addlegendentry{\chemfig{[,0.625]-[:+30]-[:-30](=[:-90]O)-[:+30]}~\cmpd{Butanone}}
+    {Results/ScanMeCOEt.save.dat}; \addlegendentry{\chemfig{[,0.75]-[:+30]-[:-30]C(=[:-90]O)-[:+30]}~\cmpd{Butanone}}
   \end{axis}
 \end{tikzpicture}%
-\caption{\label{fig:Internal:Rotation:Butanes}Потенциалы внутреннего вращения молекул \cmpd{Butane}--\cmpd{Butanone} (убрать границу легенды!!!)}
+\caption{\label{fig:Internal:Rotation:Butanes}Потенциалы внутреннего вращения молекул \cmpd{Butane}--\cmpd{Butanone}}
 \end{figure}
 
 \begin{figure}
   \centering
 \begin{tikzpicture}
   \begin{axis} [%
+    legend style={draw=none},
     xlabel={\chemfig{[,0.75]H_3C-[:+30]\circ-[:-30]\bullet(-[:-90]CH_3)-[:+30]CH_3}/$\tau$,~\textdegree},
     xmin=-180, xmax=180,
     xtick={-180,-120,...,180},
@@ -357,7 +360,7 @@ create col/assign/.code={%
     {Results/ScanMeMeNEt.save.dat};\addlegendentry{\chemfig{[,0.625]-[:+30]N(-[:+90])-[:-30]-[:+30]}~\cmpd{Me2NEt}}
 \end{axis}
 \end{tikzpicture}%
-\caption{\label{fig:Internal:Rotation:Isopentanes}Потенциалы внутреннего вращения молекул \cmpd{Isopentane}--\cmpd{Me2NEt} (можно убрать границу легенды для единообразия?)} 
+\caption{\label{fig:Internal:Rotation:Isopentanes}Потенциалы внутреннего вращения молекул \cmpd{Isopentane}--\cmpd{Me2NEt}} 
 \end{figure}
 
 \pgfplotstableset{
@@ -393,6 +396,8 @@ columns/EDMeNEt/.style = {column name = \cmpd{Me2NEt}},
 ]\ScanReagents
 \end{table}
 
+Глобально оптимальными, судя по~рис.~\ref{fig:Internal:Rotation:Butanes}--\ref{fig:Internal:Rotation:Isopentanes}, ожидаемо являются \emph{транс}- или \emph{транс,~гош}-конформеры с $\tau\approx\ang{180}$. В дальнейшем во всех случаях для расчётов энергетических эффектов реакций разделения связей были использованы оптимизированные значения энергии именно для таких структур.
+
 
 \section{Напряжения свободных шестичленных циклов}
 
@@ -421,7 +426,7 @@ B таблице~\ref{tab:Cycle:Six:Opt} на с.~\pageref{tab:Cycle:Six:Opt}--\
 \begin{longtabu} to \textwidth {rc|SS|X[l]}
 \multicolumn{5}{p{\textwidth}}{Таблица\label{tab:Cycle:Six:Opt}~\arabic{table}. Строение молекул циклогексана и его аналогов по данным неэмпирических расчётов} \\ %  
 \toprule\multicolumn{2}{c|}{Структура}  & \(E_{2}\),~\si{\hartree} & \(E_{ZPE}\),~\si{\hartree} & Геометрия \endfirsthead
-  \multicolumn{5}{p{\textwidth}}{\emph{продолжение таблицы}~\arabic{table}:} \\
+  \multicolumn{5}{p{\textwidth}}{\emph{продолжение таблицы}~\thetable:} \\
   \toprule\multicolumn{2}{c|}{Структура} & \(E_{2}\),~\si{\hartree} & \(E_{ZPE}\),~\si{\hartree} & Геометрия\endhead
   \midrule\multicolumn{5}{l}{\emph{продолжение на следующей странице}}\endfoot
   \bottomrule\multicolumn{5}{l}{}\endlastfoot
