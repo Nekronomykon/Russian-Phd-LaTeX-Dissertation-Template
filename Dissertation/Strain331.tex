@@ -315,7 +315,8 @@ create col/assign/.code={%
 ]{Erel}\ScanMeMeNEt %
 \pgfplotstablesave[columns={Tau,Etot,Erel}]
 {\ScanMeMeNEt}{Results/ScanMeMeNEt.save.dat}
-\begin{figure}
+
+\begin{center}
 \centering
 \begin{tikzpicture}
   \begin{axis} [%
@@ -337,10 +338,12 @@ create col/assign/.code={%
     {Results/ScanMeCOEt.save.dat}; \addlegendentry{\chemfig{[,0.75]-[:+30]-[:-30]C(=[:-90]O)-[:+30]}~\cmpd{Butanone}}
   \end{axis}
 \end{tikzpicture}%
-\caption{\label{fig:Internal:Rotation:Butanes}Потенциалы внутреннего вращения молекул \cmpd{Butane}--\cmpd{Butanone}}
-\end{figure}
+\label{fig:Internal:Rotation:Butanes}
 
-\begin{figure}
+%\caption{Потенциалы внутреннего вращения молекул \cmpd{Butane}--\cmpd{Butanone}}
+\end{center}
+
+\begin{center}
   \centering
 \begin{tikzpicture}
   \begin{axis} [%
@@ -360,8 +363,10 @@ create col/assign/.code={%
     {Results/ScanMeMeNEt.save.dat};\addlegendentry{\chemfig{[,0.625]-[:+30]N(-[:+90])-[:-30]-[:+30]}~\cmpd{Me2NEt}}
 \end{axis}
 \end{tikzpicture}%
-\caption{\label{fig:Internal:Rotation:Isopentanes}Потенциалы внутреннего вращения молекул \cmpd{Isopentane}--\cmpd{Me2NEt}} 
-\end{figure}
+\label{fig:Internal:Rotation:Isopentanes}
+
+%\caption{Потенциалы внутреннего вращения молекул \cmpd{Isopentane}--\cmpd{Me2NEt}} 
+\end{center}
 
 \pgfplotstableset{
 %columns/TauAll/.style = {column name = $\tau$,~\textdegree},
@@ -381,20 +386,21 @@ create on use/EIPrSMe/.style = {create col/copy column from table={\ScanIPrSMe}{
 create on use/EDMeNEt/.style = {create col/copy column from table={\ScanMeMeNEt}{Erel}},
 columns={Tau,EButane,EMeOEt,EMeSEt,EMeCOEt,EIsoPentane,EIPrOMe,EIPrSMe,EDMeNEt}]{25}\ScanReagents
 
-\begin{table}
-  \caption{\label{tab:Rot:Energy:Reagents}Внутреннее вращение молекул~\cmpd{Butane} -- \cmpd{Me2NEt},~\si{\kilo\joule\per\mole} }
-\centering
-\pgfplotstabletypeset[column type=r,fixed, fixed zerofill, precision=1,
-columns/EButane/.style = {column name = \cmpd{Butane}},
-columns/EMeOEt/.style = {column name = \cmpd{MeOEt}},
-columns/EMeSEt/.style = {column name = \cmpd{MeSEt}},
-columns/EMeCOEt/.style = {column name = \cmpd{Butanone}},
-columns/EIsoPentane/.style = {column name = \cmpd{Isopentane}},
-columns/EIPrOMe/.style = {column name = \cmpd{Me2CHOMe}},
-columns/EIPrSMe/.style = {column name = \cmpd{Me2CHSMe}},
-columns/EDMeNEt/.style = {column name = \cmpd{Me2NEt}},
-]\ScanReagents
-\end{table}
+%\begin{table}
+%\label{tab:Rot:Energy:Reagents} 
+%\caption{Внутреннее вращение молекул~\cmpd{Butane} -- \cmpd{Me2NEt},~\si{\kilo\joule\per\mole} }
+%\centering
+%\pgfplotstabletypeset[column type=r,fixed, fixed zerofill, precision=1,
+%columns/EButane/.style = {column name = \cmpd{Butane}},
+%columns/EMeOEt/.style = {column name = \cmpd{MeOEt}},
+%columns/EMeSEt/.style = {column name = \cmpd{MeSEt}},
+%columns/EMeCOEt/.style = {column name = \cmpd{Butanone}},
+%columns/EIsoPentane/.style = {column name = \cmpd{Isopentane}},
+%columns/EIPrOMe/.style = {column name = \cmpd{Me2CHOMe}},
+%columns/EIPrSMe/.style = {column name = \cmpd{Me2CHSMe}},
+%columns/EDMeNEt/.style = {column name = \cmpd{Me2NEt}},
+%]\ScanReagents
+%\end{table}
 
 Глобально оптимальными, судя по~рис.~\ref{fig:Internal:Rotation:Butanes}--\ref{fig:Internal:Rotation:Isopentanes}, ожидаемо являются \emph{транс}- или \emph{транс,~гош}-конформеры с $\tau\approx\ang{180}$. В дальнейшем во всех случаях для расчётов энергетических эффектов реакций разделения связей были использованы оптимизированные значения энергии именно для таких структур.
 
