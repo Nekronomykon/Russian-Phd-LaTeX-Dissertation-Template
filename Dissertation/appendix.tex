@@ -1,39 +1,42 @@
 \chapter{Примеры вставки листингов программного кода}\label{app:A}
 
-%Для крупных листингов есть два способа. Первый красивый, но в нём могут быть
-%проблемы с поддержкой кириллицы (у вас может встречаться в~комментариях
-%и печатаемых сообщениях), он представлен на листинге~\ref{lst:hwbeauty}.
-%\begin{ListingEnv}[!h]% настройки floating аналогичны окружению figure
-%    \captiondelim{ } % разделитель идентификатора с номером от наименования
-%    \caption{Программа ,,Hello, world`` на \protect\cpp}\label{lst:hwbeauty}
-%    % окружение учитывает пробелы и табуляции и применяет их в сответсвии с настройками
-%    \begin{lstlisting}[language={[ISO]C++}]
-%	#include <iostream>
-%	using namespace std;
-%
-%	int main() //кириллица в комментариях при xelatex и lualatex имеет проблемы с пробелами
-%	{
-%		cout << "Hello, world" << endl; //latin letters in commentaries
-%		system("pause");
-%		return 0;
-%	}
-%    \end{lstlisting}
-%\end{ListingEnv}%
-%Второй не~такой красивый, но без ограничений (см.~листинг~\ref{lst:hwplain}).
-%\begin{ListingEnv}[!h]
-%    \captiondelim{ } % разделитель идентификатора с номером от наименования
-%    \caption{Программа ,,Hello, world`` без подсветки}\label{lst:hwplain}
-%    \begin{Verb}
-%
-%        #include <iostream>
-%        using namespace std;
-%
-%        int main() //кириллица в комментариях
-%        {
-%            cout << "Привет, мир" << endl;
-%        }
-%    \end{Verb}
-%\end{ListingEnv}
+Для крупных листингов есть два способа. Первый красивый, но в нём могут быть
+проблемы с поддержкой кириллицы (у вас может встречаться в~комментариях
+и печатаемых сообщениях), он представлен на листинге~\ref{lst:hwbeauty}.
+
+\begin{ListingEnv}[!h]% настройки floating аналогичны окружению figure
+    \captiondelim{ } % разделитель идентификатора с номером от наименования
+    \caption{Программа ,,Hello, world`` на \protect\cpp}\label{lst:hwbeauty}
+    % окружение учитывает пробелы и табуляции и применяет их в сответсвии с настройками
+    \begin{lstlisting}[language={[ISO]C++}]
+	#include <iostream>
+	using namespace std;
+
+	int main() //кириллица в комментариях при xelatex и lualatex имеет проблемы с пробелами
+	{
+		cout << "Hello, world" << endl; //latin letters in commentaries
+		system("pause");
+		return 0;
+	}
+    \end{lstlisting}
+\end{ListingEnv}%
+
+Второй "--- не~такой красивый, но без ограничений (см.~листинг~\ref{lst:hwplain}).
+
+\begin{ListingEnv}[!h]
+    \captiondelim{ } % разделитель идентификатора с номером от наименования
+    \caption{Программа ,,Hello, world`` без подсветки}\label{lst:hwplain}
+    \begin{Verb}
+
+        #include <iostream>
+        using namespace std;
+
+        int main() //кириллица в комментариях
+        {
+            cout << "Привет, мир" << endl;
+        }
+    \end{Verb}
+\end{ListingEnv}
 
 Можно использовать первый (\texttt{ListingEnv/lstlisting}) для вставки небольших фрагментов
 внутри текста, а второй (\texttt{ListingEnv/Verb}) для вставки полного
@@ -818,48 +821,3 @@ f13 & 500  & 2.0E-16   & 1.2E-15   & 1.5E-06   & 6.1E-05   & 7.5E-02   & 2.9E-03
 
 Нужно больше подразделов приложения!
 
-\chapter{Потенциалы внутреннего вращения молекул}
-
-Расчёт проводился в приближении RI-MP2/aug-cc-pVTZ без явного учёта симметрии.
-
-%\twocolumn
-  \begin{table}
-    \caption{\label{tab:InternalRotation:Butane}Внутреннее вращение \emph{н}-бутана~\cmpd{Butane}}\centering
-    \pgfplotstabletypeset[column type=r,columns={Tau,Etot,Erel}]\ScanButane
-  \end{table}
-  
-  \begin{table}
-    \caption{\label{tab:InternalRotation:MeOEt}Внутреннее вращение метилэтилового эфира~\cmpd{MeOEt}}\centering
-    \pgfplotstabletypeset[column type=r,columns={Tau,Etot,Erel}]\ScanMeOEt
-  \end{table}
-  
-  \begin{table}
-    \caption{\label{tab:InternalRotation:MeSEt}Внутреннее вращение метилэтилсульфида~\cmpd{MeSEt}}\centering
-    \pgfplotstabletypeset[column type=r,columns={Tau,Etot,Erel}]\ScanMeSEt
-  \end{table}
-  
-  \begin{table}
-    \caption{\label{tab:InternalRotation:Butanone}Внутреннее вращение бутанона-2~\cmpd{Butanone}}\centering
-    \pgfplotstabletypeset[column type=r,columns={Tau,Etot,Erel}]\ScanMeCOEt
-  \end{table}
-  
-  \begin{table}
-    \caption{\label{tab:InternalRotation:Isopentane}Внутреннее вращение изопентана~\cmpd{Isopentane}}\centering
-    \pgfplotstabletypeset[column type=r,columns={Tau,Etot,Erel}]\ScanIsoPentane
-  \end{table}
-  
-  \begin{table}
-    \caption{\label{tab:InternalRotation:Me2CHOMe}Внутреннее вращение метил-\emph{изо}-пропилового эфира~\cmpd{Me2CHOMe}}\centering
-    \pgfplotstabletypeset[column type=r,columns={Tau,Etot,Erel}]\ScanIPrOMe
-  \end{table}
-  
-  \begin{table}
-    \caption{\label{tab:InternalRotation:Me2CHSMe}Внутреннее вращение метил-\emph{изо}-пропилсульфида~\cmpd{Me2CHSMe}}\centering
-    \pgfplotstabletypeset[column type=r,columns={Tau,Etot,Erel}]\ScanIPrSMe
-  \end{table}
-  
-  \begin{table}
-    \caption{\label{tab:InternalRotation:Me2NEt}Внутреннее вращение \ce{N},\ce{N}-диметилэтиламина~\cmpd{Me2NEt}}\centering
-    \pgfplotstabletypeset[column type=r,columns={Tau,Etot,Erel}]\ScanMeMeNEt
-  \end{table}
-%\onecolumn

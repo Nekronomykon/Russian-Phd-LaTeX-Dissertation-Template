@@ -332,9 +332,9 @@
 %%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% Немного математических символов
-\newcommand{\Etot}{{\ensuremath{E_{tot}}{}}}
-\newcommand{\Ezpe}{\ensuremath{E_{ZPE}}{}}
-\newcommand{\EStrain}{\ensuremath{\Func{E}_\varsigma}}
+\newcommand{\Energytot}{{\ensuremath E_{tot}}{}}
+\newcommand{\EnergyZPE}{{\ensuremath E_{ZPE}}{}}
+\newcommand{\EStrain}{{\ensuremath\Func{E}_\varsigma}{}}
 \newcommand{\SymGroup}[2]{\ensuremath{\AGroup{#1}_{#2}}}
 %%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -349,13 +349,13 @@
   %every first column/.style={},
   columns/Tau/.style={int detect,column type=r,column type/.add={}{|},column name={$\tau$}},
   columns/Etot/.style={fixed,fixed zerofill,
-    % column type=S,
-    precision=6,column name=$\Etot$},
+    column type=r,
+    precision=6,column name=$\Energytot$},
   columns/Emin/.style={fixed,fixed zerofill,precision=6,
     column name={$E_0$},
   },
   columns/Erel/.style={fixed,fixed zerofill,
-    % column type=S,
+    column type=r,
     precision=2,%showpos,
     column name={$\Delta\Func{E}$},
     %create on use={create col/expr={2625.5 * {\thisrow{Etot} - \thisrow{Emin}} } },

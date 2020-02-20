@@ -59,10 +59,10 @@
 
 Для расчётов энергий индивидуальных реагентов применяются неэмпирические (\emph{ab~initio}) методы. Они включают на первом этапе оптимизацию геометрии молекул. Далее расчёт собственных частот колебаний для конформеров. 
 
-Часто несколько методов расчёта комбинируются в виде так называемых \emph{аддитивных схем}\dots Полная энергия \Etot и энергия нулевых колебаний \Ezpe
+Часто несколько методов расчёта комбинируются в виде так называемых \emph{аддитивных схем}\dots Полная энергия $\Energytot$ и энергия нулевых колебаний $\EnergyZPE$
 
 \begin{equation}
-E_\varpi = \underbrace{{\overbrace{E_0^\infty + E_c^\infty}^{E_\infty}} + E_k}_{\sim\Etot} + E_{ZPE}
+E_\varpi = \underbrace{{\overbrace{E_0^\infty + E_c^\infty}^{E_\infty}} + E_k}_{\sim\Energytot} + \EnergyZPE
 \end{equation}
 
 Ниже в таблице~\ref{tab:Reagents:Opt} на с.~\pageref{tab:Reagents:Opt}--\pageref{tab:Reagents:Opt:Ends} приводятся результаты оптимизации молекул-\tqt{реагентов} в приближении RI-MP2~\cite{MP:1934,RI:MP2:1997} с использованием расширенного корреляционно-согласованного трёхэкспоненциального базисного набора Даннинга (aug-cc-pVTZ).~\cite{Dunning:1989,Peterson:1993,Woon:1993} Если группа симметрии оптимальной структуры не указана явно, она является тривиальной~(\SymGroup{C}{1}). Все полученные в ходе расчёта собственные частоты молекул действительны.
@@ -317,7 +317,7 @@ create col/assign/.code={%
 {\ScanMeMeNEt}{Results/ScanMeMeNEt.save.dat}
 
 \begin{center}
-\centering
+%\centering
 \begin{tikzpicture}
   \begin{axis} [%
     %title={\chemfig{H_3C-[:+30]\circ-[:-30]\circ-[:+30]CH_3}},
@@ -338,17 +338,17 @@ create col/assign/.code={%
     {Results/ScanMeCOEt.save.dat}; \addlegendentry{\chemfig{[,0.75]-[:+30]-[:-30]C(=[:-90]O)-[:+30]}~\cmpd{Butanone}}
   \end{axis}
 \end{tikzpicture}%
+
+\caption{Потенциалы внутреннего вращения молекул \cmpd{Butane}--\cmpd{Butanone}}
 \label{fig:Internal:Rotation:Butanes}
-
-%\caption{Потенциалы внутреннего вращения молекул \cmpd{Butane}--\cmpd{Butanone}}
 \end{center}
-
+~
 \begin{center}
-  \centering
+  %\centering
 \begin{tikzpicture}
   \begin{axis} [%
     legend style={draw=none},
-    xlabel={\chemfig{[,0.75]H_3C-[:+30]\circ-[:-30]\bullet(-[:-90]CH_3)-[:+30]CH_3}/$\tau$,~\textdegree},
+    xlabel={\chemfig{[,0.75]H_3C-[:+30]\bullet(-[:+90]CH_3)-[:-30]\circ-[:+30]CH_3}/$\tau$,~\textdegree},
     xmin=-180, xmax=180,
     xtick={-180,-120,...,180},
     ylabel={$\Delta\Func{E}$,~\si{\kilo\joule\per\mole}},
@@ -363,14 +363,14 @@ create col/assign/.code={%
     {Results/ScanMeMeNEt.save.dat};\addlegendentry{\chemfig{[,0.625]-[:+30]N(-[:+90])-[:-30]-[:+30]}~\cmpd{Me2NEt}}
 \end{axis}
 \end{tikzpicture}%
-\label{fig:Internal:Rotation:Isopentanes}
 
-%\caption{Потенциалы внутреннего вращения молекул \cmpd{Isopentane}--\cmpd{Me2NEt}} 
+\caption{Потенциалы внутреннего вращения молекул \cmpd{Isopentane}--\cmpd{Me2NEt}}
+\label{fig:Internal:Rotation:Isopentanes} 
 \end{center}
 
 \pgfplotstableset{
 %columns/TauAll/.style = {column name = $\tau$,~\textdegree},
-%columns/EButane/.style = {column name = \cmpd{Butane}},
+%columns/EButane/.style = {column name = \cmpd{Butane}},0
 %columns/EMeOEt/.style = {column name = $\Delta\Func{E}$~(\cmpd{MeOEt})},
 }
 
@@ -503,5 +503,5 @@ B таблице~\ref{tab:Cycle:Six:Opt} на с.~\pageref{tab:Cycle:Six:Opt}--\
 %\begin{longtabu} to \textwidth {X} \end{longtabu}
 
 \vspace{\medskipamount}
-Энергии напряжения... \EStrain
+Энергии напряжения... $\EStrain$
 
