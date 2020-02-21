@@ -7,6 +7,7 @@
 
 \input{common/setup}            % общие настройки шаблона
 \input{common/packages}         % Пакеты общие для диссертации и автореферата
+%\input{common/chempacks}
 \synopsisfalse                      % Этот документ --- не автореферат
 \input{Dissertation/dispackages}    % Пакеты для диссертации
 \input{Dissertation/userpackages}   % Пакеты для специфических пользовательских задач
@@ -51,16 +52,7 @@
 %
 % Если все команды закомментированы, то документ будет выведен в PDF файл полностью
 
-%%% Данные в виде таблиц:
-\pgfplotstableread{Results/CCCC-Scan.dat}{\ScanButane}
-\pgfplotstableread{Results/CCOC-Scan.dat}{\ScanMeOEt}
-\pgfplotstableread{Results/CCSC-Scan.dat}{\ScanMeSEt}
-\pgfplotstableread{Results/CCQC-Scan.dat}{\ScanMeCOEt}
-\pgfplotstableread{Results/C2CCC-Scan.dat}{\ScanIsoPentane}
-\pgfplotstableread{Results/C2COC-Scan.dat}{\ScanIPrOMe}
-\pgfplotstableread{Results/C2CSC-Scan.dat}{\ScanIPrSMe}
-\pgfplotstableread{Results/C2NCC-Scan.dat}{\ScanMeMeNEt}
-
+%\include{Dissertation/datatables}
 \begin{document}
 
 \input{common/renames}                 % Переопределение именований
@@ -75,13 +67,13 @@
 }{\counterwithin{figure}{chapter}}
 \ifnumequal{\value{contnumtab}}{1}{\counterwithout{table}{chapter}
 }{\counterwithin{table}{chapter}}
-\include{Dissertation/Review}
-\include{Dissertation/Confrm331}
-\include{Dissertation/Strain331}
+%\include{Dissertation/Review}
+%\include{Dissertation/Confrm331}
+%\include{Dissertation/Strain331}
 %% методические главы
-%\include{Dissertation/part1}           % Глава 1
-%\include{Dissertation/part2}           % Глава 2
-%\include{Dissertation/part3}           % Глава 3
+\include{Dissertation/part1}           % Глава 1
+\include{Dissertation/part2}           % Глава 2
+\include{Dissertation/part3}           % Глава 3
 \include{Dissertation/conclusion}      % Заключение
 \include{Dissertation/acronyms}        % Список сокращений и условных обозначений
 \include{Dissertation/dictionary}      % Словарь терминов
@@ -95,7 +87,7 @@
 \renewcommand*{\afterchapternum}{\par\nobreak\vskip \midchapskip}
 \renewcommand\thechapter{\Asbuk{chapter}} % Чтобы приложения русскими буквами нумеровались
 
-%\include{Dissertation/appendix}        % Образцы приложения
-\include{Dissertation/Appendices}
+\include{Dissertation/appendix}        % Образцы приложения
+%\include{Dissertation/Appendices}
 
 \end{document}
