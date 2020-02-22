@@ -7,7 +7,7 @@
 
 \input{common/setup}            % общие настройки шаблона
 \input{common/packages}         % Пакеты общие для диссертации и автореферата
-%\input{common/chempacks}
+\input{common/chempacks}
 \synopsisfalse                      % Этот документ --- не автореферат
 \input{Dissertation/dispackages}    % Пакеты для диссертации
 \input{Dissertation/userpackages}   % Пакеты для специфических пользовательских задач
@@ -52,7 +52,7 @@
 %
 % Если все команды закомментированы, то документ будет выведен в PDF файл полностью
 
-%\include{Dissertation/datatables}
+\input{Dissertation/datatables}
 \begin{document}
 
 \input{common/renames}                 % Переопределение именований
@@ -67,12 +67,12 @@
 }{\counterwithin{figure}{chapter}}
 \ifnumequal{\value{contnumtab}}{1}{\counterwithout{table}{chapter}
 }{\counterwithin{table}{chapter}}
-%\include{Dissertation/Review}
-%\include{Dissertation/Confrm331}
-%\include{Dissertation/Strain331}
+\include{Dissertation/Review}
+\include{Dissertation/Confrm331}
+\include{Dissertation/Strain331}
 %% методические главы
-\include{Dissertation/part1}           % Глава 1
-\include{Dissertation/part2}           % Глава 2
+%% \include{Dissertation/part1}           % Глава 1
+%% \include{Dissertation/part2}           % Глава 2
 \include{Dissertation/part3}           % Глава 3
 \include{Dissertation/conclusion}      % Заключение
 \include{Dissertation/acronyms}        % Список сокращений и условных обозначений
