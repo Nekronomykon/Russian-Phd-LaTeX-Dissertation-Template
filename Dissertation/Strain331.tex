@@ -126,7 +126,8 @@ $\angle\ce{C(O)CC}~\ang{113.4}$;
 %\midrule\cmpd{Isopentanone} &\chemfig{H_3C-[:+30](-[:+90]CH_3)-[:-30]C(=[:-90]O)-[:+30]CH_3} & & & \\
 \end{longtabu}\label{tab:Reagents:Opt:Ends}
 
-За исключением простейших структур \cmpd{Propane}--\cmpd{Acetone}, молекулы реагентов также обладают конформационной подвижностью. В частности, инверсия атома азота триметиламина~\cmpd{Trimethylamine} взаимодействует со внутренним вращением метильных групп. Внутреннее вращение \emph{н}-бутана~\cmpd{Butane} и его аналогов\dots
+За исключением простейших структур \cmpd{Propane}--\cmpd{Acetone}, молекулы реагентов обладают конформационной подвижностью. Инверсия атома азота триметиламина~\cmpd{Trimethylamine} взаимодействует со внутренним вращением метильных групп. 
+%Внутреннее вращение \emph{н}-бутана~\cmpd{Butane} и его аналогов\dots
 
 \pgfplotstablecreatecol[%
 create col/assign/.code={%
@@ -317,7 +318,9 @@ create col/assign/.code={%
 {\ScanMeMeNEt}{Results/ScanMeMeNEt.save.dat}
 
 \begin{center}
-%\centering
+\caption{Потенциалы внутреннего вращения молекул \cmpd{Butane}--\cmpd{Butanone}\label{fig:Internal:Rotation:Butanes}}
+
+\centerfloat{
 \begin{tikzpicture}
   \begin{axis} [%
     %title={\chemfig{H_3C-[:+30]\circ-[:-30]\circ-[:+30]CH_3}},
@@ -337,14 +340,14 @@ create col/assign/.code={%
     \addplot [green,thick,smooth,domain=-180:180] table [x=Tau,y=Erel] 
     {Results/ScanMeCOEt.save.dat}; \addlegendentry{\chemfig{[,0.75]-[:+30]-[:-30]C(=[:-90]O)-[:+30]}~\cmpd{Butanone}}
   \end{axis}
-\end{tikzpicture}%
-
-\caption{Потенциалы внутреннего вращения молекул \cmpd{Butane}--\cmpd{Butanone}}
-\label{fig:Internal:Rotation:Butanes}
+\end{tikzpicture}
+}
 \end{center}
-~
+
 \begin{center}
-  %\centering
+\caption{Потенциалы внутреннего вращения молекул \cmpd{Isopentane}--\cmpd{Me2NEt}\label{fig:Internal:Rotation:Isopentanes}}
+
+  \centerfloat{
 \begin{tikzpicture}
   \begin{axis} [%
     legend style={draw=none},
@@ -363,9 +366,7 @@ create col/assign/.code={%
     {Results/ScanMeMeNEt.save.dat};\addlegendentry{\chemfig{[,0.625]-[:+30]N(-[:+90])-[:-30]-[:+30]}~\cmpd{Me2NEt}}
 \end{axis}
 \end{tikzpicture}%
-
-\caption{Потенциалы внутреннего вращения молекул \cmpd{Isopentane}--\cmpd{Me2NEt}}
-\label{fig:Internal:Rotation:Isopentanes} 
+}
 \end{center}
 
 \pgfplotstableset{
