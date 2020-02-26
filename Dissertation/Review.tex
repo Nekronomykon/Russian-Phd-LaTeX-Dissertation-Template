@@ -250,7 +250,8 @@ $\leftarrow$ \qquad $\leftarrow$ & $\longrightarrow$ & $\leftarrow$\quad$\righta
 
 \begin{center}
   \begin{tabular}{cccc}
-  \chemfig{[:-30]Y*6(-?[a](-[:180]-[:120]X-[:+60]-[:0]?[a])--X---)} & \chemfig{[:-30]H_2C*6(-?[a](-[:180]-[:120]S-[:+60]-[:0]?[a])--S---)}& \chemfig{[:-30]H_2C*6(-?[a](-[:180]-[:120]S(=[:180,0.75]O)-[:+60]-[:0]?[a])--S(=[:0,0.75]O)---)} & \\
+  %\ChemPicture{[:-30]Y*6(-?[a](-[:180]-[:120]X-[:+60]-[:0]?[a])--X---)} 
+  & \chemfig{[:-30]*6(-?[a](-[:180]-[:120]S-[:+60]-[:0]?[a])--S---)}& \chemfig{[:-30]*6(-?[a](-[:180]-[:120]S(=[:180,0.75]O)-[:+60]-[:0]?[a])--S(=[:0,0.75]O)---)} & \\
   \cmpd{Propellanes331} & \cmpd{Propellanes331S37} & \cmpd{Propellanes331SO37}\\
 \end{tabular}
 \end{center}
@@ -259,7 +260,19 @@ $\leftarrow$ \qquad $\leftarrow$ & $\longrightarrow$ & $\leftarrow$\quad$\righta
 
 \section{Биспидины (производные и гетероаналоги 3,7-диазабицикло[3.3.1]нонана)}
 
-3,7-диметил-9,9-диоксо-9-тиа-3,7-диазабицикло[3.3.1]нонан~\cmpd{Bispidine9SO2} по данным РСА находится в конформации~\CC{}. Структурные данные согласуются с результатом оптимизации соответствующей формы молекулы в приближении B3LYP / 6-31+G[dp].~\cite{Vlasova:2013:rus,Vlasova:2013}
+Катион протонированного 1,5-диметил-3,7-диазабицикло[3.3.1]нонанона-9~\cmpd{BSP:O9:15Me2:HPlus} в кристаллах своих солей обнаруживает различную конформацию атома водорода связанного с нейтральным атомом азота в зависимости от способности аниона \ce{X-} к образованию водородных связей.
+
+\begin{center}
+  \begin{tabular}{ccc}
+    \chemfig{N?[a](-[:-150]H)<[:+60]-[:+30,,,,line width=\boldbondwidth](-[:+45,,,,line width=\boldbondwidth]CH_3)(>[:+120]C(=[:+90,0.75]O)-[:-120] (-[:+135]H_3C) (-[:-150]?[a]) (-[:-30]-[:-60]{N}^+?[b](-[:-135]H)(-[:-45]H)))-[:-+30,,,,line width=\boldbondwidth]?[b,{<}]} & 
+    \chemfig{N?[a](-[:-75]H)<[:+60]-[:+30,,,,line width=\boldbondwidth](-[:+45,,,,line width=\boldbondwidth]CH_3)(>[:+120]C(=[:+90,0.75]O)-[:-120] (-[:+135]H_3C) (-[:-150]?[a]) (-[:-30]-[:-60]{N}^+?[b](-[:-105]H)(-[:-30]H)))-[:-+30,,,,line width=\boldbondwidth]?[b,{<}]} & \\
+    \texttt{BOZGAA}~\cmpd{CCDC:BOZGAA} &
+    \texttt{BOZFUT}~\cmpd{CCDC:BOZFUT} & \\
+    (\ce{\cmpd{BSP:O9:15Me2:HPlus} + Cl^-.H2O}) & (\ce{\cmpd{BSP:O9:15Me2:HPlus} + CH3COO^-}) & \\ 
+  \end{tabular}
+\end{center}
+
+3,7-диметил-9,9-диоксо-9-тиа-3,7-диазабицикло[3.3.1]нонан~\cmpd{Bispidine9SO2} по данным РСА~(\texttt{AFUFUE}) находится в конформации~\CC{}. Структурные данные согласуются с результатом оптимизации соответствующей формы молекулы в приближении B3LYP / 6-31+G[dp].~\cite{Vlasova:2013:rus,Vlasova:2013}
 \begin{center}
   \begin{tabular}{cc}
 \ChemPicture{N?[a](-[:-150]H_3C)<[:+60]-[:+30,,,,line width=\boldbondwidth](>[:+120]S(=[:+135,0.875]O)(=[:+45,0.875]O)-[:-120](-[:-150]?[a]) (-[:-30]-[:-60]N?[b](-[:-30]CH_3)))-[:-+30,,,,line width=\boldbondwidth]?[b,{<}]} & \\
@@ -269,23 +282,57 @@ $\leftarrow$ \qquad $\leftarrow$ & $\longrightarrow$ & $\leftarrow$\quad$\righta
 
 \subsection{Природные соединения, содержащие биспидиновый скелет}
 
-Хинолизидиновые алкалоиды
+Хинолизидиновые алкалоиды. 
 
-Цитизин~\cmpd{Cytisine}. Пахикарпин или (-)-спартеин~\cmpd{Pachycarpine}, (+)-спартеин~\cmpd{Sparteine}. В гидроиодиде $\alpha$-изолупанина~\ce{{\cmpd{IsolupanineA}}.HI} структура \CC{} стабилизируется внутримолекулярным мостиком \ce{N\bond{...}H-N} [Anna E. Kozio\l,~JMS 145(1-2),~1986; doi:~10.1016/0022-2860(86)87035-1]
+Одним из простейших представителей
+является цитизин~\cmpd{Cytisine}. Родственные ему ромбифолин~\cmpd{Rhombifoline}, анагирин~\cmpd{Anagyrine}, термопсин~\cmpd{Thermopsine}, баптифолин~\cmpd{Baptifoline} и эпибаптифолин~\cmpd{Epibaptifoline}.~\cite{Goller:2019} 
+
+\begin{center}
+\begin{tabular}{ccc}
+\chemfig{*6(-C(=[,0.75]O)-N(*6(--(-[:+30]-[:+90]NH-[:+150]?[a])<:>:?[a]-))-=-=)} & 
+\chemfig{*6(-C(=[,0.75]O)-N(*6(--(-[:+30]-[:+90]N (-[:+30]-[:-30]-[:-90]=[:-150,0.75]H_2C)-[:+150]?[a])<:>:?[a]-))-=-=)} & \\
+\cmpd{Cytisine} &
+\cmpd{Rhombifoline} & 
+\\
+\end{tabular}
+\end{center}
+
+\begin{center}
+\begin{tabular}{ccc}
+    \chemfig{*6(-C(=[,0.75]O)-N(*6(--(-[:+30](*6(-----N)) (<:[:-90,0.75]H)-[:+90]\phantom{N}-[:+150]?[a])<>?[a]-))-=-=)} & 
+    \chemfig{*6(-C(=[,0.75]O)-N(*6(--(-[:+30](*6(-----N)) (<[:-90,0.75]H)-[:+90]\phantom{N}-[:+150]?[a])<>?[a]-))-=-=)} & \\
+\cmpd{Anagyrine} & \cmpd{Thermopsine} & \\
+  \end{tabular}
+\end{center}
+
+\begin{center}
+\begin{tabular}{ccc}
+  \chemfig{*6(-C(=[,0.75]O)-N(*6(--(-[:+30](*6(--(<:[:-30,0.875]OH)---N)) (<:[:-90,0.75]H)-[:+90]\phantom{N}-[:+150]?[a])<>?[a]-))-=-=)} &
+  \chemfig{*6(-C(=[,0.75]O)-N(*6(--(-[:+30](*6(--(<[:-30,0.875]OH)---N)) (<:[:-90,0.75]H)-[:+90]\phantom{N}-[:+150]?[a])<>?[a]-))-=-=)} & \\
+  \cmpd{Baptifoline} & \cmpd{Epibaptifoline} & \\
+  \end{tabular}
+\end{center}
+
+Пахикарпин или (-)-спартеин~\cmpd{Pachycarpine}, (+)-спартеин~\cmpd{Sparteine}.
 
 \begin{center}
   \begin{tabular}{ccc}
-    &
-\chemfig{*6(-C(=[,0.75]O)-N(*6(--(-[:+30]-[:+90]NH-[:+150]?[a])<:>:?[a]-))-=-=)} & 
-\\
-&
-\cmpd{Cytisine} & 
-\\
-    \chemfig{*6(--N(*6(--(-[:+30](*6(-----N))(<:[:-90,0.75]H)-[:+90]\phantom{N}-[:+150]?[a])<>?[a]-))-(<[:+90,0.75]H)---)} & 
-    \chemfig{*6(--N(*6(--(-[:+30](*6(-----N))(<[:-90,0.75]H)-[:+90]\phantom{N}-[:+150]?[a])<:>:?[a]-))-(<:[:+90,0.75]H)---)} & \\
+    \chemfig{*6(--N(*6(--(-[:+30](*6(-----N)) (<:[:-90,0.75]H)-[:+90]\phantom{N}-[:+150]?[a])<>?[a]-))-(<[:+90,0.75]H)---)} & 
+    \chemfig{*6(--N(*6(--(-[:+30](*6(-----N)) (<[:-90,0.75]H)-[:+90]\phantom{N}-[:+150]?[a])<:>:?[a]-))-(<:[:+90,0.75]H)---)} & \\
     \cmpd{Pachycarpine} & \cmpd{Sparteine} & \\
-    \chemfig{*6(-C(=[,0.75]O)-N(*6(--(-[:+30](*6(-----N))(<[:-90,0.75]H)-[:+90]\phantom{N}-[:+150]?[a])<>?[a]-))-(<[:+90,0.75]H)---)} & & \\
-\cmpd{IsolupanineA} & & \\
+  \end{tabular}
+\end{center}
+
+Ангустифолин~\cmpd{Angustifoline} по данным ЯЭО~\cite{Wysocka:1994}
+
+В гидроиодиде $\alpha$-изолупанина~\ce{{\cmpd{IsolupanineA}}.HI} структура \CC{} стабилизируется внутримолекулярным мостиком \ce{N\bond{...}H-N}~\cite{Koziol:1986}
+ 
+\begin{center}
+\begin{tabular}{ccc}
+\chemfig{*6(-C(=[,0.75]O)-N(*6(--(-[:+30] (-[:-30]-[:+30]=[:+90,0.75]CH_2)
+ (<:[:-90,0.75]H)-[:+90]NH-[:+150]?[a])<>?[a]-))-(<[:+90,0.75]H)---)} &
+\chemfig{*6(-C(=[,0.75]O)-N(*6(--(-[:+30] (*6(-----N))  (<[:-90,0.75]H)-[:+90]\phantom{N}-[:+150]?[a])<>?[a]-))-(<[:+90,0.75]H)---)} & \\
+\cmpd{Angustifoline} & \cmpd{IsolupanineA} & \\
   \end{tabular}
 \end{center}
 
