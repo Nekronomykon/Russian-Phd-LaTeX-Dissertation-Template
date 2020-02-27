@@ -332,13 +332,13 @@ create col/assign/.code={%
     ylabel={$\Delta\Func{E}$,~\si{\kilo\joule\per\mole}},
     ymin=-1, ymax=32]
     \addplot [black,thick,smooth,domain=-180:180] table [x=Tau,y=Erel] 
-    {Results/ScanButane.save.dat};\addlegendentry{\chemfig{[,0.75]-[:+30]-[:-30]-[:+30]}~\cmpd{Butane}}
+    {Results/ScanButane.save.dat};\addlegendentry{\chemfig{[,0.675]-[:+30]-[:-30]-[:+30]}~\cmpd{Butane}}
     \addplot [red,thick,smooth,domain=-180:180] table [x=Tau,y=Erel]
-    {Results/ScanMeOEt.save.dat};\addlegendentry{\chemfig{[,0.75]-[:+30]-[:-30]O-[:+30]}~\cmpd{MeOEt}}
+    {Results/ScanMeOEt.save.dat};\addlegendentry{\chemfig{[,0.675]-[:+30]-[:-30]O-[:+30]}~\cmpd{MeOEt}}
     \addplot [brown,thick,smooth,domain=-180:180] table [x=Tau,y=Erel] 
-    {Results/ScanMeSEt.save.dat};\addlegendentry{\chemfig{[,0.75]-[:+30]-[:-30]S-[:+30]}~\cmpd{MeSEt}}
+    {Results/ScanMeSEt.save.dat};\addlegendentry{\chemfig{[,0.675]-[:+30]-[:-30]S-[:+30]}~\cmpd{MeSEt}}
     \addplot [green,thick,smooth,domain=-180:180] table [x=Tau,y=Erel] 
-    {Results/ScanMeCOEt.save.dat}; \addlegendentry{\chemfig{[,0.75]-[:+30]-[:-30]C(=[:-90]O)-[:+30]}~\cmpd{Butanone}}
+    {Results/ScanMeCOEt.save.dat}; \addlegendentry{\chemfig{[,0.675]-[:+30]-[:-30]C(=[:-90]O)-[:+30]}~\cmpd{Butanone}}
   \end{axis}
 \end{tikzpicture}
 }
@@ -357,13 +357,13 @@ create col/assign/.code={%
     ylabel={$\Delta\Func{E}$,~\si{\kilo\joule\per\mole}},
     ymin=-1, ymax=32]
     \addplot [black,thick,smooth,domain=-180:180] table [x=Tau,y=Erel] 
-    {Results/ScanIsopentane.save.dat};\addlegendentry{\chemfig{[,0.625]-[:+30](-[:+90])-[:-30]-[:+30]}~\cmpd{Isopentane}}
+    {Results/ScanIsopentane.save.dat};\addlegendentry{\chemfig{[,0.675]-[:+30](-[:+90])-[:-30]-[:+30]}~\cmpd{Isopentane}}
     \addplot [red,thick,smooth,domain=-180:180] table [x=Tau,y=Erel] 
-    {Results/ScanIPrOMe.save.dat};\addlegendentry{\chemfig{[,0.625]-[:+30](-[:+90])-[:-30]O-[:+30]}~\cmpd{Me2CHOMe}}
+    {Results/ScanIPrOMe.save.dat};\addlegendentry{\chemfig{[,0.675]-[:+30](-[:+90])-[:-30]O-[:+30]}~\cmpd{Me2CHOMe}}
     \addplot [brown,thick,smooth,domain=-180:180] table [x=Tau,y=Erel] 
-    {Results/ScanIPrSMe.save.dat};\addlegendentry{\chemfig{[,0.625]-[:+30](-[:+90])-[:-30]S-[:+30]}~\cmpd{Me2CHSMe}}
+    {Results/ScanIPrSMe.save.dat};\addlegendentry{\chemfig{[,0.675]-[:+30](-[:+90])-[:-30]S-[:+30]}~\cmpd{Me2CHSMe}}
     \addplot [blue,thick,smooth,domain=-180:180] table [x=Tau,y=Erel] 
-    {Results/ScanMeMeNEt.save.dat};\addlegendentry{\chemfig{[,0.625]-[:+30]N(-[:+90])-[:-30]-[:+30]}~\cmpd{Me2NEt}}
+    {Results/ScanMeMeNEt.save.dat};\addlegendentry{\chemfig{[,0.75]-[:+30]N(-[:+90])-[:-30]-[:+30]}~\cmpd{Me2NEt}}
 \end{axis}
 \end{tikzpicture}%
 }
@@ -403,7 +403,7 @@ columns={Tau,EButane,EMeOEt,EMeSEt,EMeCOEt,EIsoPentane,EIPrOMe,EIPrSMe,EDMeNEt}]
 %]\ScanReagents
 %\end{table}
 
-Глобально оптимальными, судя по~рис.~\ref{fig:Internal:Rotation:Butanes}--\ref{fig:Internal:Rotation:Isopentanes}, ожидаемо являются \emph{транс}- или \emph{транс,~гош}-конформеры с $\tau\approx\ang{180}$. В дальнейшем во всех случаях для расчётов энергетических эффектов реакций разделения связей были использованы оптимизированные значения энергии именно для таких структур.
+Глобально оптимальными, судя по~рис.~\ref{fig:Internal:Rotation:Butanes}--\ref{fig:Internal:Rotation:Isopentanes}, являются \emph{транс}- или \emph{транс,~гош}-конформеры с $\tau\approx+\ang{60}$ и $\tau\approx\ang{180}$. В дальнейшем во всех случаях для расчётов энергетических эффектов реакций разделения связей были использованы оптимизированные значения энергии именно для таких структур.
 
 
 \section{Напряжения свободных шестичленных циклов}
