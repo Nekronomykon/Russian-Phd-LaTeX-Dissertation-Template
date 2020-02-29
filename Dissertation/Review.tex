@@ -72,9 +72,10 @@
 \end{enumerate}
 
 \begin{center}
-\caption{Номенклатура положений и структурные декомпозиции системы бицикло[3.3.1]нонана. Для циклов {\CycleFirst}--{\CyclePseudoSecond} указано направление обхода\label{fig:Decomposition:331}}
+\caption{Номенклатура положений и структурные декомпозиции системы бицикло[3.3.1]нонана. Для циклов {\CycleFirst--\CycleThird}, {\CyclePseudoFirst} и~{\CyclePseudoSecond} указано направление обхода\label{fig:Decomposition:331}}
 
-\centerfloat{
+\centering
+%\centerfloat{
 \begin{tabular}{|c|c|c|c|}
 %\toprule
 \multicolumn{4}{c}{\chemfig{[:-30,1.25]\circ*6(-\bullet(-[:180]\circ-[:120]\circ-[:+60]\circ-[:0]\phantom{\bullet}?)-\circ-\circ-\circ-\bullet-)} \qquad = \qquad \chemfig{[:-30,1.25]9*6(-1(-[:180]2-[:120]3-[:+60]4-[:0]\phantom{5}?)-8-7-6-5-)}} \\
@@ -92,7 +93,7 @@ $\leftarrow$ \qquad $\leftarrow$ & $\longrightarrow$ & $\leftarrow$\quad$\righta
 %\bottomrule
 \end{tabular}
 \vspace{\bigskipamount}
-}
+%}
 \end{center}
 
 Максимальная симметрия бициклического скелета~\cmpd{Bicycle331}, как группа автоморфизмов соответствующего молекулярного графа, порождается из группы перестановок всех вершин $\SymGroup{S}{9}$ системой нетривиальных орбит (классов эквивалентности вершин) вида $\left\langle(2\,4\,6\,8)(1\,5)(3\,7)\right\rangle$. В эвклидовом трёхмерном (\tqt{мировом}) пространстве $\SymGroup{E}{3}\left(\AGroup{R}\right)\simeq\AGroup{R}^3$ эта группа (изоморфно реализуется?) представлена (?)  в~виде точечной группы симметрии \(\SymGroup{C}{2v}\) для~\CC{} и~\BB{}. Для других конформаций симметрия снижается до~подгрупп \(\SymGroup{C}{s}\) у~\BC{}/\CB{} и~$\SymGroup{C}{2}$ у~\TT{}.
@@ -106,12 +107,12 @@ $\leftarrow$ \qquad $\leftarrow$ & $\longrightarrow$ & $\leftarrow$\quad$\righta
 \begin{tabular}{c|cc|c}
 \toprule
 %\cmpd{Bicycle331:XYZ}: & \multicolumn{3}{c}{\chemfig{[:-30]Z*6(-(-[:180]-[:120]X-[:+60]-[:0]?)--Y---)}} \\ \midrule
- & \ConfName{К} & \ConfName{Т} & \ConfName{В} \\ \midrule
+ & \ConfName{К} & \ConfName{Т} & \ConfName{В} \\ & ($\SymGroup{D}{3d}$) & ($\SymGroup{D}{2}$) & ($\SymGroup{C}{2v}$) \\ \midrule
 \chemfig{[:-90,0.75]*6(------)} &
 \chemfig{?<[:-60]-[:+20,,,,line width=\boldbondwidth]>[:-20]-[:+120]-[:-160]?} & 
 \chemfig{?-[:-150,0.75]<[:-30,0.75]-[:+30,1.5,,,line width=\boldbondwidth]>[:-30,0.75]-[:-150,0.75]?} &
 \chemfig{(-[:-35]?)<[:-60]-[:+0,1.5,,,line width=\boldbondwidth]>[:+60]-[:-145]?} \\
-\cmpd{Cyclohexane} & ($\SymGroup{D}{3d}$) & ($\SymGroup{D}{2}$) & ($\SymGroup{C}{2v}$) \\ \midrule
+\cmpd{Cyclohexane} & & & \\ \midrule
 \chemfig{[:-90,0.75]*6(-X-----)} &
 \chemfig{X?<[:-60]-[:+20,,,,line width=\boldbondwidth]>[:-20]-[:+120]-[:-160]?} & 
 \chemfig{X?-[:-150,0.75]<[:-30,0.75]-[:+30,1.5,,,line width=\boldbondwidth]>[:-30,0.75]-[:-150,0.75]?} &
