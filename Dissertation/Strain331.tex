@@ -317,7 +317,7 @@ create col/assign/.code={%
 \pgfplotstablesave[columns={Tau,Etot,Erel}]
 {\ScanMeMeNEt}{Results/ScanMeMeNEt.save.dat}
 
-\begin{center}
+\begin{figure}
 \caption{Потенциалы внутреннего вращения молекул \cmpd{Butane}--\cmpd{Butanone}\label{fig:Internal:Rotation:Butanes}}
 
 \centerfloat{
@@ -342,9 +342,9 @@ create col/assign/.code={%
   \end{axis}
 \end{tikzpicture}
 }
-\end{center}
+\end{figure}
 
-\begin{center}
+\begin{figure}
 \caption{Потенциалы внутреннего вращения молекул \cmpd{Isopentane}--\cmpd{Me2NEt}\label{fig:Internal:Rotation:Isopentanes}}
 
   \centerfloat{
@@ -367,7 +367,7 @@ create col/assign/.code={%
 \end{axis}
 \end{tikzpicture}%
 }
-\end{center}
+\end{figure}
 
 \pgfplotstableset{
 %columns/TauAll/.style = {column name = $\tau$,~\textdegree},
