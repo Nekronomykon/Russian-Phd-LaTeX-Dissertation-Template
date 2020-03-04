@@ -5,8 +5,7 @@
 
 \begin{figure}
 \caption{Конформационное поведение аналогов бицикло[3.3.1]нонана}\label{fig:Conformational:Behavior:331:XYZ}
-  \centerfloat{\ce{\BC{} <--> \CC{} <--> \CB{}}
-    
+  \centerfloat{
     \begin{tabu} to \textwidth {|X[c]|X[c]|X[c]|}
       \toprule
       \BC{} & \CC{} & \CB{} \\
@@ -75,7 +74,8 @@
   \caption{Диаграмма корреляции конформационной энергии для некоторых вариантов симметричного гетероаналогичного замещения в бицикло[3.3.1]нонане (MP4(2) / aug-cc-pVDZ,~ккал/моль)~\cite{Pisarev:2013:rus,Pisarev:2013}}\label{fig:Conform331:MP2}
   \centering
   \begin{tikzpicture}[xscale=3.75,yscale=1.25] %
-    \DrawCorrFrame{-2}{6};%
+    \DrawCorrFrame{-2}{6};
+%
     % [O x 2O]
     \begin{scope}[red,dashed]
       \DrawQuadCorrelation{2.21}{1.11}{1.21}{3.23}
@@ -104,7 +104,8 @@
     % bicyclo[3.3.1]nonane
 \draw(1.0, 2.25) node [anchor=south] {\chemfig{[:-30,\ScaleCorrStr]*6(-(-[:180]-[:120]-[:+60]-[:0]?)-----)}};
     \draw(1.0, 2.20) node [anchor=north] {\num{2.21}};
-    %1-azabicyclo[3.3.1]nonane
+    %
+1-azabicyclo[3.3.1]nonane
 \draw(2.0, 4.10) node [anchor=south] {\chemfig{[:-30,\ScaleCorrStr]*6(-N(-[:180]-[:120]-[:+60]-[:0]\phantom{N}?)----N-)}};
     \draw(2.0, 4.10) node [anchor=north] {\num{4.06}};
     % 
