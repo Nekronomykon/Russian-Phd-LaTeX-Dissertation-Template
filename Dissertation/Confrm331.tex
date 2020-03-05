@@ -2,66 +2,6 @@
 % !TeX encoding = UTF-8
 \chapter{Конформационное поведение бицикло[3.3.1]нонанов и их аналогов}\label{ch:Conformation:331}
 
-
-\begin{figure}
-\caption{Конформационное поведение аналогов бицикло[3.3.1]нонана}\label{fig:Conformational:Behavior:331:XYZ}
-  \centerfloat{
-    \begin{tabu} to \textwidth {|X[c]|X[c]|X[c]|}
-      \toprule
-      \BC{} & \CC{} & \CB{} \\
-      \midrule
-      \multicolumn{3}{c}{
-      \schemestart
-      %\ChemPicture
-      \chemfig{X?[a]<[:-30,1.25]-[:+30,,,,line width=\boldbondwidth](-[:+45,0.75,,,line width=\boldbondwidth]R')(>[:+120]Z-[:-120](-[:+135,0.75]R)(-[:-150]?[a])(-[:-30]-[:-60]Y?[b]))-[:-30,,,,line width=\boldbondwidth]?[b,{<}]
-      }
-      %\ChemPicture
-      \arrow{<=>}
-      % \ChemPicture
-      \chemfig{X?[a]<[:+60]-[:+30,,,,line width=\boldbondwidth](-[:+45,0.75,,,line width=\boldbondwidth]R')(>[:+120]Z-[:-120](-[:+135,0.75]R)(-[:-150]?[a])(-[:-30]-[:-60]Y?[b]))-[:-+30,,,,line width=\boldbondwidth]?[b,{<}]} % 
-      \arrow{<=>}
-      %\ChemPicture
-      \chemfig{X?[a]<[:+60]-[:+30,,,,line width=\boldbondwidth](-[:+45,0.75,,,line width=\boldbondwidth]R')(>[:+120]Z-[:-120](-[:+135,0.75]R)(-[:-150]?[a])(-[:-30]-[:+30,1.25]Y?[b]))-[:-+30,,,,line width=\boldbondwidth]?[b,{<}]}
-      \schemestop
-      } 
-    \\
-    \midrule
-    \multicolumn{3}{c}{
-      \schemestart
-      %\ChemPicture
-      \chemfig{X?[a]<[:-30,1.25]-[:+30,,,,line width=\boldbondwidth]N(>[:+120]-[:-120](-[:+135,0.75]R)(-[:-150]?[a])(-[:-30]-[:-60]Y?[b]))-[:-30,,,,line width=\boldbondwidth]?[b,{<}]
-      }
-      %\ChemPicture
-      \arrow{<=>}
-      % \ChemPicture
-      \chemfig{X?[a]<[:+60]-[:+30,,,,line width=\boldbondwidth]N(>[:+120]-[:-120](-[:+135,0.75]R)(-[:-150]?[a])(-[:-30]-[:-60]Y?[b]))-[:-30,,,,line width=\boldbondwidth]?[b,{<}]} % 
-      \arrow{<=>}
-      %\ChemPicture
-      \chemfig{X?[a]<[:+60]-[:+30,,,,line width=\boldbondwidth]N(>[:+120]-[:-120](-[:+135,0.75]R)(-[:-150]?[a])(-[:-30]-[:+30,1.25]Y?[b]))-[:-30,,,,line width=\boldbondwidth]?[b,{<}]}
-      \schemestop
-    } 
-    \\      \midrule
-    \multicolumn{3}{c}{
-      \schemestart
-      %\ChemPicture
-      \chemfig{X?[a]<[:-30,1.25]-[:+30,,,,line width=\boldbondwidth]N(>[:+120]-[:-120]N(-[:-150]?[a])(-[:-30]-[:-60]Y?[b]))-[:-30,,,,line width=\boldbondwidth]?[b,{<}]
-      }
-      %\ChemPicture
-      \arrow{<=>}
-      % \ChemPicture
-      \chemfig{X?[a]<[:+60]-[:+30,,,,line width=\boldbondwidth]N(>[:+120]-[:-120]N(-[:-150]?[a])(-[:-30]-[:-60]Y?[b]))-[:-30,,,,line width=\boldbondwidth]?[b,{<}]} % 
-      \arrow{<=>}
-      %\ChemPicture
-      \chemfig{X?[a]<[:+60]-[:+30,,,,line width=\boldbondwidth]N(>[:+120]-[:-120]N(-[:-150]?[a])(-[:-30]-[:+30,1.25]Y?[b]))-[:-30,,,,line width=\boldbondwidth]?[b,{<}]}
-      \schemestop
-    } 
-    \\ \bottomrule
-    \end{tabu}
-  }
-\end{figure}
-
-
-
 \section{Конформационые энергии, эффекты и строение конформеров}
 
 Корреляционные диаграммы конформационной энергии аналогов бицикло[3.3.1]нонана\dots~\cite{Pisarev:2019}
@@ -115,18 +55,20 @@
     %structures:
     % bicyclo[3.3.1]nonane
 \draw(1.00, 2.21) node [anchor=south] {\chemfig{[:-30,\ScaleCorrStr]*6(-(-[:180]-[:120]-[:+60]-[:0]?)-----)}};
-\draw(0.85, 2.21) node [anchor=east]  {\cmpd{Bicycle331}}
+\draw(0.85, 2.21) node [anchor=east]  {\cmpd{Bicycle331}};
 \draw(1.00, 2.21) node [anchor=north] {\num{2.21}};
     % 1,5-diazabicyclo[3.3.1]nonane
 \draw(2.00, 4.06) node [anchor=north] {\chemfig{[:-30,\ScaleCorrStr]*6(-N(-[:180]-[:120]-[:+60]-[:0]\phantom{N}?)----N-)}};
 \draw(2.00, 4.06) node [anchor=south] {\num{4.06}};
-\draw(2.15, 4.06) node [anchor=west]  {\cmpd{Bicycle331:15N2}}
+\draw(2.15, 4.06) node [anchor=west]  {\cmpd{Bicycle331:15N2}};
     % 
 \draw(2.00, 1.35) node [anchor=south] {\chemfig{[:-30,\ScaleCorrStr]S*6(-(-[:180]-[:120]-[:+60]-[:0]?)-----)}};
 \draw(1.85, 1.35)node[anchor=east]{\num{1.26}};
+\draw(2.15, 1.35) node [anchor=west]  {\cmpd{Bicycle331:9S}};
     %
 \draw(2.00, 1.00) node [anchor=north] {\chemfig{[:-30,\ScaleCorrStr]O*6(-(-[:180]-[:120]-[:+60]-[:0]?)-----)}};
 \draw(1.85, 1.00)node[anchor=east]{\num{1.11}};
+\draw(2.15, 1.00) node [anchor=west]  {\cmpd{Bicycle331:9O}};
     %
 \draw(3.00, 1.21) node [anchor=north] {\chemfig{[:-30,\ScaleCorrStr]*6(-(-[:180]-[:120]O-[:+60]-[:0]?)--O---)}};
 \draw(3.00, 1.21)node[anchor=south]{\num{1.21}};
@@ -154,3 +96,86 @@
     %
   \end{tikzpicture}
 \end{figure*}
+
+\begin{longtabu} to \textwidth {c|c|SS|S|X[l]}
+  \multicolumn{6}{p{\textwidth}}{Таблица\label{tab:Biycle:331:Opt}~\arabic{table}. Расчётное строение аналогов бицикло$[3.3.1]$нонана (RI-MP2 / aug-cc-pVTZ)} \\ %  
+  \toprule\midrule
+  \multicolumn{2}{c|}{Структура}  & \(E_{2}\),~\si{\hartree} & \(E_{ZPE}\),~\si{\hartree} & \(\mu\) & Геометрия \endfirsthead
+  \multicolumn{6}{p{\textwidth}}{\emph{продолжение таблицы}~\thetable:} \\
+  \toprule\multicolumn{2}{c|}{Структура} & \(E_{2}\),~\si{\hartree} & \(E_{ZPE}\),~\si{\hartree} & \(\mu\) & Геометрия \endhead
+  \midrule\multicolumn{6}{l}{\emph{продолжение на следующей странице}}\endfoot
+  \bottomrule\multicolumn{6}{l}{}\endlastfoot
+  \midrule
+  \cmpd{Bicycle331} & \BC{}~\(\SymGroup{C}{s}\) & -351.821711 & & \num{0.117} & \\
+  \chemfig{[:-30,0.75]*6(-(-[:180]-[:120]-[:+60]-[:0]?)-----)} & \CC{}~\(\SymGroup{C}{2}\) & & & & \\
+  & \TT{}~\(\SymGroup{C}{2}\) & & & & \\
+  \midrule
+\cmpd{Bicycle331:9O} & \BC{}~\(\SymGroup{C}{s}\) & & & & \\
+\chemfig{[:-30,0.75]O*6(-(-[:180]-[:120]-[:+60]-[:0]?)-----)} & \CC{}~\(\SymGroup{C}{2}\) & & & & \\
+& \TT{}~\(\SymGroup{C}{2}\) & & & & \\
+  \midrule
+\cmpd{Bicycle331:9S} & \BC{}~\(\SymGroup{C}{s}\) & & & & \\
+\chemfig{[:-30,0.75]S*6(-(-[:180]-[:120]-[:+60]-[:0]?)-----)} & \CC{}~\(\SymGroup{C}{2}\) & & & & \\
+& \TT{}~\(\SymGroup{C}{2}\) & & & & \\
+\bottomrule
+\end{longtabu}\label{tab:Biycle:331:Opt:Ends}
+
+\section*{*~*~*}
+
+\begin{table}
+  \caption{Ещё одна иллюстрация конформационного поведение аналогов бицикло[3.3.1]нонана}\label{fig:Conformational:Behavior:331:XYZ}
+  \centerfloat{
+    \begin{tabu} to \textwidth {|X[c]|X[c]|X[c]|}
+      \toprule
+      \BC{} & \CC{} & \CB{} \\
+      \midrule
+      \multicolumn{3}{c}{
+        \schemestart
+        %\ChemPicture
+        \chemfig{X?[a]<[:-30,1.25]-[:+30,,,,line width=\boldbondwidth](-[:+45,0.75,,,line width=\boldbondwidth]R')(>[:+120]Z-[:-120](-[:+135,0.75]R)(-[:-150]?[a])(-[:-30]-[:-60]Y?[b]))-[:-30,,,,line width=\boldbondwidth]?[b,{<}]
+        }
+        %\ChemPicture
+        \arrow{<=>}
+        % \ChemPicture
+        \chemfig{X?[a]<[:+60]-[:+30,,,,line width=\boldbondwidth](-[:+45,0.75,,,line width=\boldbondwidth]R')(>[:+120]Z-[:-120](-[:+135,0.75]R)(-[:-150]?[a])(-[:-30]-[:-60]Y?[b]))-[:-+30,,,,line width=\boldbondwidth]?[b,{<}]} % 
+        \arrow{<=>}
+        %\ChemPicture
+        \chemfig{X?[a]<[:+60]-[:+30,,,,line width=\boldbondwidth](-[:+45,0.75,,,line width=\boldbondwidth]R')(>[:+120]Z-[:-120](-[:+135,0.75]R)(-[:-150]?[a])(-[:-30]-[:+30,1.25]Y?[b]))-[:-+30,,,,line width=\boldbondwidth]?[b,{<}]}
+        \schemestop
+      } 
+      \\
+      \midrule
+      \multicolumn{3}{c}{
+        \schemestart
+        %\ChemPicture
+        \chemfig{X?[a]<[:-30,1.25]-[:+30,,,,line width=\boldbondwidth]N(>[:+120]-[:-120](-[:+135,0.75]R)(-[:-150]?[a])(-[:-30]-[:-60]Y?[b]))-[:-30,,,,line width=\boldbondwidth]?[b,{<}]
+        }
+        %\ChemPicture
+        \arrow{<=>}
+        % \ChemPicture
+        \chemfig{X?[a]<[:+60]-[:+30,,,,line width=\boldbondwidth]N(>[:+120]-[:-120](-[:+135,0.75]R)(-[:-150]?[a])(-[:-30]-[:-60]Y?[b]))-[:-30,,,,line width=\boldbondwidth]?[b,{<}]} % 
+        \arrow{<=>}
+        %\ChemPicture
+        \chemfig{X?[a]<[:+60]-[:+30,,,,line width=\boldbondwidth]N(>[:+120]-[:-120](-[:+135,0.75]R)(-[:-150]?[a])(-[:-30]-[:+30,1.25]Y?[b]))-[:-30,,,,line width=\boldbondwidth]?[b,{<}]}
+        \schemestop
+      } 
+      \\      \midrule
+      \multicolumn{3}{c}{
+        \schemestart
+        %\ChemPicture
+        \chemfig{X?[a]<[:-30,1.25]-[:+30,,,,line width=\boldbondwidth]N(>[:+120]-[:-120]N(-[:-150]?[a])(-[:-30]-[:-60]Y?[b]))-[:-30,,,,line width=\boldbondwidth]?[b,{<}]
+        }
+        %\ChemPicture
+        \arrow{<=>}
+        % \ChemPicture
+        \chemfig{X?[a]<[:+60]-[:+30,,,,line width=\boldbondwidth]N(>[:+120]-[:-120]N(-[:-150]?[a])(-[:-30]-[:-60]Y?[b]))-[:-30,,,,line width=\boldbondwidth]?[b,{<}]} % 
+        \arrow{<=>}
+        %\ChemPicture
+        \chemfig{X?[a]<[:+60]-[:+30,,,,line width=\boldbondwidth]N(>[:+120]-[:-120]N(-[:-150]?[a])(-[:-30]-[:+30,1.25]Y?[b]))-[:-30,,,,line width=\boldbondwidth]?[b,{<}]}
+        \schemestop
+      } 
+      \\ \bottomrule
+    \end{tabu}
+  }
+\end{table}
+
