@@ -61,10 +61,10 @@
 
 Для расчётов энергий индивидуальных реагентов применяются неэмпирические (\emph{ab~initio}) методы. Они включают на первом этапе оптимизацию геометрии молекул. Далее расчёт собственных частот колебаний для конформеров. 
 
-Часто несколько методов расчёта комбинируются в виде так называемых \emph{аддитивных схем}\dots Полная энергия $\Energytot$ и энергия нулевых колебаний $\EnergyZPE$
+Часто несколько методов расчёта комбинируются в виде так называемых \emph{аддитивных схем}. Основу энергии такой схемы~$\Escheme{}$ составляет электронная энергия~$\Energytot$, вычисляемая, как правило, в приближении, учитывающем значительную долю корреляционной энергии в виде предела полного базисного набора~$E_\infty^{(A)}$, а также энергия нулевых колебаний (обычно в гармоническом приближении $\EnergyZPE = \frac{\hbar}{2} \sum_a\omega_a$), дополняется корреляционной энергией~$E_k^A$ более высокого
 
 \begin{equation}
-E_\varpi = \underbrace{{\overbrace{E_0^\infty + E_c^\infty}^{E_\infty}} + E_k}_{\sim\Energytot} + \EnergyZPE
+\Escheme = \underbrace{{\overbrace{E_0^\infty + E_c^\infty{(A)}}^{E_\infty^{(A)}}} + E_k^{(B)}}_{\sim\Energytot} + \EnergyZPE
 \end{equation}
 
 Ниже в таблице~\ref{tab:Reagents:Opt} на с.~\pageref{tab:Reagents:Opt}--\pageref{tab:Reagents:Opt:Ends} приводятся результаты оптимизации молекул-\tqt{реагентов} в приближении RI-MP2~\cite{MP:1934,RI:MP2:1997} с использованием расширенного корреляционно-согласованного трёхэкспоненциального базисного набора Даннинга (aug-cc-pVTZ).~\cite{Dunning:1989,Peterson:1993,Woon:1993} Если группа симметрии оптимальной структуры не указана явно, она является тривиальной~(\SymGroup{C}{1}). Все полученные в ходе расчёта собственные частоты молекул действительны.
@@ -124,7 +124,7 @@ $\angle\ce{C(O)CC}~\ang{113.4}$;
 \midrule\chemfig{H_3C-[:-30](-[:-90]CH_3)-[:+30]-[:-30]CH_3}  & \cmpd{Isopentane} & \num{-197.311142} & \num{0.161457} & \\
 \midrule\chemfig{H_3C-[:-30](-[:-90]CH_3)-[:+30]O-[:-30]CH_3} & \cmpd{Me2CHOMe} & \num{-233.195233} & \num{0.137450} &  \\
 \midrule\chemfig{H_3C-[:-30](-[:-90]CH_3)-[:+30]S-[:-30]CH_3} & \cmpd{Me2CHSMe} & & & \\
-\midrule \chemfig{H_3C-[:-30]N(-[:-90]CH_3)-[:+30]-[:-30]CH_3} & \cmpd{Me2NEt} & & & \\
+\midrule \begin{tabular}{c} \chemfig{H_3C-[:-30]N(-[:-90]CH_3)-[:+30]-[:-30]CH_3} \\ \cmpd{Me2NEt} \end{tabular} & & & & \\
 %\midrule\cmpd{Isopentanone} &\chemfig{H_3C-[:+30](-[:+90]CH_3)-[:-30]C(=[:-90]O)-[:+30]CH_3} & & & \\
 \end{longtabu}\label{tab:Reagents:Opt:Ends}
 
@@ -493,11 +493,11 @@ B таблице~\ref{tab:Cycle:Six:Opt} на с.~\pageref{tab:Cycle:Six:Opt}--\
 \namebond{5}{4}{\small\num{1.526}} % 
 \namebond{6}{5}{\small\num{1.520}} % 
 \namebond{6}{1}{\small\num{1.422}} %
-\quad 
+\quad 13
 \chemfig{[,1.75]*6(@{6}-@{1}S-@{2}-@{3}-@{4}-@{5}-)}
 \namebond{1}{2}{\small\ang{56.3}} 
 \namebond{2}{3}{\small\ang{-62.1}}
-\namebond{3}{4}{\small\ang{59.6}}
+\namebond{3}{4}{\small\ang{59.6}}13
 \namebond{5}{4}{\small\num{1.525}}
 \namebond{6}{5}{\small\num{1.521}}
 \namebond{6}{1}{\small\num{1.814}}
