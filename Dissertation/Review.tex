@@ -65,7 +65,7 @@
 Конформационный анализ молекулярных структур часто включает их разбиение на~подструктуры с~дальнейшим выражением конформации структуры в~целом как~суперпозиции конформаций подструктур. Система бицикло[3.3.1]нонана~\cmpd{Bicycle331} допускает несколько вариантов подобных разбиений~(рис.~\ref{fig:Decomposition:331}):
 
 \begin{enumerate}
-\item\label{item:331:Decomposition:IUPAC} Два атома 1 и~5 c тремя соединяющими их мостиками $1-2-3-4-5$, $1-8-7-6-5$ и~$1-9-5$ (такое разбиение соответствует международному обозначению бицикла [3.3.1]);
+\item\label{item:331:Decomposition:IUPAC} Два атома 1 и~5 c тремя соединяющими их мостиками $1-2-3-4-5$, $1-8-7-6-5$ и~$1-9-5$. Такое разбиение соответствует международному (IUPAC) обозначению бициклической системы \tqt{$[3.3.1]$}. В дальнейшем "--- там, где это не вносит путаницы "--- мы будем использовать только числа в квадратных скобках вместо полного наименования би- или полициклической системы;
 \item\label{item:331:Decomposition:6:6} Два 1,3-конденсированных шестичленных цикла (здесь и~в~дальнейшем циклы будем обозначать вместе с~направлением обхода): $\text{\CycleFirst} = \left(5\rightarrow 9\rightarrow 1\rightarrow 2\rightarrow 3\rightarrow 4\right)$ и~$\text{\CycleSecond} = \left(1\rightarrow 9\rightarrow 5\rightarrow 6\rightarrow 7\rightarrow 8\right)$;
 \item\label{item:331:Decomposition:8:1} Восьмичленный цикл~$\text{\CycleThird} = \left(8\rightarrow 7\rightarrow 6\rightarrow 5\rightarrow 4\rightarrow 3\rightarrow 2\rightarrow 1\right)$ с одноатомным мостиком $-9-$ между положениями 1 и 5;
 \item\label{item:331:Decomposition:2x5:3} Два пятичленных \emph{псевдоцикла} (группы из~атомов, трактуемых как~цикл, но~не~обязательно соединённых связями в~соответствующем порядке) $\text{\CyclePseudoFirst}=(1\rightarrow 2\rightarrow 3\rightarrow 4\rightarrow 5)$ и $\text{\CyclePseudoSecond}=(5\rightarrow 6\rightarrow 7\rightarrow 8\rightarrow 1)$, примыкающих к трёхчленному псевдоциклу $(1\rightarrow 9\rightarrow 5)$;
@@ -231,13 +231,14 @@ $\leftarrow$ \qquad $\leftarrow$ & $\longrightarrow$ & $\leftarrow$\quad$\righta
 
 \begin{center}
   \begin{tabular}{cccc}
-\ChemPicture{S?[a]<[:-30,1.25]-[:+30,,,,line width=\boldbondwidth] (>[:+120]C(-[:+135,0.875]H)(-[:+45,0.875]H)-[:-120] (-[:-150]?[a]) (-[:-30]-[:-60]S?[b]))-[:-+30,,,,line width=\boldbondwidth]?[b,{<}]} & 
+%\ChemPicture{S?[a]<[:-30,1.25]-[:+30,,,,line width=\boldbondwidth] (>[:+120]C(-[:+135,0.875]H)(-[:+45,0.875]H)-[:-120] (-[:-150]?[a]) (-[:-30]-[:-60]S?[b]))-[:-+30,,,,line width=\boldbondwidth]?[b,{<}]}~
+\ChemPicture{S?[a]<[:-30,1.25]-[:+30,,,,line width=\boldbondwidth] (>[:+120]-[:-120] (-[:-150]?[a]) (-[:-30]-[:-60]S?[b]))-[:-+30,,,,line width=\boldbondwidth]?[b,{<}]} & 
 \ChemPicture{S?[a]<[:+60]-[:+30,,,,line width=\boldbondwidth](-[:+45,,,,line width=\boldbondwidth]CH_3)(>[:+120]C(=[:+90]Se)-[:-120] (-[:+135]H_3C)(-[:-150]?[a])(-[:-30]-[:-60]S?[b]))-[:-+30,,,,line width=\boldbondwidth]?[b,{<}]} &
 \ChemPicture{S?[a]<[:+60]-[:+30,,,,line width=\boldbondwidth]N(>[:+120]-[:-120]N(-[:-150]?[a])(-[:-30]-[:-60]S?[b]))-[:-+30,,,,line width=\boldbondwidth]?[b,{<}]} &
 \\
-\cmpd{Bicyclo331:37S2} & 
+\cmpd{Bicycle331:37S2} & 
 \cmpd{Dithia37Selone9} & 
-\cmpd{Bicyclo331:37S2:15N2} & 
+\cmpd{Bicycle331:37S2:15N2} & 
 \\
 \end{tabular}
 ~
@@ -267,7 +268,7 @@ $\leftarrow$ \qquad $\leftarrow$ & $\longrightarrow$ & $\leftarrow$\quad$\righta
 \end{tabular}
 ~
 \begin{tabular}{cc}
-\ChemPicture{[:-30]N*6((-[:0,0.75]CH_3)-?----(-[:180]-[:-120]C(=[:180,0.75]O)-[:-60]?)-)} & \\ \cmpd{Pseudopelletierine} & \\ 
+\ChemPicture{[:-30]N*6((-[:0,0.75]CH_3)-?----(-[:180]-[:-120]C(=[:180,0.875]O)-[:-60]?)-)} & \\ \cmpd{Pseudopelletierine} & \\ 
 \end{tabular}
 
 \end{center}
