@@ -6,25 +6,23 @@
 
 Корреляционные диаграммы конформационной энергии аналогов бицикло[3.3.1]нонана\dots~\cite{Pisarev:2019}
 
-Применение QTAIM к анализу~\cite{Bushmarinov:UX:2009,Bushmarinov:2011}
-
-\newcommand{\ScaleCorrStr}{0.625}
-
+\newcommand{\ScaleCorrStr}{0.725}
+\newcommand{\ScaleCorrAux}{0.825}
 \begin{figure*}
   \caption{Конформационная энергия для некоторых вариантов симметричного гетероаналогичного замещения в бицикло[3.3.1]нонане (MP4(2)/aug-cc-pVDZ + ZPE,~ккал/моль)~\cite{Pisarev:2013:rus,Pisarev:2013}}\label{fig:Conform331:MP2}
   \centering
   \begin{tikzpicture}[xscale=3.75,yscale=1.75] %
     \DrawCorrFrame{-2}{6};
-\draw(1.50,6.50) node [anchor=north,draw=black,fill=white]{\schemestart %
-\chemfig{[0,\ScaleCorrStr]?[a]-[:+30,,,,line width=\boldbondwidth] (>[:+120]-[:-120](-[:-150]-[:+105,0.5]?[a,{>}])(-[:-30]-[:-60]?[b]))-[:-30,,,,line width=\boldbondwidth]?[b,{<}]} %
+\draw(1.50,6.00) node [scale=\ScaleCorrAux,anchor=north,draw=black,fill=white]{\schemestart %
+\chemfig{[:0,\ScaleCorrStr]?[a]-[:+30,,,,line width=\boldbondwidth] (>[:+120]-[:-120](-[:-150]-[:+105,0.5]?[a,{>}])(-[:-30]-[:-60]?[b]))-[:-30,,,,line width=\boldbondwidth]?[b,{<}]} %
 \arrow{->} %
 \chemfig{?[a]-[:+30,,,,line width=\boldbondwidth](>[:+120]-[:-120](-[:-150]-[:-60]?[a,{>}])(-[:-30]-[:-60]?[b]))-[:-30,,,,line width=\boldbondwidth]?[b,{<}]} % 
 \schemestop %
 };
-\draw(1.50,-1.00) node [anchor=north,draw=black,fill=white]{\schemestart %
+\draw(1.50,-1.00) node [scale=\ScaleCorrAux,anchor=north,draw=black,fill=white]{\schemestart %
 \chemfig{?[a]-[:+30,,,,line width=\boldbondwidth] (>[:+120]-[:-120](-[:-150]-[:+105,0.5]?[a,{>}])(-[:-30]-[:-60]?[b]))-[:-+30,,,,line width=\boldbondwidth]?[b,{<}]} %
 \arrow{<-} %
-\chemfig{[0,\ScaleCorrStr]?[a]-[:+30,,,,line width=\boldbondwidth](>[:+120]-[:-120](-[:-150]-[:-60]?[a,{>}])(-[:-30]-[:-60]?[b]))-[:-30,,,,line width=\boldbondwidth]?[b,{<}]} % 
+\chemfig{[:0,\ScaleCorrStr]?[a]-[:+30,,,,line width=\boldbondwidth](>[:+120]-[:-120](-[:-150]-[:-60]?[a,{>}])(-[:-30]-[:-60]?[b]))-[:-30,,,,line width=\boldbondwidth]?[b,{<}]} % 
   \schemestop %
 };
 %
@@ -126,6 +124,8 @@
 \bottomrule
 \end{longtabu}\label{tab:Biycle:331:Opt:Ends}
 
+Применение QTAIM к анализу~\cite{Bushmarinov:UX:2009,Bushmarinov:2011}
+
 \section*{*~*~*}
 
 \begin{table}
@@ -184,4 +184,3 @@
     \end{tabu}
   }
 \end{table}
-
