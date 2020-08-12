@@ -2,6 +2,8 @@
 % !TeX encoding = UTF-8
 \chapter{Исследование напряжений в производных бицикло[3.3.1]нонана}\label{ch:Strain:331}
 
+Байеровское напряжение...
+
 Ранние работы по анализу напряжений в связи со структурой алмаза и адамантана\dots~\cite{Mohr:1918}
 
 \paragraph{Реакции разделения связей} Наименьшую погрешность обеспечивают \emph{гипергомодесмотические} реакции, сохраняющие не только состав, как гомодесмические... но и число связей различных типов. В частности, для 3,7,9-замещённых аналогов бицикло[3.3.1]нонана выводится уравнение
@@ -67,17 +69,20 @@
 \Escheme = \underbrace{{\overbrace{E_0^\infty + E_c^\infty{(A)}}^{E_\infty^{(A)}}} + E_k^{(B)}}_{\sim\Energytot} + \EnergyZPE
 \end{equation}
 
+\section{Строение и конформационное поведение молекул-реагентов для реакций разделения связей}
+
 Ниже в таблице~\ref{tab:Reagents:Opt} на с.~\pageref{tab:Reagents:Opt}--\pageref{tab:Reagents:Opt:Ends} приводятся результаты оптимизации молекул-\tqt{реагентов} в приближении RI-MP2~\cite{MP:1934,RI:MP2:1997} с использованием расширенного диффузными функциями трёхэкспоненциального корреляционно-согласованного базисного набора Даннинга (aug-cc-pVTZ).~\cite{Dunning:1989,Peterson:1993,Woon:1993} Если группа симметрии оптимальной структуры не указана явно, она является тривиальной~(\SymGroup{C}{1}). Все полученные в ходе расчёта собственные частоты молекул действительны.
 
 %\caption{\label{tab:Desmotic:Reagents}Результаты расчёта реагентов для реакций разделения связей}
 
+
 \begin{longtabu} to \textwidth {rr|SS|X[l]}
-\multicolumn{5}{p{\textwidth}}{Таблица\label{tab:Reagents:Opt}~\arabic{table}. Строение молекул-\tqt{реагентов} для реакций разделения связей по данным неэмпирических расчётов} \\ %
-\toprule\multicolumn{2}{c|}{Структура / симметрия}  & \(E_{2}\),~\si{\hartree} & \(E_{ZPE}\),~\si{\hartree} & Геометрия \endfirsthead
+\multicolumn{5}{p{\textwidth}}{Таблица\label{tab:Reagents:Opt}~\arabic{table}. Строение молекул-реагентов для реакций разделения связей по данным неэмпирических расчётов} \\ %
+\toprule\multicolumn{2}{c|}{Структура / симметрия} & \(E_{2}\),~\si{\hartree} & \(E_{ZPE}\),~\si{\hartree} & Геометрия \endfirsthead
 \multicolumn{5}{p{\textwidth}}{\emph{продолжение таблицы}~\arabic{table}} \\
 \toprule\multicolumn{2}{c|}{Структура / симметрия} & \(E_{2}\),~\si{\hartree} & \(E_{ZPE}\),~\si{\hartree} & Геометрия \endhead
-  \midrule\multicolumn{5}{l}{\emph{продолжение на следующей странице}} \endfoot
-  \bottomrule\multicolumn{5}{l}{} \endlastfoot
+\midrule\multicolumn{5}{l}{\emph{продолжение на следующей странице}} \endfoot
+\bottomrule\multicolumn{5}{l}{} \endlastfoot
 \midrule\chemfig{H_3C-[:-30]-[:+30]CH_3} / \(\SymGroup{C}{2v}\) &\cmpd{Propane} & \num{-118.859638} & \num{0.104589} &
 \ce{C-C}~\SI{1.523}{\angstrom}; $\angle$\ce{CCC}~\ang{112.3} \\
 \midrule \chemfig{H_3C-[:-30]O-[:+30]CH_3} / \(\SymGroup{C}{2v}\) &\cmpd{Me2O} & \num{-154.737526} & \num{0.080693} & 
