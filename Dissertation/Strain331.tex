@@ -9,7 +9,7 @@
 \paragraph{Реакции разделения связей} Наименьшую погрешность обеспечивают \emph{гипергомодесмотические} реакции, сохраняющие не только состав, как гомодесмические... но и число связей различных типов. В частности, для 3,7,9-замещённых аналогов бицикло[3.3.1]нонана выводится уравнение
 \begin{center}
   \chemfig{[:-30]Z*6(-(-[:180]-[:120]X-[:+60]-[:0]?)--Y---)}
-  + \chemfig{H_3C-[:-30]X-[:+30]CH_3} + \chemfig{H_3C-[:-30]Y-[:+30]CH_3} + \chemfig{H_3C-[:-30]Z-[:+30]CH_3} + 4\(\cdot\) \chemfig{H_3C-[:-30]-[:+30]CH_3}
+  + \DrawMeXMe{} + \DrawMeYMe{} + \DrawMeZMe{} + 4~\DrawMeEt{}
   + 4\(\cdot\)\chemfig{H_3C-[:+30](-[:+90]CH_3)-[:-30]CH_3}
   \(\longrightarrow\)
   
@@ -21,7 +21,7 @@
 Для 1,3,5,7-аналогов исследуемой бициклической системы
 \begin{center}
   \chemfig{[:-30]*6(-A(-[:180]-[:120]X-[:+60]-[:0]\phantom{Z}?)--Y--Z-)}
-  + \chemfig{H_3C-[:-30]X-[:+30]CH_3} + \chemfig{H_3C-[:-30]Y-[:+30]CH_3} + 5\(\cdot\) \chemfig{H_3C-[:-30]-[:+30]CH_3}
+  + \DrawMeXMe{} + \DrawMeYMe{} + 5~\DrawMeEt{}
   + 2\(\cdot\)\chemfig{H_3C-[:+30]A(-[:+90]CH_3)-[:-30]CH_3}
   + 2\(\cdot\)\chemfig{H_3C-[:+30]Z(-[:+90]CH_3)-[:-30]CH_3}
   \(\longrightarrow\)
@@ -35,8 +35,7 @@
 В частности, для 3,7-аналогов 1-азабицикло[3.3.1]нонана~\cmpd{Bicycle331:1N} такое разделение связей описывается уравнением
 \begin{center}
   \chemfig{[:-30]*6(-N(-[:180]-[:120]X-[:+60]-[:0]?)--Y---)}
-  + \chemfig{H_3C-[:-30]X-[:+30]CH_3} + \chemfig{H_3C-[:-30]Y-[:+30]CH_3}
-  + 5\(\cdot\)\chemfig{H_3C-[:-30]-[:+30]CH_3}
+  + \DrawMeXMe{} + \DrawMeYMe{} + 5~\DrawMeEt{}
   + 2\(\cdot\)\chemfig{H_3C-[:-30](-[:-90]CH_3)-[:+30]CH_3}
   + 2\(\cdot\)\chemfig{H_3C-[:-30]N(-[:-90]CH_3)-[:+30]CH_3}
   \(\longrightarrow\)
@@ -49,7 +48,7 @@
 Для аналогов 1,5-диаазабицикло[3.3.1]нонана~\cmpd{Bicycle331:15N2},~\cmpd{Bicycle331:15N2:37O2},~\cmpd{Bicycle331:15N2:37S2}
 \begin{center}
   \chemfig{[:-30]*6(-N(-[:180]-[:120]X-[:+60]-[:0]\phantom{N}?)--Y--N-)}
-  + \DrawMeXMe{} + \DrawDimethyl{}{Y} + 5~\DrawDimethyl{}{}
+  + \DrawMeXMe{} + \DrawMeYMe{} + 5~\DrawMeEt{}
   + 2\(\cdot\)\chemfig{H_3C-[:+30](-[:+90]CH_3)-[:-30]CH_3}
   + 2\(\cdot\)\chemfig{H_3C-[:+30]N(-[:+90]CH_3)-[:-30]CH_3}
   \(\longrightarrow\)
