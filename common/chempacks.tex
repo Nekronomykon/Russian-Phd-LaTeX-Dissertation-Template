@@ -40,7 +40,7 @@
 %% Relied upon \compoundstyle from *chemcompounds*
 \usepackage{chemcompounds}
 \newcommand{\ConfName}[1]{{\compoundstyle{#1}}}
-%
+% Русские...
 \newcommand{\BB}[1]{{#1}\ConfName{ВВ}}
 \newcommand{\BC}[1]{{#1}\ConfName{ВК}}
 \newcommand{\CB}[1]{{#1}\ConfName{КВ}}
@@ -49,7 +49,7 @@
 %%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% chemfig setup
-\newcommand{\boldbondwidth}{3.5pt}
+\newcommand{\boldbondwidth}{3.25pt}
 \setchemfig{angle increment=15}
 \setchemfig{arrow offset=12pt}
 \setchemfig{arrow style=thick}
@@ -93,7 +93,8 @@
 %%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \usepackage{pgfplotstable}
-\pgfplotsset{width=12.5cm,compat=1.15}
+\pgfplotsset{compat=1.17}
+\pgfplotsset{width=12.5cm}
 %\pgfkeys{/pgf/fpu=true}
 \pgfplotstableset{%
   1000 sep={},
@@ -104,9 +105,9 @@
   columns/Tau/.style={int detect,column type=r,column type/.add={}{|},column name={$\tau$}},
   columns/Etot/.style={fixed,fixed zerofill,
     column type=r,
-    precision=6,column name=$\Energytot$},
+    precision=6,column name=$\Energytot{}$},
   columns/Emin/.style={fixed,fixed zerofill,precision=6,
-    column name={$E_0$},
+    column name={$E_{min}$},
   },
   columns/Erel/.style={fixed,fixed zerofill,
     column type=r,

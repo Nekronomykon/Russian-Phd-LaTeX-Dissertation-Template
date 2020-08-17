@@ -63,60 +63,59 @@
 
 Для расчётов энергий индивидуальных реагентов применяются неэмпирические (\emph{ab~initio}) методы. Они включают на первом этапе оптимизацию геометрии молекул. Далее расчёт собственных частот колебаний для конформеров. 
 
-Часто несколько методов расчёта комбинируются в виде так называемых \emph{аддитивных схем}. Основу энергии такой схемы~$\Escheme{}$ составляет электронная энергия~$\Energytot$, вычисляемая, как правило, в приближении, учитывающем значительную долю корреляционной энергии в виде предела полного базисного набора~$E_\infty^{(A)}$, а также энергия нулевых колебаний (обычно в гармоническом приближении, где $\EnergyZPE = \frac{\hbar}{2} \sum_a\omega_a$), дополняется корреляционной энергией~$E_k^A$ более высокого
+Часто несколько методов расчёта комбинируются в виде так называемых \emph{аддитивных схем}. Основу энергии такой схемы~$\Escheme{}$ составляет электронная энергия~$\Energytot$, вычисляемая, как правило, в приближении, учитывающем значительную долю корреляционной энергии в виде предела полного базисного набора~$E_\infty^{(A)}$, а также энергия нулевых колебаний (обычно в гармоническом приближении, где $\EnergyZPE = \frac{\hbar}{2} \sum_a\omega_a$), дополняется корреляционной энергией~$E_k(B)$, относящейся к более высокому теоретическому уровню описания.  выполненном .
 
 \begin{equation}
-\Escheme = \underbrace{{\overbrace{E_0^\infty + E_c^\infty{(A)}}^{E_\infty^{(A)}}} + E_k^{(B)}}_{\sim\Energytot} + \EnergyZPE
+\Escheme = \underbrace{{\overbrace{E_0^\infty + E_c^\infty{(A)}}^{E_\infty^{(A)}}} + E_k(B)}_{\sim\Energytot} + \EnergyZPE
 \end{equation}
 
 \section{Строение и конформационное поведение молекул-реагентов для реакций разделения связей}
 
 Ниже в таблице~\ref{tab:Reagents:Opt} на с.~\pageref{tab:Reagents:Opt}--\pageref{tab:Reagents:Opt:Ends} приводятся результаты оптимизации молекул-\tqt{реагентов} в приближении RI-MP2~\cite{MP:1934,RI:MP2:1997} с использованием расширенного диффузными функциями трёхэкспоненциального корреляционно-согласованного базисного набора Даннинга (aug-cc-pVTZ).~\cite{Dunning:1989,Peterson:1993,Woon:1993} Если группа симметрии оптимальной структуры не указана явно, она является тривиальной~(\SymGroup{C}{1}). Все полученные в ходе расчёта собственные частоты молекул действительны.
 
-%\caption{\label{tab:Desmotic:Reagents}Результаты расчёта реагентов для реакций разделения связей}
+%\caption{\label{tab:Desmotic:Reagents}Результаты расчёта реагентов для реакций разделения связей
 
-
-\begin{longtabu} to \textwidth {rr|SS|X[l]}
-\multicolumn{5}{p{\textwidth}}{Таблица\label{tab:Reagents:Opt}~\arabic{table}. Строение молекул-реагентов для реакций разделения связей по данным неэмпирических расчётов} \\ %
-\toprule\multicolumn{2}{c|}{Структура / симметрия} & \(E_{2}\),~\si{\hartree} & \(E_{ZPE}\),~\si{\hartree} & Геометрия \endfirsthead
-\multicolumn{5}{p{\textwidth}}{\emph{продолжение таблицы}~\arabic{table}} \\
-\toprule\multicolumn{2}{c|}{Структура / симметрия} & \(E_{2}\),~\si{\hartree} & \(E_{ZPE}\),~\si{\hartree} & Геометрия \endhead
-\midrule\multicolumn{5}{l}{\emph{продолжение на следующей странице}} \endfoot
-\bottomrule\multicolumn{5}{l}{} \endlastfoot
-\midrule\chemfig{H_3C-[:-30]-[:+30]CH_3} / \(\SymGroup{C}{2v}\) &\cmpd{Propane} & \num{-118.859638} & \num{0.104589} &
+\begin{longtabu} to \textwidth {rcl|SS|X[l]}
+\multicolumn{6}{p{\textwidth}}{Таблица~\arabic{table}. Строение молекул-реагентов для реакций разделения связей по данным неэмпирических расчётов} \label{tab:Reagents:Opt} \\
+\toprule\multicolumn{3}{c|}{Структура / симметрия} & \(E_{2}\),~\si{\hartree} & \(E_{ZPE}\),~\si{\hartree} & Геометрия \endfirsthead
+\multicolumn{6}{p{\textwidth}}{\emph{продолжение таблицы}~\arabic{table}} \\
+\toprule\multicolumn{3}{c|}{Структура / симметрия} & \(E_{2}\),~\si{\hartree} & \(E_{ZPE}\),~\si{\hartree} & Геометрия \endhead
+\midrule\multicolumn{6}{l}{\emph{продолжение на следующей странице}} \endfoot
+\bottomrule \multicolumn{6}{l}{} \endlastfoot
+\midrule\cmpd{Propane} & \DrawMeEt{} & \(\SymGroup{C}{2v}\) & \num{-118.859638} & \num{0.104589} &
 \ce{C-C}~\SI{1.523}{\angstrom}; $\angle$\ce{CCC}~\ang{112.3} \\
-\midrule \chemfig{H_3C-[:-30]O-[:+30]CH_3} / \(\SymGroup{C}{2v}\) &\cmpd{Me2O} & \num{-154.737526} & \num{0.080693} & 
+\midrule\cmpd{Me2O} & \DrawMeOMe{} & \(\SymGroup{C}{2v}\) &  \num{-154.737526} & \num{0.080693} & 
 \ce{C-O}~\SI{1.411}{\angstrom};
 $\angle$\ce{COC}~\ang{110.5} \\
-\midrule \chemfig{H_3C-[:-30]S-[:+30]CH_3} / \(\SymGroup{C}{2v}\) & \cmpd{Me2S} & \num{-477.351949} & \num{0.076641} & 
+\midrule\cmpd{Me2S} & \DrawMeSMe{} & \(\SymGroup{C}{2v}\) & \num{-477.351949} & \num{0.076641} & 
 \ce{C-S}~\SI{1.804}{\angstrom}; 
 $\angle$\ce{CSC}~\ang{97.9} \\
 %\midrule\cmpd{Dimethylamine} & \chemfig{H_3C-[:-30]N(-[:-90]H)-[:+30]CH_3} & \(\SymGroup{C}{s}\) & \\
-\midrule \chemfig{H_3C-[:-30](-[:-90]CH_3)-[:+30]CH_3} / \(\SymGroup{C}{3v}\) & \cmpd{Isobutane} & \num{-158.087267} & \num{0.132478} & \ce{C-C}~\SI{1.524}{\angstrom}; $\angle$\ce{CCC}~\ang{110.7}\\
-\midrule\chemfig{H_3C-[:-30]C(=[:-90]O)-[:+30]CH_3} / \(\SymGroup{C}{2v}\) & \cmpd{Acetone} &  \num{-192.789711} & \num{0.084256} & \ce{C=O}~\SI{1.220}{\angstrom}; 
+\midrule\cmpd{Isobutane} & \DrawMeCHMeMe{} & \(\SymGroup{C}{3v}\) & \num{-158.087267} & \num{0.132478} & \ce{C-C}~\SI{1.524}{\angstrom}; $\angle$\ce{CCC}~\ang{110.7}\\
+\midrule\cmpd{Acetone} & \DrawMeAc{} & \(\SymGroup{C}{2v}\) & \num{-192.789711} & \num{0.084256} & \ce{C=O}~\SI{1.220}{\angstrom}; 
 \ce{C-C}~\SI{1.508}{\angstrom};
 $\angle$\ce{OCC}~\ang{122.1};
 $\angle$\ce{CCC}~\ang{115.8}\\
-\midrule \chemfig{H_3C-[:-30]N(-[:-90]CH_3)-[:+30]CH_3} / \(\SymGroup{C}{3v}\) & \cmpd{Trimethylamine} & \num{-174.100139} & \num{0.121385} & 
+\midrule \cmpd{Me3N} & \DrawMeNMeMe{} & \(\SymGroup{C}{3v}\) &  \num{-174.100139} & \num{0.121385} & 
 \ce{C-N}~\SI{1.451}{\angstrom};
 $\angle$\ce{CNC}~\ang{110.2} \\
-\midrule\chemfig{H_3C-[:-30]-[:+30]-[:-30]CH_3} / \(\SymGroup{C}{2h}\) &\cmpd{Butane} &  \num{-158.084303} & \num{0.133309} & 
+\midrule\cmpd{Butane} & \DrawEtEt{} & \(\SymGroup{C}{2h}\) &  \num{-158.084303} & \num{0.133309} & 
 \ce{H_3C-CH_2}~\SI{1.524}{\angstrom}; 
 \ce{H_2C-CH_2}~\SI{1.523}{\angstrom}; 
 $\angle$\ce{CCC}~\ang{112.3} \\
-\midrule\chemfig{H_3C-[:-30]O-[:+30]-[:-30]CH_3} / \(\SymGroup{C}{s}\) & \cmpd{MeOEt} &  \num{-193.966394} & \num{0.108895} & 
+\midrule\cmpd{MeOEt} & \DrawMeOEt{} & \(\SymGroup{C}{s}\) & \num{-193.966394} & \num{0.108895} & 
 \ce{H3C-O}~\SI{1.412}{\angstrom};
 \ce{H_2C-O}~\SI{1.417}{\angstrom};
 \ce{H2C-CH_3}~\SI{1.509}{\angstrom};
 $\angle$\ce{COC}~\ang{111.2};
 $\angle$\ce{OCC}~\ang{108.1} \\
-\midrule\chemfig{H_3C-[:-30]S-[:+30]-[:-30]CH_3} / \(\SymGroup{C}{s}\) & \cmpd{MeSEt} &  \num{-516.576661} & \num{0.105402} &
+\midrule\cmpd{MeSEt} & \DrawMeSEt{} & \(\SymGroup{C}{s}\) &   \num{-516.576661} & \num{0.105402} &
 \ce{H_3C-S}~\SI{1.805}{\angstrom}; 
 \ce{H_2C-S}~\SI{1.809}{\angstrom}; 
 \ce{H_2C-CH_3}~\SI{1.519}{\angstrom}; 
 $\angle$\ce{CSC}~\ang{98.7}; 
 $\angle$\ce{SCC}~\ang{109.3} \\
-\midrule\chemfig{H_3C-[:-30]C(=[:-90]O)-[:+30]-[:-30]CH_3} / \(\SymGroup{C}{s}\) & \cmpd{Butanone} & \num{-232.014552} & \num{0.113700} & \ce{C=O}~\SI{1.220}{\angstrom};
+\midrule\cmpd{Butanone} & \DrawEtAc{} & \(\SymGroup{C}{s}\) & \num{-232.014552} & \num{0.113700} & \ce{C=O}~\SI{1.220}{\angstrom};
 \ce{H_3C-CO}~\SI{1.509}{\angstrom}; 
 \ce{H_2C-CO}~\SI{1.513}{\angstrom}; 
 \ce{H_3C-CH_2}~\SI{1.517}{\angstrom};
@@ -126,303 +125,21 @@ $\angle\ce{CC(O)C}~\ang{116.0}$;
 $\angle\ce{C(O)CC}~\ang{113.4}$;
 %$\tau_{\ce{OCCC}}\approx\ang{0}$ 
 \\
-\midrule\chemfig{H_3C-[:-30](-[:-90]CH_3)-[:+30]-[:-30]CH_3}  & \cmpd{Isopentane} & \num{-197.311142} & \num{0.161457} & \\
-\midrule\chemfig{H_3C-[:-30](-[:-90]CH_3)-[:+30]O-[:-30]CH_3} & \cmpd{Me2CHOMe} & \num{-233.195233} & \num{0.137450} &  \\
-\midrule\chemfig{H_3C-[:-30](-[:-90]CH_3)-[:+30]S-[:-30]CH_3} & \cmpd{Me2CHSMe} & & & \\
-\midrule \begin{tabular}{c} \chemfig{H_3C-[:-30]N(-[:-90]CH_3)-[:+30]-[:-30]CH_3} \\ \cmpd{Me2NEt} \end{tabular} & & & & \\
+\midrule\cmpd{Isopentane} & \DrawMeCHMeEt{} & \(\SymGroup{C}{1}\) & \num{-197.311142} & \num{0.161457} & \\
+\midrule\cmpd{Me2CHOMe} & \DrawMeCHMeOMe{} & \(\SymGroup{C}{1}\) & \num{-233.195233} & \num{0.137450} &  \\
+\midrule\cmpd{Me2CHSMe} & \DrawMeCHMeSMe{} & & & \\
+\midrule\cmpd{Me2NEt} & \DrawMeNMeEt{} & \(\SymGroup{C}{1}\) & & & \\
 %\midrule\cmpd{Isopentanone} &\chemfig{H_3C-[:+30](-[:+90]CH_3)-[:-30]C(=[:-90]O)-[:+30]CH_3} & & & \\
 \end{longtabu}\label{tab:Reagents:Opt:Ends}
 
 За исключением простейших структур \cmpd{Propane}--\cmpd{Acetone}, молекулы реагентов обладают конформационной подвижностью (карбонильная группа сама по себе вообще считается жёстко планарной; существующие исключения будут рассмотрены ниже). Инверсия атома азота триметиламина~\cmpd{Trimethylamine} слабо взаимодействует со внутренним вращением метильных групп, а (N,N-диметил)этиламина~\cmpd{Me2NEt} "--- преимущественно с внутренним вращением, параметризуемым подструктрурой \ce{H3C-N-CH2-CH3}...
 %Внутреннее вращение \emph{н}-бутана~\cmpd{Butane} и его аналогов\dots
 
-\pgfplotstablecreatecol[%
-create col/assign/.code={%
-\getthisrow{Etot}\entryval%
-%\ifnum\pgfplotstablerow>0
-\pgfmathsetmacro{\entryval}{min(\entryval,\pgfmathaccuma)}%
-%\fi
-\edef\pgfmathaccuma{\entryval}
-\pgfkeyslet{/pgfplots/table/create col/next content}\entryval
-}
-]{Emin}\ScanButane %
-\pgfplotstablecreatecol[%
-create col/assign/.code={%
-  \getthisrow{Etot}\entryval%
-  \getthisrow{Emin}\refval%
-  %\ifnum\pgfplotstablerow>0
-  \pgfmathsetmacro{\entryval}{\entryval - \refval}%
-  \pgfmathsetmacro{\entryval}{\AUtoKJM * \entryval}%
-  %\fi
-  \edef\pgfmathaccuma{\entryval}
-  \pgfkeyslet{/pgfplots/table/create col/next content}\entryval
-}
-]{Erel}\ScanButane %
-\pgfplotstablesave[columns={Tau,Etot,Erel}]{\ScanButane}{Results/ScanButane.save.dat}
 
-\pgfplotstablecreatecol[%
-create col/assign/.code={%
-  \getthisrow{Etot}\entry%
-  \ifnum\pgfplotstablerow>0
-  \pgfmathsetmacro{\entry}{min(\entry,\pgfmathaccuma)}%
-  \fi
-  \edef\pgfmathaccuma{\entry}
-  \pgfkeyslet{/pgfplots/table/create col/next content}\entry
-}]{Emin}\ScanMeOEt %
-\pgfplotstablecreatecol[%
-create col/assign/.code={%
-  \getthisrow{Etot}\entryval%
-  \getthisrow{Emin}\refval%
-  %\ifnum\pgfplotstablerow>0
-  \pgfmathsetmacro{\entryval}{\entryval - \refval}%
-  \pgfmathsetmacro{\entryval}{\AUtoKJM * \entryval}%
-  %\fi
-  \edef\pgfmathaccuma{\entryval}
-  \pgfkeyslet{/pgfplots/table/create col/next content}\entryval
-}
-]{Erel}\ScanMeOEt %
-\pgfplotstablesave[columns={Tau,Etot,Erel}]{\ScanMeOEt}{Results/ScanMeOEt.save.dat}
+\input{Results/Rot-Butanes}
+\input{Results/Rot-IsoPentanes}
+\input{Results/Rot-Esters}
 
-\pgfplotstablecreatecol[%
-create col/assign/.code={%
-  \getthisrow{Etot}\entry%
-  \ifnum\pgfplotstablerow>0
-  \pgfmathsetmacro{\entry}{min(\entry,\pgfmathaccuma)}%
-  \fi
-  \edef\pgfmathaccuma{\entry}
-  \pgfkeyslet{/pgfplots/table/create col/next content}\entry
-}]{Emin}\ScanMeSEt %
-\pgfplotstablecreatecol[%
-create col/assign/.code={%
-  \getthisrow{Etot}\entryval%
-  \getthisrow{Emin}\refval%
-  %\ifnum\pgfplotstablerow>0
-  \pgfmathsetmacro{\entryval}{\entryval - \refval}%
-  \pgfmathsetmacro{\entryval}{\AUtoKJM * \entryval}%
-  %\fi
-  \edef\pgfmathaccuma{\entryval}
-  \pgfkeyslet{/pgfplots/table/create col/next content}\entryval
-}
-]{Erel}\ScanMeSEt %
-\pgfplotstablesave[columns={Tau,Etot,Erel}]{\ScanMeSEt}{Results/ScanMeSEt.save.dat}
-
-\pgfplotstablecreatecol[%
-create col/assign/.code={%
-  \getthisrow{Etot}\entry%
-  \ifnum\pgfplotstablerow>0
-  \pgfmathsetmacro{\entry}{min(\entry,\pgfmathaccuma)}%
-  \fi
-  \edef\pgfmathaccuma{\entry}
-  \pgfkeyslet{/pgfplots/table/create col/next content}\entry
-}]{Emin}\ScanMeCOEt %
-\pgfplotstablecreatecol[%
-create col/assign/.code={%
-  \getthisrow{Etot}\entryval%
-  \getthisrow{Emin}\refval%
-  %\ifnum\pgfplotstablerow>0
-  \pgfmathsetmacro{\entryval}{\entryval - \refval}%
-  \pgfmathsetmacro{\entryval}{\AUtoKJM * \entryval}%
-  %\fi
-  \edef\pgfmathaccuma{\entryval}
-  \pgfkeyslet{/pgfplots/table/create col/next content}\entryval
-}
-]{Erel}\ScanMeCOEt %
-\pgfplotstablesave[columns={Tau,Etot,Erel}]{\ScanMeCOEt}{Results/ScanMeCOEt.save.dat}
-
-\pgfplotstablecreatecol[%
-create col/assign/.code={%
-  \getthisrow{Etot}\entry%
-  \ifnum\pgfplotstablerow>0
-  \pgfmathsetmacro{\entry}{min(\entry,\pgfmathaccuma)}%
-  \fi
-  \edef\pgfmathaccuma{\entry}
-  \pgfkeyslet{/pgfplots/table/create col/next content}\entry
-}]{Emin}\ScanIsoPentane %
-\pgfplotstablecreatecol[%
-create col/assign/.code={%
-  \getthisrow{Etot}\entryval%
-  \getthisrow{Emin}\refval%
-  %\ifnum\pgfplotstablerow>0
-  \pgfmathsetmacro{\entryval}{\entryval - \refval}%
-  \pgfmathsetmacro{\entryval}{\AUtoKJM * \entryval}%
-  %\fi
-  \edef\pgfmathaccuma{\entryval}
-  \pgfkeyslet{/pgfplots/table/create col/next content}\entryval
-}
-]{Erel}\ScanIsoPentane %
-\pgfplotstablesave[columns={Tau,Etot,Erel}]{\ScanIsoPentane}{Results/ScanIsoPentane.save.dat}
-
-\pgfplotstablecreatecol[%
-create col/assign/.code={%
-  \getthisrow{Etot}\entry%
-  \ifnum\pgfplotstablerow>0
-  \pgfmathsetmacro{\entry}{min(\entry,\pgfmathaccuma)}%
-  \fi
-  \edef\pgfmathaccuma{\entry}
-  \pgfkeyslet{/pgfplots/table/create col/next content}\entry
-}]{Emin}\ScanIPrOMe %
-\pgfplotstablecreatecol[%
-create col/assign/.code={%
-  \getthisrow{Etot}\entryval%
-  \getthisrow{Emin}\refval%
-  %\ifnum\pgfplotstablerow>0
-  \pgfmathsetmacro{\entryval}{\entryval - \refval}%
-  \pgfmathsetmacro{\entryval}{\AUtoKJM * \entryval}%
-  %\fi
-  \edef\pgfmathaccuma{\entryval}
-  \pgfkeyslet{/pgfplots/table/create col/next content}\entryval
-}
-]{Erel}\ScanIPrOMe %
-\pgfplotstablesave[columns={Tau,Etot,Erel}]
-{\ScanIPrOMe}{Results/ScanIPrOMe.save.dat}
-%
-\pgfplotstablecreatecol[%
-create col/assign/.code={%
-  \getthisrow{Etot}\entry%
-  \ifnum\pgfplotstablerow>0
-  \pgfmathsetmacro{\entry}{min(\entry,\pgfmathaccuma)}%
-  \fi
-  \edef\pgfmathaccuma{\entry}
-  \pgfkeyslet{/pgfplots/table/create col/next content}\entry
-}]{Emin}\ScanIPrSMe %
-\pgfplotstablecreatecol[%
-create col/assign/.code={%
-  \getthisrow{Etot}\entryval%
-  \getthisrow{Emin}\refval%
-  %\ifnum\pgfplotstablerow>0
-  \pgfmathsetmacro{\entryval}{\entryval - \refval}%
-  \pgfmathsetmacro{\entryval}{\AUtoKJM * \entryval}%
-  %\fi
-  \edef\pgfmathaccuma{\entryval}
-  \pgfkeyslet{/pgfplots/table/create col/next content}\entryval
-}
-]{Erel}\ScanIPrSMe %
-\pgfplotstablesave[columns={Tau,Etot,Erel}]
-{\ScanIPrSMe}{Results/ScanIPrSMe.save.dat}
-%
-\pgfplotstablecreatecol[%
-create col/assign/.code={%
-  \getthisrow{Etot}\entry%
-  \ifnum\pgfplotstablerow>0
-  \pgfmathsetmacro{\entry}{min(\entry,\pgfmathaccuma)}%
-  \fi
-  \edef\pgfmathaccuma{\entry}
-  \pgfkeyslet{/pgfplots/table/create col/next content}\entry
-}]{Emin}\ScanMeMeNEt %
-\pgfplotstablecreatecol[%
-create col/assign/.code={%
-  \getthisrow{Etot}\entryval%
-  \getthisrow{Emin}\refval%
-  %\ifnum\pgfplotstablerow>0
-  \pgfmathsetmacro{\entryval}{\entryval - \refval}%
-  \pgfmathsetmacro{\entryval}{\AUtoKJM * \entryval}%
-  %\fi
-  \edef\pgfmathaccuma{\entryval}
-  \pgfkeyslet{/pgfplots/table/create col/next content}\entryval
-}
-]{Erel}\ScanMeMeNEt %
-\pgfplotstablesave[columns={Tau,Etot,Erel}]
-{\ScanMeMeNEt}{Results/ScanMeMeNEt.save.dat}
-
-\begin{figure}
-\caption{Потенциалы внутреннего вращения молекул \cmpd{Butane}--\cmpd{Butanone}\label{fig:Internal:Rotation:Butanes}}
-
-\centerfloat{
-\begin{tikzpicture}
-  \begin{axis} [%
-    %title={\chemfig{H_3C-[:+30]\circ-[:-30]\circ-[:+30]CH_3}},
-    %legend pos=outer north east,
-    legend style={draw=none},
-    xlabel={\chemfig{[,0.875]H_3C-[:+30]\circ-[:-30]\circ-[:+30]CH_3} / $\tau$,~\textdegree},
-    xmin=-180, xmax=180,
-    xtick={-180,-120,...,180},
-    ylabel={$\Delta\Func{E}$,~\si{\kilo\joule\per\mole}},
-    ymin=-1, ymax=32]
-    \addplot [black,thick,smooth,domain=-180:180] table [x=Tau,y=Erel] 
-    {Results/ScanButane.save.dat};\addlegendentry{\chemfig{[,0.675]-[:+30]-[:-30]-[:+30]}~\cmpd{Butane}}
-    \addplot [red,thick,smooth,domain=-180:180] table [x=Tau,y=Erel]
-    {Results/ScanMeOEt.save.dat};\addlegendentry{\chemfig{[,0.675]-[:+30]-[:-30]O-[:+30]}~\cmpd{MeOEt}}
-    \addplot [brown,thick,smooth,domain=-180:180] table [x=Tau,y=Erel] 
-    {Results/ScanMeSEt.save.dat};\addlegendentry{\chemfig{[,0.675]-[:+30]-[:-30]S-[:+30]}~\cmpd{MeSEt}}
-    \addplot [green,thick,smooth,domain=-180:180] table [x=Tau,y=Erel] 
-    {Results/ScanMeCOEt.save.dat}; \addlegendentry{\chemfig{[,0.675]-[:+30]-[:-30]C(=[:-90]O)-[:+30]}~\cmpd{Butanone}}
-  \end{axis}
-\end{tikzpicture}
-}
-\end{figure}
-
-\begin{figure}
-\caption{Потенциалы внутреннего вращения молекул \cmpd{Isopentane}--\cmpd{Me2NEt}\label{fig:Internal:Rotation:Isopentanes}}
-  \centerfloat{
-\begin{tikzpicture}
-  \begin{axis} [%
-    legend style={draw=none},
-    xlabel={\chemfig{[,0.875]H_3C-[:+30]\bullet(-[:+90]CH_3)-[:-30]\circ-[:+30]CH_3}/$\tau$,~\textdegree},
-    xmin=-180, xmax=180,
-    xtick={-180,-120,...,180},
-    ylabel={$\Delta\Func{E}$,~\si{\kilo\joule\per\mole}},
-    ymin=-1, ymax=32]
-    \addplot [black,thick,smooth,domain=-180:180] table [x=Tau,y=Erel] 
-    {Results/ScanIsopentane.save.dat};\addlegendentry{\chemfig{[,0.675]-[:+30](-[:+90])-[:-30]-[:+30]}~\cmpd{Isopentane}}
-    \addplot [red,thick,smooth,domain=-180:180] table [x=Tau,y=Erel] 
-    {Results/ScanIPrOMe.save.dat};\addlegendentry{\chemfig{[,0.675]-[:+30](-[:+90])-[:-30]O-[:+30]}~\cmpd{Me2CHOMe}}
-    \addplot [brown,thick,smooth,domain=-180:180] table [x=Tau,y=Erel] 
-    {Results/ScanIPrSMe.save.dat};\addlegendentry{\chemfig{[,0.675]-[:+30](-[:+90])-[:-30]S-[:+30]}~\cmpd{Me2CHSMe}}
-    \addplot [blue,thick,smooth,domain=-180:180] table [x=Tau,y=Erel] 
-    {Results/ScanMeMeNEt.save.dat};\addlegendentry{\chemfig{[,0.75]-[:+30]N(-[:+90])-[:-30]-[:+30]}~\cmpd{Me2NEt}}
-\end{axis}
-\end{tikzpicture}%
-}
-\end{figure}
-
-\begin{figure}
-\caption{Потенциалы внутреннего вращения молекул \label{fig:Internal:Rotation:Esters}}
-\centerfloat{
-\begin{tikzpicture}
-\begin{axis}[legend style={draw=none},
-xlabel={\chemfig{[,0.875]H_3C-[:+30]C(=[:+90]X)-[:-30]Y-[:+30]CH_3}/$\tau$,~\textdegree},
-xmin=-180, xmax=180,
-xtick={-180,-120,...,180},
-ylabel={$\Delta\Func{E}$,~\si{\kilo\joule\per\mole}},
-ymin=-1, ymax=32]
-\end{axis}
-\end{tikzpicture}%
-}
-\end{figure}
-
-%\pgfplotstableset{
-%columns/TauAll/.style = {column name = $\tau$,~\textdegree},
-%columns/EButane/.style = {column name = \cmpd{Butane}},0
-%columns/EMeOEt/.style = {column name = $\Delta\Func{E}$~(\cmpd{MeOEt})},
-%}
-
-\pgfplotstablenew[
-create on use/Tau/.style = {create col/copy column from table={\ScanButane}{Tau}},
-create on use/EButane/.style = {create col/copy column from table={\ScanButane}{Erel}},
-create on use/EMeOEt/.style = {create col/copy column from table={\ScanMeOEt}{Erel}},
-create on use/EMeSEt/.style = {create col/copy column from table={\ScanMeSEt}{Erel}},
-create on use/EMeCOEt/.style = {create col/copy column from table={\ScanMeCOEt}{Erel}},
-create on use/EIsoPentane/.style = {create col/copy column from table={\ScanIsoPentane}{Erel}},
-create on use/EIPrOMe/.style = {create col/copy column from table={\ScanIPrOMe}{Erel}},
-create on use/EIPrSMe/.style = {create col/copy column from table={\ScanIPrSMe}{Erel}},
-create on use/EDMeNEt/.style = {create col/copy column from table={\ScanMeMeNEt}{Erel}},
-columns={Tau,EButane,EMeOEt,EMeSEt,EMeCOEt,EIsoPentane,EIPrOMe,EIPrSMe,EDMeNEt}]{25}\ScanReagents
-
-%\begin{table}
-%\label{tab:Rot:Energy:Reagents} 
-%\caption{Внутреннее вращение молекул~\cmpd{Butane} -- \cmpd{Me2NEt},~\si{\kilo\joule\per\mole} }
-%\centering
-%\pgfplotstabletypeset[column type=r,fixed, fixed zerofill, precision=1,
-%columns/EButane/.style = {column name = \cmpd{Butane}},
-%columns/EMeOEt/.style = {column name = \cmpd{MeOEt}},
-%columns/EMeSEt/.style = {column name = \cmpd{MeSEt}},
-%columns/EMeCOEt/.style = {column name = \cmpd{Butanone}},
-%columns/EIsoPentane/.style = {column name = \cmpd{Isopentane}},
-%columns/EIPrOMe/.style = {column name = \cmpd{Me2CHOMe}},
-%columns/EIPrSMe/.style = {column name = \cmpd{Me2CHSMe}},
-%columns/EDMeNEt/.style = {column name = \cmpd{Me2NEt}},
-%]\ScanReagents
-%\end{table}
 
 Глобально оптимальными, судя по~рис.~\ref{fig:Internal:Rotation:Butanes}--\ref{fig:Internal:Rotation:Isopentanes}, являются \emph{транс}- или \emph{транс,~гош}-конформеры с $\tau\approx+\ang{60}$ и $\tau\approx\ang{180}$. В дальнейшем во всех случаях для расчётов энергетических эффектов реакций разделения связей были использованы оптимизированные значения энергии именно для таких структур.
 
@@ -446,8 +163,6 @@ columns={Tau,EButane,EMeOEt,EMeSEt,EMeCOEt,EIsoPentane,EIPrOMe,EIPrSMe,EDMeNEt}]
   \chemfig{X*6(--Y----)} + \chemfig{*6(------)} \(\longrightarrow\) \chemfig{X*6(------)} + \chemfig{Y*6(------)}
 \end{center}
 
-
-  
 B таблице~\ref{tab:Cycle:Six:Opt} на с.~\pageref{tab:Cycle:Six:Opt}--\pageref{tab:Cycle:Six:Opt:Ends} приводятся результаты оптимизации молекул производных циклогексана, включая эндоциклические торсионные углы $\tau$.
 
 \begin{center}

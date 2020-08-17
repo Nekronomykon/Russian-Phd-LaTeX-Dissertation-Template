@@ -16,17 +16,23 @@
 
 \begin{table}
 \caption{Внутреннее вращение \emph{н}-бутана~\cmpd{Butane}\label{tab:InternalRotation:Butane}}
-\centering\pgfplotstabletypeset[column type=r,columns={Tau,Etot,Erel}]\ScanButane
+\centering\DrawEtEt{}
+
+\pgfplotstabletypeset[column type=r,columns={Tau,Etot,Erel}]\ScanButane
 \end{table}
   
 \begin{table}
 \caption{Внутреннее вращение метилэтилового эфира~\cmpd{MeOEt}\label{tab:InternalRotation:MeOEt}}
-\centering\pgfplotstabletypeset[column type=r,columns={Tau,Etot,Erel}]\ScanMeOEt
+\centering\DrawMeOEt{}
+
+\pgfplotstabletypeset[column type=r,columns={Tau,Etot,Erel}]\ScanMeOEt
 \end{table}
 
 \begin{table}
 \caption{Внутреннее вращение метилэтилсульфида~\cmpd{MeSEt}\label{tab:InternalRotation:MeSEt}}
-\centering\pgfplotstabletypeset[column type=r,columns={Tau,Etot,Erel}]\ScanMeSEt
+\centering\DrawMeSEt{}
+
+\pgfplotstabletypeset[column type=r,columns={Tau,Etot,Erel}]\ScanMeSEt
 \end{table}
 
 \begin{table}
@@ -52,6 +58,26 @@
 \begin{table}
 \caption{Внутреннее вращение \ce{N},\ce{N}-диметилэтиламина~\cmpd{Me2NEt}\label{tab:InternalRotation:Me2NEt}}
 \centering\pgfplotstabletypeset[column type=r,columns={Tau,Etot,Erel}]\ScanMeMeNEt
+\end{table}
+
+\begin{table}
+  \caption{Внутреннее вращение метилацетата~\cmpd{MeOAc}\label{tab:InternalRotation:MeOAc}}
+  \centering\pgfplotstabletypeset[column type=r,columns={Tau,Etot,Erel}]\ScanMeOAc
+\end{table}
+
+\begin{table}
+  \caption{Внутреннее вращение метилтиоацетата~\cmpd{MeSAc}\label{tab:InternalRotation:MeSAc}}
+\centering\pgfplotstabletypeset[column type=r,columns={Tau,Etot,Erel}]\ScanMeSAc
+\end{table}
+
+\begin{table}
+  \caption{Внутреннее вращение метилтионацетата~\cmpd{MeOCSMe}\label{tab:InternalRotation:MeOCSMe}}
+  \centering\pgfplotstabletypeset[column type=r,columns={Tau,Etot,Erel}]\ScanMeOCSMe
+\end{table}
+
+\begin{table}
+  \caption{Внутреннее вращение метилдитионацетата~\cmpd{MeSCSMe}\label{tab:InternalRotation:MeSCSMe}}
+\centering\pgfplotstabletypeset[column type=r,columns={Tau,Etot,Erel}]\ScanMeSCSMe
 \end{table}
 
 \onecolumn
