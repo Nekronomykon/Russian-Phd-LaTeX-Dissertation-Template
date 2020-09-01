@@ -6,28 +6,26 @@
 
 Ранние работы по анализу напряжений в связи со структурой алмаза и адамантана\dots~\cite{Mohr:1918}
 
-\paragraph{Реакции разделения связей} Наименьшую погрешность обеспечивают \emph{гипергомодесмотические} реакции, сохраняющие не только состав, как гомодесмические... но и число связей различных типов. В частности, для 3,7,9-замещённых аналогов бицикло[3.3.1]нонана выводится уравнение
+\section{Реакции разделения связей} 
+
+Наименьшую погрешность обеспечивают \emph{гипергомодесмотические} реакции, сохраняющие не только состав, как гомодесмические... но и число связей различных типов. В частности, для 3,7,9-замещённых аналогов бицикло[3.3.1]нонана выводится уравнение
 \begin{center}
-  \chemfig{[:-30]Z*6(-(-[:180]-[:120]X-[:+60]-[:0]?)--Y---)}
-  + \DrawMeXMe{} + \DrawMeYMe{} + \DrawMeZMe{} + 4~\DrawMeEt{}
-  + 4\(\cdot\)\chemfig{H_3C-[:+30](-[:+90]CH_3)-[:-30]CH_3}
+\chemfig{[:-30]Z*6(-(-[:180]-[:120]X-[:+60]-[:0]?)--Y---)} + \DrawMeXMe{} + \DrawMeYMe{} + \DrawMeZMe{} +
+
++ 4~\DrawPropane{} + 4~\DrawIsoButane{}
   \(\longrightarrow\)
   
-  \(\longrightarrow\) 
-  2\(\cdot\)\chemfig{H_3C-[:+30]X-[:-30]-[:+30]CH_3} + 2\(\cdot\)\chemfig{H_3C-[:+30]Y-[:-30]-[:+30]CH_3} + 4\(\cdot\)\chemfig{H_3C-[:+30](-[:+90]CH_3)-[:-30]-[:+30]CH_3} + 
-  2\(\cdot\)\chemfig{H_3C-[:+30](-[:+90]CH_3)-[:-30]Z-[:+30]CH_3}
+\(\longrightarrow\) 2~\DrawHeteroButane{}{X}{} + 2~\DrawHeteroButane{}{Y}{} +
+
++ 4~\DrawIsoPentane{} + 2~\DrawHeteroIsoPentane{}{}{Z}
 \end{center}
 
 Для 1,3,5,7-аналогов исследуемой бициклической системы
 \begin{center}
-  \chemfig{[:-30]*6(-A(-[:180]-[:120]X-[:+60]-[:0]\phantom{Z}?)--Y--Z-)}
-  + \DrawMeXMe{} + \DrawMeYMe{} + 5~\DrawMeEt{}
-  + 2\(\cdot\)\chemfig{H_3C-[:+30]A(-[:+90]CH_3)-[:-30]CH_3}
-  + 2\(\cdot\)\chemfig{H_3C-[:+30]Z(-[:+90]CH_3)-[:-30]CH_3}
+  \chemfig{[:-30]*6(-A(-[:180]-[:120]X-[:+60]-[:0]\phantom{Z}?)--Y--Z-)} + \DrawMeXMe{} + \DrawMeYMe{} + 5~\DrawPropane{} + 2~\DrawTrimethyl{}{A} + 2~\DrawTrimethyl{}{Z}
   \(\longrightarrow\)
   
-  \(\longrightarrow\) 
-  2\(\cdot\)\chemfig{H_3C-[:+30]X-[:-30]-[:+30]CH_3} + 2\(\cdot\)\chemfig{H_3C-[:+30]Y-[:-30]-[:+30]CH_3} + 3\(\cdot\)\chemfig{H_3C-[:+30]A(-[:+90]CH_3)-[:-30]-[:+30]CH_3} + 3\(\cdot\)\chemfig{H_3C-[:+30]Z(-[:+90]CH_3)-[:-30]-[:+30]CH_3}
+  \(\longrightarrow\) 2~\DrawHeteroButane{}{X}{} + 2~\DrawHeteroButane{}{Y}{} + 3~\DrawHeteroIsoPentane{}{A}{} + 3~\DrawHeteroIsoPentane{}{Z}{}
 \end{center}
 
 Энергетический эффект этих реакций, взятый с обратным знаком, оценивает общее напряжение молекулы относительно ациклических форм, считающихся свободными от напряжения. 
@@ -35,27 +33,22 @@
 В частности, для 3,7-аналогов 1-азабицикло[3.3.1]нонана~\cmpd{Bicycle331:1N} такое разделение связей описывается уравнением
 \begin{center}
   \chemfig{[:-30]*6(-N(-[:180]-[:120]X-[:+60]-[:0]?)--Y---)}
-  + \DrawMeXMe{} + \DrawMeYMe{} + 5~\DrawMeEt{}
-  + 2\(\cdot\)\chemfig{H_3C-[:-30](-[:-90]CH_3)-[:+30]CH_3}
-  + 2\(\cdot\)\chemfig{H_3C-[:-30]N(-[:-90]CH_3)-[:+30]CH_3}
+  + \DrawMeXMe{} + \DrawMeYMe{} + 5~\DrawPropane{}
+  + 2~\DrawIsoButane{} + 2~\DrawMeNMeMe{}
   \(\longrightarrow\)
   
   \(\longrightarrow\) 
-  2\(\cdot\)\chemfig{H_3C-[:+30]X-[:-30]-[:+30]CH_3} + 2\(\cdot\)\chemfig{H_3C-[:+30]Y-[:-30]-[:+30]CH_3} + 3\(\cdot\)\chemfig{H_3C-[:+30](-[:+90]CH_3)-[:-30]-[:+30]CH_3} + 
-  3\(\cdot\)\chemfig{H_3C-[:+30]N(-[:+90]CH_3)-[:-30]-[:+30]CH_3}
+  2~\DrawHeteroButane{}{X}{} + 2~\DrawHeteroButane{}{Y}{} + 3~\DrawIsoPentane{}
+  3~\DrawMeNMeEt{}
 \end{center}
 
 Для аналогов 1,5-диаазабицикло[3.3.1]нонана~\cmpd{Bicycle331:15N2},~\cmpd{Bicycle331:15N2:37O2},~\cmpd{Bicycle331:15N2:37S2}
 \begin{center}
-  \chemfig{[:-30]*6(-N(-[:180]-[:120]X-[:+60]-[:0]\phantom{N}?)--Y--N-)}
-  + \DrawMeXMe{} + \DrawMeYMe{} + 5~\DrawMeEt{}
-  + 2\(\cdot\)\chemfig{H_3C-[:+30](-[:+90]CH_3)-[:-30]CH_3}
-  + 2\(\cdot\)\chemfig{H_3C-[:+30]N(-[:+90]CH_3)-[:-30]CH_3}
+\chemfig{[:-30]*6(-N(-[:180]-[:120]X-[:+60]-[:0]\phantom{N}?)--Y--N-)}
++ \DrawMeXMe{} + \DrawMeYMe{} + 5~\DrawPropane{} + 2~\DrawIsoButane{} + 2~\DrawMeNMeMe{}
   \(\longrightarrow\)
   
-  \(\longrightarrow\) 
-  2\(\cdot\)\chemfig{H_3C-[:+30]X-[:-30]-[:+30]CH_3} + 2\(\cdot\)\chemfig{H_3C-[:+30]Y-[:-30]-[:+30]CH_3} + 
-  6\(\cdot\)\chemfig{H_3C-[:+30]N(-[:+90]CH_3)-[:-30]-[:+30]CH_3}
+\(\longrightarrow\) 2~\DrawHeteroButane{}{X}{} + 2~\DrawHeteroButane{}{Y}{} + 6~\DrawMeNMeEt{}
 \end{center}
 
 Для более подробного рассмотрения отдельных взаимодействий необходимо комбинировать эти уравнения с другими.
@@ -81,7 +74,7 @@
 \toprule\multicolumn{3}{c|}{Структура / симметрия} & \(E_{2}\),~\si{\hartree} & \(E_{ZPE}\),~\si{\hartree} & Геометрия \\ \midrule \endhead
 \multicolumn{6}{l}{\emph{продолжение на следующей странице}}\endfoot
 \bottomrule\endlastfoot
-\cmpd{Propane} & \DrawMeEt{} & \(\SymGroup{C}{2v}\) & \num{-118.859638} & \num{0.104589} &
+\cmpd{Propane} & \DrawPropane{} & \(\SymGroup{C}{2v}\) & \num{-118.859638} & \num{0.104589} &
 \ce{C-C}~\SI{1.523}{\angstrom}; $\angle$\ce{CCC}~\ang{112.3} \\
 \midrule\cmpd{Me2O} & \DrawMeOMe{} & \(\SymGroup{C}{2v}\) &  \num{-154.737526} & \num{0.080693} & 
 \ce{C-O}~\SI{1.411}{\angstrom};
@@ -90,7 +83,7 @@ $\angle$\ce{COC}~\ang{110.5} \\
 \ce{C-S}~\SI{1.804}{\angstrom}; 
 $\angle$\ce{CSC}~\ang{97.9} \\
 %\midrule\cmpd{Dimethylamine} & \chemfig{H_3C-[:-30]N(-[:-90]H)-[:+30]CH_3} & \(\SymGroup{C}{s}\) & \\
-\midrule\cmpd{Isobutane} & \DrawMeCHMeMe{} & \(\SymGroup{C}{3v}\) & \num{-158.087267} & \num{0.132478} & \ce{C-C}~\SI{1.524}{\angstrom}; $\angle$\ce{CCC}~\ang{110.7}\\
+\midrule\cmpd{Isobutane} & \DrawIsoButane{} & \(\SymGroup{C}{3v}\) & \num{-158.087267} & \num{0.132478} & \ce{C-C}~\SI{1.524}{\angstrom}; $\angle$\ce{CCC}~\ang{110.7}\\
 \midrule\cmpd{Acetone} & \DrawMeAc{} & \(\SymGroup{C}{2v}\) & \num{-192.789711} & \num{0.084256} & \ce{C=O}~\SI{1.220}{\angstrom}; 
 \ce{C-C}~\SI{1.508}{\angstrom};
 $\angle$\ce{OCC}~\ang{122.1};
@@ -98,7 +91,7 @@ $\angle$\ce{CCC}~\ang{115.8}\\
 \midrule \cmpd{Me3N} & \DrawMeNMeMe{} & \(\SymGroup{C}{3v}\) &  \num{-174.100139} & \num{0.121385} & 
 \ce{C-N}~\SI{1.451}{\angstrom};
 $\angle$\ce{CNC}~\ang{110.2} \\
-\midrule\cmpd{Butane} & \DrawEtEt{} & \(\SymGroup{C}{2h}\) &  \num{-158.084303} & \num{0.133309} & 
+\midrule\cmpd{Butane} & \DrawButane{} & \(\SymGroup{C}{2h}\) &  \num{-158.084303} & \num{0.133309} & 
 \ce{H_3C-CH_2}~\SI{1.524}{\angstrom}; 
 \ce{H_2C-CH_2}~\SI{1.523}{\angstrom}; 
 $\angle$\ce{CCC}~\ang{112.3} \\
@@ -124,7 +117,7 @@ $\angle\ce{CC(O)C}~\ang{116.0}$;
 $\angle\ce{C(O)CC}~\ang{113.4}$;
 %$\tau_{\ce{OCCC}}\approx\ang{0}$ 
 \\
-\midrule\cmpd{Isopentane} & \DrawMeCHMeEt{} & \(\SymGroup{C}{1}\) & \num{-197.311142} & \num{0.161457} & \\
+\midrule\cmpd{Isopentane} & \DrawIsoPentane{} & \(\SymGroup{C}{1}\) & \num{-197.311142} & \num{0.161457} & \\
 \midrule\cmpd{Me2CHOMe} & \DrawMeCHMeOMe{} & \(\SymGroup{C}{1}\) & \num{-233.195233} & \num{0.137450} &  \\
 \midrule\cmpd{Me2CHSMe} & \DrawMeCHMeSMe{} & & & \\
 \midrule\cmpd{Me2NEt} & \DrawMeNMeEt{} & \(\SymGroup{C}{1}\) & & & \\
@@ -142,7 +135,7 @@ $\angle\ce{C(O)CC}~\ang{113.4}$;
 
 Глобально оптимальными, судя по~рис.~\ref{fig:Internal:Rotation:Butanes}--\ref{fig:Internal:Rotation:Isopentanes}, являются \emph{транс}- или \emph{транс,~гош}-конформеры с $\tau\approx+\ang{60}$ и $\tau\approx\ang{180}$. В дальнейшем во всех случаях для расчётов энергетических эффектов реакций разделения связей были использованы оптимизированные значения энергии именно для таких структур.
 
-Введение в рассмотрение сероорганических веществ\dots
+Введение в рассмотрение сероорганических веществ резко увеличивает число типов связей и, соответственно, количество структур, необходимых для рассмотрения реакции. Это напрямую связано со значительным количеством окислительных состояний, которое может принимать атом серы в органических соединениях: не только сульфиды~\ce{R2S}, но и дисульфиды~\ce{R2S2}, а также сульфоксиды~\ce{R2SO}, сульфоны~\ce{R2SO2}, а также иные серосодержащие функциональные группы\dots
 
 \section{Напряжения свободных шестичленных циклов}
 

@@ -9,7 +9,7 @@
 \newcommand{\ScaleCorrStr}{0.725}
 \newcommand{\ScaleCorrAux}{0.825}
 \begin{figure*}
-  \caption{Конформационная энергия для некоторых вариантов симметричного гетероаналогичного замещения в бицикло[3.3.1]нонане (MP4(2)/aug-cc-pVDZ + ZPE,~ккал/моль)~\cite{Pisarev:2013:rus,Pisarev:2013}}\label{fig:Conform331:MP2}
+  \caption{Конформационная энергия для некоторых вариантов симметричного гетероаналогичного замещения в бицикло[3.3.1]нонане,~ккал/моль (расчёт MP4(2)/aug-cc-pVDZ + ZPE)~\cite{Pisarev:2013:rus,Pisarev:2013}\label{fig:Conform331:MP2}}
   \centering
   \begin{tikzpicture}[xscale=3.75,yscale=1.75] %
     \DrawCorrFrame{-2}{6};
@@ -85,18 +85,20 @@
 \draw(3.85, 3.30) node [anchor=east] {\cmpd{Bicyclo331:379O3}};
     %
 \draw(4.00, 2.95) node [anchor=north] {\chemfig{[:-30,\ScaleCorrStr]*6(-N(-[:180]-[:120]S-[:+60]-[:0]\phantom{N}?)--S--N-)}};
-\draw(4.15, 2.95)node[anchor=west]{\num{3.01}};
-\draw(3.85, 2.95) node [anchor=east]  {\cmpd{Bicyclo331:37S2:15N2}};
+\draw(4.15, 2.95) node [anchor=west]{\num{3.01}};
+\draw(3.85, 2.95) node [anchor=east]  {\cmpd{Bicyclo331:37O2:15N2}};
     %
 \draw(4.00, 1.55) node [anchor=north] {\chemfig{[:-30,\ScaleCorrStr]S*6(-(-[:180]-[:120]O-[:+60]-[:0]?)--O---)}};
 \draw(4.00, 1.55) node [anchor=south] {\num{1.55}};
+\draw(3.85, 1.55) node [anchor=east]  {\cmpd{Bicyclo331:37O2:9S}};
     %
 \draw(4.00,-0.47) node [anchor=south] {\chemfig{[:-30,\ScaleCorrStr]S*6(-(-[:180]-[:120]S-[:+60]-[:0]?)--S---)}};
 \draw(4.00,-0.47) node [anchor=north] {\num{-0.47}};
 \draw(3.85,-0.47) node [anchor=east]  {\cmpd{Bicyclo331:379S3}};
     %
 \draw(4.00,-1.53) node [anchor=north] {\chemfig{[:-30,\ScaleCorrStr]O*6(-(-[:180]-[:120]S-[:+60]-[:0]?)--S---)}};
-\draw(4.00,-1.53)node[anchor=south]{\num{-1.53}};
+\draw(4.00,-1.53) node [anchor=south]{\num{-1.53}};
+\draw(3.85,-1.53) node [anchor=east]  {\cmpd{Bicyclo331:37S2:9O}};
     %
   \end{tikzpicture}
 \end{figure*}

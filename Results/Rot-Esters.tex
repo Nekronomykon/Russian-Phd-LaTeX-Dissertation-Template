@@ -95,11 +95,11 @@ create col/assign/.code={%
 \pgfplotstablesave[columns={Tau,Etot,Erel}]{\ScanMeSCSMe}{Results/ScanMeSCSMe.save.dat} 
 
 \begin{figure}
-  \caption{Потенциалы внутреннего вращения аналогов сложных эфиров\label{fig:Internal:Rotation:Esters} [переделать координаты, чтобы угол был \ce{H3C-C-Y-CH3}, иначе тут всё слева неправильно]}
+  \caption{Потенциалы внутреннего вращения аналогов сложных эфиров\label{fig:Internal:Rotation:Esters} [переделать координаты, чтобы угол был \ce{H3C-C-Y-CH3}, иначе тут всё слева неправильно, а сам торсионный угол должен быть \ce{X=C-Y-CH3}]}
   \centerfloat{
     \begin{tikzpicture}
       \begin{axis}[legend style={draw=none},
-        xlabel={\chemfig{[,0.875]H_3C-[:+30]C(=[:+90]X)-[:-30]Y-[:+30]CH_3}/$\tau$,~\textdegree},
+        xlabel={\chemfig{[,0.875]H_3C-[:+30]C(=[:+90]X)-[:-30]\circ-[:+30]CH_3}/$\tau$,~\textdegree},
         xmin=-180, xmax=180,
         xtick={-180,-120,...,180},
         ylabel={$\Delta\Func{E}$,~\si{\kilo\joule\per\mole}},
