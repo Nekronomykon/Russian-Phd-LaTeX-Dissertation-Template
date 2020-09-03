@@ -24,20 +24,25 @@
 %% \tqt{а \tqt{б} в} = ,,а <<б>> в''
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% Химические пакеты
-%\usepackage[compatibility=latest,language=russian]{chemmacros}
+\usepackage{upgreek}
 \usepackage[version=4]{mhchem}
 \usepackage{chemfig}
-%\chemsetup{modules=all}
+\usepackage{chemmacros}
+\usepackage{textgreek}
+\chemsetup{modules=all,formula = chemfig,greek=textgreek}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% ChemMacros package
+%%
+\chemsetup[orbital]{p/color = black!25,overlay=true,opacity=0.75}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \usepackage{chemnum}
 \makeatletter
-\def\CF@node@content{\expandafter\expandafter\expandafter
-    \printatom\expandafter\expandafter\expandafter
+\def\CF@node@content{\expandafter\expandafter\expandafter%
+    \printatom\expandafter\expandafter\expandafter%
     {\csname atom@\number\CF@cnt@atomnumber\endcsname}%
     \ensuremath{\CF@node@strut}%
 }
 \makeatother
 \renewcommand*\printatom[1]{\ensuremath{\mathsf{#1}}} % from the ChemFig manual
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% Relied upon \compoundstyle from *chemcompounds*
 \usepackage{chemcompounds}
 \newcommand{\ConfName}[1]{{\compoundstyle{#1}}}
