@@ -47,16 +47,20 @@
 %%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% n-Butane
-\newcommand{\DrawHeteroButane}[3]{\chemfig[#1]{@{1}H_3C-[:-30]@{2}{#2} -[:+30]@{3}{#3}-[:-30]@{4}CH_3}}
-\newcommand{\DrawButane}[1]{\DrawHeteroButane{#1}{}{}}
+\newcommand{\DrawHeteroButane}[3]{\chemfig[#1]{@{1}H_3C-[:-30]@{2}{#2} -[:+30]@{3}{#3}-[:-30]@{4}CH_3}}%
+%%
+\newcommand{\DrawNormButane}[1]{\DrawHeteroButane{#1}{}{}}
 %%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% Et-O-Me
-\newcommand{\DrawMeOEt}[1]{\DrawHeteroButane{#1}{}{O}}
+\newcommand{\DrawMeOEt}[1]{\DrawHeteroButane{#1}{O}{}}
+\newcommand{\DrawEtOMe}[1]{\DrawHeteroButane{#1}{}{O}}
 %%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% Et-S-Me
-\newcommand{\DrawMeSEt}[1]{\DrawHeteroButane{#1}{}{S}}
+\newcommand{\DrawMeSEt}[1]{\DrawHeteroButane{#1}{S}{}}
+\newcommand{\DrawEtSMe}[1]{\DrawHeteroButane{#1}{}{S}}
+\newcommand{\DrawMeSSMe}[1]{\DrawHeteroButane{#1}{S}{S}}
 %%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% Et-SO-Me
@@ -80,7 +84,7 @@
 %%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% Methylthionacetate
-\newcommand{\DrawMeOCSMe}[1]{\chemfig[#1]{@{4}H_3C-[:-30]@{3}O-[:+30]@{2}C(=[:+90]@{5}S)-[:-30]@{1}CH_3}}
+\newcommand{\DrawMeOCSMe}[1]{\chemfig[#1]{@{4}H_3C-[:-30]@{3}O-[:+30]@{2}C (=[:+90]@{5}S)-[:-30]@{1}CH_3}}
 %%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% Methyldithioacetate
@@ -130,15 +134,15 @@
 %%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% Dimethylmesylamide
-\newcommand{\DrawMeNMeMs}[1]{\chemfig[#1]{@{4}H_3C-[:-30]@{3}N(-[:-90]@{7}CH_3)-[:+30]@{3}S(=[:+45]@{5}O)(=[:+135]@{6}O)-[:-30]@{4}CH_3}}
+\newcommand{\DrawMeNMeMs}[1]{\chemfig[#1]{@{4}H_3C-[:-30]@{3}N(-[:-90]@{7}CH_3)-[:+30]@{3}S(=[:+45]@{5}O) (=[:+135]@{6}O)-[:-30]@{4}CH_3}}
 %%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% neo-Pentane
-\newcommand{\DrawTBuMe}[1]{\chemfig[#1]{@{1}H_3C-[:-30]@{2}(-[:-60]@{4}CH_3)(<[:-120]@{5}H_3C)-[:+30]@{3}CH_3}}
+\newcommand{\DrawNeoPentane}[1]{\chemfig[#1]{@{1}H_3C-[:-30]@{2}(-[:-60]@{4}CH_3) (<[:-120]@{5}H_3C)-[:+30]@{3}CH_3}}
 %%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% neo-Hexane
-\newcommand{\DrawTBuEt}[1]{\chemfig[#1]{@{1}H_3C-[:-30]@{2}(-[:-60]@{5}CH_3)(<[:-120]@{6}H_3C)-[:+30]@{3}-[:-30]@{4}CH_3}}
+\newcommand{\DrawNeoHexane}[1]{\chemfig[#1]{@{1}H_3C-[:-30]@{2}(-[:-60]@{5}CH_3) (<[:-120]@{6}H_3C)-[:+30]@{3}-[:-30]@{4}CH_3}}
 %%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% Me-O-tert-Bu
