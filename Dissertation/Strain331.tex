@@ -71,9 +71,9 @@
 
 \begin{longtabu} to \textwidth {rcl|SS|X[l]}
 \multicolumn{6}{p{\textwidth}}{Таблица~\arabic{table}. Строение молекул-реагентов для реакций разделения связей по данным неэмпирических расчётов} \label{tab:Reagents:Opt} \\
-\toprule\multicolumn{3}{c|}{Структура / симметрия} & \(E_{2}\),~\si{\hartree} & \(E_{ZPE}\),~\si{\hartree} & Геометрия \\ \midrule \endfirsthead
+\toprule\multicolumn{3}{c|}{Структура / симметрия} & \(E_{2}\),~\si{\hartree} & \(E_{ZPE}\),~\si{\hartree}&Геометрия\\\midrule\endfirsthead
 \multicolumn{6}{p{\textwidth}}{\emph{продолжение таблицы}~\arabic{table}} \\
-\toprule\multicolumn{3}{c|}{Структура / симметрия} & \(E_{2}\),~\si{\hartree} & \(E_{ZPE}\),~\si{\hartree} & Геометрия \\ \midrule \endhead
+\toprule\multicolumn{3}{c|}{Структура / симметрия} & \(E_{2}\),~\si{\hartree} & \(E_{ZPE}\),~\si{\hartree}&Геометрия\\\midrule\endhead
 \multicolumn{6}{l}{\emph{продолжение на следующей странице}}\endfoot
 \bottomrule\endlastfoot
 \cmpd{Propane} & \DrawPropane{} & \(\SymGroup{C}{2v}\) & \num{-118.859638} & \num{0.104589} &
@@ -93,7 +93,7 @@ $\angle$\ce{CCC}~\ang{115.8}\\
 \midrule \cmpd{Me3N} & \DrawMeNMeMe{} & \(\SymGroup{C}{3v}\) &  \num{-174.100139} & \num{0.121385} & 
 \ce{C-N}~\SI{1.451}{\angstrom};
 $\angle$\ce{CNC}~\ang{110.2} \\
-\midrule\cmpd{Butane} & \DrawButane{} & \(\SymGroup{C}{2h}\) &  \num{-158.084303} & \num{0.133309} & 
+\midrule\cmpd{Butane} & \DrawNormButane{} & \(\SymGroup{C}{2h}\) &  \num{-158.084303} & \num{0.133309} & 
 \ce{H_3C-CH_2}~\SI{1.524}{\angstrom}; 
 \ce{H_2C-CH_2}~\SI{1.523}{\angstrom}; 
 $\angle$\ce{CCC}~\ang{112.3} \\
@@ -212,6 +212,7 @@ B таблице~\ref{tab:Cycle:Six:Opt} на с.~\pageref{tab:Cycle:Six:Opt}--\
 Длины связей~(\AA) и эндоциклические двугранные углы
 
 \vspace{\medskipamount}
+
 \chemfig{[,1.75]*6(@{6}-@{1}-@{2}-@{3}-@{4}-@{5}-)} %
 \namebond{3}{4}{\small\ang{56.9}}  %
 \namebond{1}{2}{\small\num{1.526}} %

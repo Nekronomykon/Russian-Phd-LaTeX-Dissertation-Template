@@ -15,49 +15,59 @@
 \twocolumn
 
 \begin{table}
-\caption{Внутреннее вращение \emph{н}-бутана~\cmpd{Butane}\label{tab:InternalRotation:Butane}}
-\centering\DrawButane{}
+\caption{Внутреннее вращение \emph{н}-бутана~\cmpd{Butane}}\label{tab:InternalRotation:Butane}
+\centering\DrawNormButane{}
 
 \pgfplotstabletypeset[column type=r,columns={Tau,Etot,Erel}]\ScanButane
 \end{table}
   
 \begin{table}
-\caption{Внутреннее вращение метилэтилового эфира~\cmpd{MeOEt}\label{tab:InternalRotation:MeOEt}}
+\caption{Внутреннее вращение метилэтилового эфира~\cmpd{MeOEt}}\label{tab:InternalRotation:MeOEt}
 \centering\DrawMeOEt{}
 
 \pgfplotstabletypeset[column type=r,columns={Tau,Etot,Erel}]\ScanMeOEt
 \end{table}
 
 \begin{table}
-\caption{Внутреннее вращение метилэтилсульфида~\cmpd{MeSEt}\label{tab:InternalRotation:MeSEt}}
+\caption{Внутреннее вращение метилэтилсульфида~\cmpd{MeSEt}}\label{tab:InternalRotation:MeSEt}
 \centering\DrawMeSEt{}
 
 \pgfplotstabletypeset[column type=r,columns={Tau,Etot,Erel}]\ScanMeSEt
 \end{table}
 
 \begin{table}
-\caption{Внутреннее вращение бутанона-2~\cmpd{Butanone}\label{tab:InternalRotation:Butanone}}
-\centering\pgfplotstabletypeset[column type=r,columns={Tau,Etot,Erel}]\ScanMeCOEt
+\caption{Внутреннее вращение бутанона-2~\cmpd{Butanone}}\label{tab:InternalRotation:Butanone}
+\centering\DrawEtAc{}
+
+\pgfplotstabletypeset[column type=r,columns={Tau,Etot,Erel}]\ScanMeCOEt
 \end{table}
 
 \begin{table}
-\caption{Внутреннее вращение изопентана~\cmpd{Isopentane}\label{tab:InternalRotation:Isopentane}}
-\centering\pgfplotstabletypeset[column type=r,columns={Tau,Etot,Erel}]\ScanIsoPentane
+\caption{Внутреннее вращение изопентана~\cmpd{Isopentane}}\label{tab:InternalRotation:Isopentane}
+\centering\DrawIsoPentane{}
+
+\pgfplotstabletypeset[column type=r,columns={Tau,Etot,Erel}]\ScanIsoPentane
 \end{table}
 
 \begin{table}
-\caption{Внутреннее вращение метил-\emph{изо}-пропилового эфира~\cmpd{Me2CHOMe}\label{tab:InternalRotation:Me2CHOMe}}
-\centering\pgfplotstabletypeset[column type=r,columns={Tau,Etot,Erel}]\ScanIPrOMe
+\caption{Внутреннее вращение метил-\emph{изо}-пропилового эфира~\cmpd{Me2CHOMe}}\label{tab:InternalRotation:Me2CHOMe}
+\centering\DrawMeCHMeOMe{}
+
+\pgfplotstabletypeset[column type=r,columns={Tau,Etot,Erel}]\ScanIPrOMe
 \end{table}
 
 \begin{table}
-\caption{Внутреннее вращение метил-\emph{изо}-пропилсульфида~\cmpd{Me2CHSMe}\label{tab:InternalRotation:Me2CHSMe}}
-\centering\pgfplotstabletypeset[column type=r,columns={Tau,Etot,Erel}]\ScanIPrSMe
+\caption{Внутреннее вращение метил-\emph{изо}-пропилсульфида~\cmpd{Me2CHSMe}}\label{tab:InternalRotation:Me2CHSMe}
+\centering\DrawMeCHMeSMe{}
+
+\pgfplotstabletypeset[column type=r,columns={Tau,Etot,Erel}]\ScanIPrSMe
 \end{table}
 
 \begin{table}
 \caption{Внутреннее вращение \ce{N},\ce{N}-диметилэтиламина~\cmpd{Me2NEt}\label{tab:InternalRotation:Me2NEt}}
-\centering\pgfplotstabletypeset[column type=r,columns={Tau,Etot,Erel}]\ScanMeMeNEt
+\centering\DrawMeNMeEt{}
+
+\pgfplotstabletypeset[column type=r,columns={Tau,Etot,Erel}]\ScanMeMeNEt
 \end{table}
 
 \begin{table}
