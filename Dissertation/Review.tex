@@ -9,7 +9,8 @@
 
 \begin{center}
   \begin{tabular}{cc|cc}
-\multicolumn{2}{c|} {\ChemPicture{[:-30]*6(-(-[:180]-[:120]?)----(-[:-180]?)-)}\quad\ChemPicture{[:-30]7*6(-6-5(-[:0]4?[a])-9-1(-[:0]2-[:-60]3?[a])-8-)} %
+\multicolumn{2}{c|} {\ChemPicture{[:-30]*6(-(-[:180]-[:120]?)----(-[:-180]?)-)}
+    \quad\ChemPicture{[:-30]7*6(-6-5(-[:0]4?[a])-9-1(-[:0]2-[:-60]3?[a])-8-)} %
 % $\equiv$ \chemfig{[:-30]*6(--(<[:-90,0.75]H)(-[:0]?[a])--(<[:+90,0.75]H)(-[:0]-[:-60]?[a])--)} %
 }
      &
@@ -198,6 +199,25 @@
 
 \ce{\BC{} <--> \CC{} <--> \CB{}}
 
+В ряде случаев конформационная изомерия углубляется. Для
+тетрацикло[$3.3.1.0^{2,4}0^{6,8}$]нонанов~\cmpd{BisMethyleneNorbornane} изомеры
+со структурами \CB{} и
+\CC{} не взаимопревращаются.~\cite{Bicker:1973}
+\begin{center}
+    \begin{tabular}{ccc}
+        \chemfig{*6(-(-[:+90]X?[a])-(*3(--))--(?[a])-(*3(--))-)} &
+        \chemfig{*3(---)}& \\
+        \cmpd{BisMethyleneNorbornane} & \cmpd{Triasterane} & \\
+    \end{tabular}
+\end{center}
+У триастерана (тетрацикло[$3.3.1.0^{2,8}0^{4,6}$]нонана~\cmpd{Triasterane})
+полностью отсутствует конформационная подвижность.
+
+Среди гетероаналогичных систем особого внимания заслуживают 3-аза- и
+3,7-диаза-аналоги
+бицикло[3.3.1]нонана (\emph{биспидины}). См.~ниже раздел~\ref{sect:Bispidines},
+с.~\pageref{sect:Bispidines} и~далее.
+
 \begin{figure}
 \caption{Основные конформации бицикло[3.3.1]нонана и его 3X,~7Y,~9Z-аналогов\label{fig:System331:379XYZ:Conf}}
 
@@ -274,9 +294,16 @@
 \DrawTripleCorrelation{-0.5}{2.5}{ 1.50}{-0.5}
 \end{scope}
   \draw(0.75,-0.5) node [anchor=east] {\chemfig[,0.875]{?-[:-60]X<[:+60]-[:+30,,,,line width=\boldbondwidth]>[:+120]-[:-120]?} $\equiv$ \chemfig[,0.875]{(>[:-120]\orbital[{phase=+,angle=-30,scale=1.5}]{sp3})-[:+30,,,,line width=\boldbondwidth]>[:+90,0.875]}};
-  %\draw(4.25,-0.5) node [anchor=west] {\chemfig[,0.875]{(>[:-60]\orbital[{phase=+,angle=-150,scale=1.5}]{sp3})-[:+150,,,,line width=\boldbondwidth]>[:+90,0.875]} $\equiv$ \chemfig[,0.875]{?-[:-60]X<[:+60]-[:+150,,,,line width=\boldbondwidth]>[:+120]-[:-120]?}};
+  \draw(4.25,-0.5) node [anchor=west]
+  {\chemfig[,0.875]{(>[:-60]\orbital[{phase=+,angle=-150,scale=1.5}]{sp3})-[:+150,,,,line
+   width=\boldbondwidth]>[:+90,0.875]} $\equiv$
+  \chemfig[,0.875]{?-[:-60]X<[:+60]-[:+150,,,,line
+  width=\boldbondwidth]>[:+120]-[:-120]?}};
   \draw(1.75,-1.5) node [anchor=north] { \chemfig[,0.875]{(>[:-120]\orbital[{phase=+,angle=-30,scale=1.5}]{sp3})-[:+30,,,,line width=\boldbondwidth](>[:+90,0.875])-[:-30,,,,line width=\boldbondwidth]>[:-60]  \orbital[{phase=+,angle=-150,scale=1.5}]{sp3}}};
-  \draw(1.75,1.5) node [anchor=south] { \chemfig[,0.875]{(>[:-120]\orbital[{phase=+,angle=-30,scale=1.5}]{sp3})-[:+30,,,,line width=\boldbondwidth](>[:+90,0.875])-[:-30,,,,line width=\boldbondwidth]>[:-60]  \orbital[{phase=-,angle=-150,scale=1.5}]{sp3}}};
+  \draw(3.75,1.5) node [anchor=south] {
+  \chemfig[,0.875]{(>[:-120]\orbital[{phase=+,angle=-30,scale=1.5}]{sp3})-[:+30,,,,line
+   width=\boldbondwidth](>[:+90,0.875])-[:-30,,,,line
+  width=\boldbondwidth]>[:-60]  \orbital[{phase=-,angle=-150,scale=1.5}]{sp3}}};
 \end{tikzpicture}
 
 \vspace{5mm}
@@ -297,9 +324,16 @@
   \DrawTripleCorrelation{-0.75}{3.0}{ 1.00}{-0.25}
   \end{scope}
   \draw(0.75, 0.25) node [anchor=east] {\chemfig[,0.875]{?-[:-60]X<[:+60]-[:+30,,,,line width=\boldbondwidth]>[:+120]-[:-120]?} $\equiv$ \chemfig[,0.875]{(>[:-120]\orbital[{phase=+,angle=-30,scale=1.5}]{sp3})-[:+30,,,,line width=\boldbondwidth]>[:+90,0.875]}};
-  \draw(4.25,-1.0) node [anchor=west] {\chemfig[,0.875]{(>[:-60]\orbital[{phase=+,angle=-150,scale=1.5}]{sp3})-[:+150,,,,line width=\boldbondwidth]>[:+90,0.875]} $\equiv$ \chemfig[,0.875]{?-[:-60]Y<[:+60]-[:+150,,,,line width=\boldbondwidth]>[:+120]-[:-120]?}};
+  \draw(4.5,-1.0) node [anchor=west]
+  {\chemfig[,0.875]{(>[:-60]\orbital[{phase=+,angle=-150,scale=1.5}]{sp3})-[:+150,,,,line
+   width=\boldbondwidth]>[:+90,0.875]} $\equiv$
+  \chemfig[,0.875]{?-[:-60]Y<[:+60]-[:+150,,,,line
+  width=\boldbondwidth]>[:+120]-[:-120]?}};
   \draw(1.0,-1.5) node [anchor=north] { \chemfig[,0.875]{(>[:-120]\orbital[{phase=+,angle=-30,scale=1.5}]{sp3})-[:+30,,,,line width=\boldbondwidth](>[:+90,0.875])-[:-30,,,,line width=\boldbondwidth]>[:-60]  \orbital[{phase=+,angle=-150,scale=1.5}]{sp3}}};
-  \draw(3.5,1.5) node [anchor=south] { \chemfig[,0.875]{(>[:-120]\orbital[{phase=+,angle=-30,scale=1.5}]{sp3})-[:+30,,,,line width=\boldbondwidth](>[:+90,0.875])-[:-30,,,,line width=\boldbondwidth]>[:-60]  \orbital[{phase=-,angle=-150,scale=1.5}]{sp3}}};
+  \draw(3.75,1.75) node [anchor=south] {
+  \chemfig[,0.875]{(>[:-120]\orbital[{phase=+,angle=-30,scale=1.5}]{sp3})-[:+30,,,,line
+   width=\boldbondwidth](>[:+90,0.875])-[:-30,,,,line
+  width=\boldbondwidth]>[:-60]  \orbital[{phase=-,angle=-150,scale=1.5}]{sp3}}};
 \end{tikzpicture}
 
 \vspace{5mm}
@@ -336,7 +370,9 @@
 %\ChemPicture{S?[a]<[:-30,1.25]-[:+30,,,,line width=\boldbondwidth] (>[:+120]C(-[:+135,0.875]H)(-[:+45,0.875]H)-[:-120] (-[:-150]?[a]) (-[:-30]-[:-60]S?[b]))-[:-+30,,,,line width=\boldbondwidth]?[b,{<}]}~
 \ChemPicture{S?[a]<[:-30,1.25]-[:+30,,,,line width=\boldbondwidth] (>[:+120]-[:-120] (-[:-150]?[a]) (-[:-30]-[:-60]S?[b]))-[:-+30,,,,line width=\boldbondwidth]?[b,{<}]} &
 \ChemPicture{S?[a]<[:+60]-[:+30,,,,line width=\boldbondwidth](-[:+45,,,,line width=\boldbondwidth]CH_3)(>[:+120]C(=[:+90]Se)-[:-120] (-[:+135]H_3C)(-[:-150]?[a])(-[:-30]-[:-60]S?[b]))-[:-+30,,,,line width=\boldbondwidth]?[b,{<}]} &
-\ChemPicture{S?[a]<[:+60]-[:+30,,,,line width=\boldbondwidth]N(>[:+120]-[:-120]N(-[:-150]?[a])(-[:-30]-[:-60]S?[b]))-[:-+30,,,,line width=\boldbondwidth]?[b,{<}]} &
+\ChemPicture{S?[a]<[:+60]-[:+30,,,,line
+width=\boldbondwidth]N(>[:+120]-[:-120]N(-[:-150]?[a])
+(-[:-30]-[:-60]S?[b]))-[:-+30,,,,line width=\boldbondwidth]?[b,{<}]} &
 \\
 \cmpd{Bicycle331:37S2} &
 \cmpd{Dithia37Selone9} &
@@ -402,15 +438,51 @@
 
 Такое конформационное предпочтение трициклических систем, производных от~[$3.3.1$], вероятно, аналогично конформационному поведению шестичленного цикла в составе аналогов бицикло[$3.1.0$]гексана, в которых он обычно находится в форме \tqt{ванны}\dots
 
-Тетрацикло[$3.3.1.0^{2,4}0^{6,8}$]нонаны~\cite{Bicker:1973}
+
+В результате конденсации тиокарбазона \cmpd{HdNNHCS} c
+\emph{бис}-(диметиламино)метаном \cmpd{MeNMedCHd} может быть получен
+3-тиа-1,5,6,8-тет\-ра\-аза\-би\-цик\-ло\-[3.3.1]\-но\-нантион-7~\cmpd{SCSCNN},
+принимающий по данным РСА конформацию \ConfName{CE}~\cite{Khairullina:2020:rus,
+    Khairullina:2020:eng}
+
+\vspace{\bigskipamount}
+
+\chemnameinit{}
+\schemestart
+\chemname{\chemfig{H_2N-[:-30]\chembelow{N}{H}-[:+30]C(=[:+90]S)-[:-30]\chembelow{N}{H}-[:+30]NH_2}}{\cmpd{HdNNHCS}}
+\+
+\chemname{\chemfig{H_3C-[:+30]N(-[:+90]CH_3)-[:-30]-[:+30]N(-[:+90]CH_3)-[:-30]CH_3}}{\cmpd{MeNMedCHd}}
+\arrow{->[\ce{H2S},~\ce{RbNO3}][\ce{SmCl3.6H2O}]}[,2.0]
+\schemestop
+
+\vspace{\bigskipamount}
+
 \begin{center}
-  \begin{tabular}{cc}\chemfig{[:-30]X*6(-(-[:180]?[c]-[:+120]?[a])-?[b]--?[b]-(-[:180]?[a]?[c])-)} & \\
-  \end{tabular}
+\chemnameinit{}
+\schemestart
+\arrow{->}\begin{tabular}{cc}
+\chemfig{S=C*6(-\chembelow{N}{H}-N(-[:+0]?[a])--N(-[:0]-[:-60]S?[a])-\chemabove{N}{H}-)}
+ & \\
+ & \\
+\cmpd{SCSCNN}\end{tabular}\schemestop
 \end{center}
 
-Триастеран...
+Среди производных 1,5-диазабицикло$[3.3.1]$нонанов наиболее известны основания
+Трёгера-Хюнлиха \cmpd{TroegerHuenlichBases}~\cite{Rigol:2013}
 
-\subsection{Биспидины (производные и гетероаналоги 3,7-диазабицикло[3.3.1]нонана)}
+\begin{center}
+\schemestart
+\chemfig{R-*6(-(-X)=-(-NH_2)=-=)}
+\arrow{->[\ce{CH2O}]}
+\chemname{\chemfig{*8(--N(<[:+90,1.25]?[a])-(*6(-=(-R)-(-X)=-))=--N?[a,{>}]-(*6(-=(-X)-(-R)=-))=)}}{\cmpd{TroegerHuenlichBases}}
+\schemestop
+\end{center}
+
+Эти соединения хиральны и привлекают в последнее время всё большее внимание, в
+том числе благодаря их необычным стереохимическим особенностям.
+
+\section{Биспидины (производные и гетероаналоги
+3,7-диазабицикло[3.3.1]нонана)}\label{sect:Bispidines}
 
 Катион протонированного 1,5-диметил-3,7-диазабицикло[3.3.1]нонан-9-она~\cmpd{BSP:O9:15Me2:HPlus} в кристаллах своих солей обнаруживает различную конформацию атома водорода связанного с нейтральным атомом азота в зависимости от способности аниона \ce{X-} к образованию водородных связей.
 
@@ -447,7 +519,10 @@
 \texttt{TAYCUU}~\cmpd{Bispidine:9N:Tf3}~\cite{Shainyan:2017} & \\
 \end{tabular}
 \end{center}
-Бициклический скелет \emph{трис}-трифторметилсульфонильного производного 3,7,9-три\-аза\-би\-цик\-ло\-[3.3.1]\-но\-на\-на~\cmpd{Bispidine:9N:Tf3}  согласно рентгеноструктурным данным~\cite{Shainyan:2017} также принимает конформацию \tqt{двойного кресла}~\CC{}.
+Бициклический скелет \emph{трис}-трифторметилсульфонильного производного
+3,7,9-три\-аза\-би\-цик\-ло\-[3.3.1]\-но\-на\-на~\cmpd{Bispidine:9N:Tf3}
+согласно рентгеноструктурным данным~\cite{Shainyan:2017} также принимает
+конформацию \tqt{двойного кресла}~\CC{}.
 
 %\input{Dissertation/Naturals}
 

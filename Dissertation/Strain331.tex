@@ -6,7 +6,7 @@
 
 Ранние работы по анализу напряжений в связи со структурой алмаза и адамантана\dots~\cite{Mohr:1918}
 
-\section{Реакции разделения связей} 
+\section{Реакции разделения связей}
 
 Наименьшую погрешность обеспечивают \emph{гипергомодесмотические} реакции, сохраняющие не только состав, как гомодесмические... но и число связей различных типов. В частности, для 3,7,9-замещённых аналогов бицикло[3.3.1]нонана выводится уравнение
 \begin{center}
@@ -14,7 +14,7 @@
 
 + 4~\DrawPropane{} + 4~\DrawIsoButane{}
   \(\longrightarrow\)
-  
+
 \(\longrightarrow\) 2~\DrawHeteroButane{}{X}{} + 2~\DrawHeteroButane{}{Y}{} +
 
 + 4~\DrawIsoPentane{} + 2~\DrawHeteroIsoPentane{}{}{Z}
@@ -24,13 +24,13 @@
 \begin{center}
   \chemfig{[:-30]*6(-A(-[:180]-[:120]X-[:+60]-[:0]\phantom{Z}?)--Y--Z-)} + \DrawMeXMe{} + \DrawMeYMe{} + 5~\DrawPropane{} + 2~\DrawTrimethyl{}{A} + 2~\DrawTrimethyl{}{Z}
   \(\longrightarrow\)
-  
+
   \(\longrightarrow\) 2~\DrawHeteroButane{}{X}{} + 2~\DrawHeteroButane{}{Y}{} +
-  
+
   +3~\DrawHeteroIsoPentane{}{A}{} + 3~\DrawHeteroIsoPentane{}{Z}{}
 \end{center}
 
-Энергетический эффект этих реакций, взятый с обратным знаком, оценивает общее напряжение молекулы относительно ациклических форм, считающихся свободными от напряжения. 
+Энергетический эффект этих реакций, взятый с обратным знаком, оценивает общее напряжение молекулы относительно ациклических форм, считающихся свободными от напряжения.
 
 В частности, для 3,7-аналогов 1-азабицикло[3.3.1]нонана~\cmpd{Bicycle331:1N} такое разделение связей описывается уравнением
 \begin{center}
@@ -38,24 +38,25 @@
   + \DrawMeXMe{} + \DrawMeYMe{} + 5~\DrawPropane{}
   + 2~\DrawIsoButane{} + 2~\DrawMeNMeMe{}
   \(\longrightarrow\)
-  
-  \(\longrightarrow\) 
+
+  \(\longrightarrow\)
   2~\DrawHeteroButane{}{X}{} + 2~\DrawHeteroButane{}{Y}{} + 3~\DrawIsoPentane{}
   3~\DrawMeNMeEt{}
 \end{center}
 
-Для аналогов 1,5-диаазабицикло[3.3.1]нонана~\cmpd{Bicycle331:15N2},~\cmpd{Bicycle331:15N2:37O2},~\cmpd{Bicycle331:15N2:37S2}
+Для аналогов 1,5-диаазабицикло[3.3.1]нонана~\cmpd{Bicycle331:15N2},
+\cmpd{Bicycle331:15N2:37O2}, \cmpd{Bicycle331:15N2:37S2}
 \begin{center}
 \chemfig{[:-30]*6(-N(-[:180]-[:120]X-[:+60]-[:0]\phantom{N}?)--Y--N-)}
 + \DrawMeXMe{} + \DrawMeYMe{} + 5~\DrawPropane{} + 2~\DrawIsoButane{} + 2~\DrawMeNMeMe{}
   \(\longrightarrow\)
-  
+
 \(\longrightarrow\) 2~\DrawHeteroButane{}{X}{} + 2~\DrawHeteroButane{}{Y}{} + 6~\DrawMeNMeEt{}
 \end{center}
 
 Для более подробного рассмотрения отдельных взаимодействий необходимо комбинировать эти уравнения с другими.
 
-Для расчётов энергий индивидуальных реагентов применяются неэмпирические (\emph{ab~initio}) методы. Они включают на первом этапе оптимизацию геометрии молекул. Далее расчёт собственных частот колебаний для конформеров. 
+Для расчётов энергий индивидуальных реагентов применяются неэмпирические (\emph{ab~initio}) методы. Они включают на первом этапе оптимизацию геометрии молекул. Далее расчёт собственных частот колебаний для конформеров.
 
 Часто несколько методов расчёта комбинируются в виде так называемых \emph{аддитивных схем}. Основу энергии такой схемы~$\Escheme{}$ составляет электронная энергия~$\Energytot$, вычисляемая, как правило, в приближении, учитывающем значительную долю корреляционной энергии в виде предела полного базисного набора~$E_\infty^{(A)}$, а также энергия нулевых колебаний (обычно в гармоническом приближении, где $\EnergyZPE = \frac{\hbar}{2} \sum_a\omega_a$, $\omega_a$ "--- частота $a$-й моды собственных колебаний молекулы), дополняется корреляционной энергией~$E_k(B)$, относящейся к более высокому теоретическому уровню описания.  выполненном .
 
@@ -81,46 +82,46 @@
 \bottomrule\endlastfoot
 \cmpd{Propane} & \DrawPropane{} & \(\SymGroup{C}{2v}\) & \num{-118.859638} & \num{0.104589} &
 \ce{C-C}~\SI{1.523}{\angstrom}; $\angle$\ce{CCC}~\ang{112.3} \\
-\midrule\cmpd{Me2O} & \DrawMeOMe{} & \(\SymGroup{C}{2v}\) &  \num{-154.737526} & \num{0.080693} & 
+\midrule\cmpd{Me2O} & \DrawMeOMe{} & \(\SymGroup{C}{2v}\) &  \num{-154.737526} & \num{0.080693} &
 \ce{C-O}~\SI{1.411}{\angstrom};
 $\angle$\ce{COC}~\ang{110.5} \\
-\midrule\cmpd{Me2S} & \DrawMeSMe{} & \(\SymGroup{C}{2v}\) & \num{-477.351949} & \num{0.076641} & 
-\ce{C-S}~\SI{1.804}{\angstrom}; 
+\midrule\cmpd{Me2S} & \DrawMeSMe{} & \(\SymGroup{C}{2v}\) & \num{-477.351949} & \num{0.076641} &
+\ce{C-S}~\SI{1.804}{\angstrom};
 $\angle$\ce{CSC}~\ang{97.9} \\
 %\midrule\cmpd{Dimethylamine} & \chemfig{H_3C-[:-30]N(-[:-90]H)-[:+30]CH_3} & \(\SymGroup{C}{s}\) & \\
 \midrule\cmpd{Isobutane} & \DrawIsoButane{} & \(\SymGroup{C}{3v}\) & \num{-158.087267} & \num{0.132478} & \ce{C-C}~\SI{1.524}{\angstrom}; $\angle$\ce{CCC}~\ang{110.7}\\
-\midrule\cmpd{Acetone} & \DrawMeAc{} & \(\SymGroup{C}{2v}\) & \num{-192.789711} & \num{0.084256} & \ce{C=O}~\SI{1.220}{\angstrom}; 
+\midrule\cmpd{Acetone} & \DrawMeAc{} & \(\SymGroup{C}{2v}\) & \num{-192.789711} & \num{0.084256} & \ce{C=O}~\SI{1.220}{\angstrom};
 \ce{C-C}~\SI{1.508}{\angstrom};
 $\angle$\ce{OCC}~\ang{122.1};
 $\angle$\ce{CCC}~\ang{115.8}\\
-\midrule \cmpd{Me3N} & \DrawMeNMeMe{} & \(\SymGroup{C}{3v}\) &  \num{-174.100139} & \num{0.121385} & 
+\midrule \cmpd{Me3N} & \DrawMeNMeMe{} & \(\SymGroup{C}{3v}\) &  \num{-174.100139} & \num{0.121385} &
 \ce{C-N}~\SI{1.451}{\angstrom};
 $\angle$\ce{CNC}~\ang{110.2} \\
-\midrule\cmpd{Butane} & \DrawNormButane{} & \(\SymGroup{C}{2h}\) &  \num{-158.084303} & \num{0.133309} & 
-\ce{H_3C-CH_2}~\SI{1.524}{\angstrom}; 
-\ce{H_2C-CH_2}~\SI{1.523}{\angstrom}; 
+\midrule\cmpd{Butane} & \DrawNormButane{} & \(\SymGroup{C}{2h}\) &  \num{-158.084303} & \num{0.133309} &
+\ce{H_3C-CH_2}~\SI{1.524}{\angstrom};
+\ce{H_2C-CH_2}~\SI{1.523}{\angstrom};
 $\angle$\ce{CCC}~\ang{112.3} \\
-\midrule\cmpd{MeOEt} & \DrawMeOEt{} & \(\SymGroup{C}{s}\) & \num{-193.966394} & \num{0.108895} & 
+\midrule\cmpd{MeOEt} & \DrawMeOEt{} & \(\SymGroup{C}{s}\) & \num{-193.966394} & \num{0.108895} &
 \ce{H3C-O}~\SI{1.412}{\angstrom};
 \ce{H_2C-O}~\SI{1.417}{\angstrom};
 \ce{H2C-CH_3}~\SI{1.509}{\angstrom};
 $\angle$\ce{COC}~\ang{111.2};
 $\angle$\ce{OCC}~\ang{108.1} \\
 \midrule\cmpd{MeSEt} & \DrawMeSEt{} & \(\SymGroup{C}{s}\) &   \num{-516.576661} & \num{0.105402} &
-\ce{H_3C-S}~\SI{1.805}{\angstrom}; 
-\ce{H_2C-S}~\SI{1.809}{\angstrom}; 
-\ce{H_2C-CH_3}~\SI{1.519}{\angstrom}; 
-$\angle$\ce{CSC}~\ang{98.7}; 
+\ce{H_3C-S}~\SI{1.805}{\angstrom};
+\ce{H_2C-S}~\SI{1.809}{\angstrom};
+\ce{H_2C-CH_3}~\SI{1.519}{\angstrom};
+$\angle$\ce{CSC}~\ang{98.7};
 $\angle$\ce{SCC}~\ang{109.3} \\
 \midrule\cmpd{Butanone} & \DrawEtAc{} & \(\SymGroup{C}{s}\) & \num{-232.014552} & \num{0.113700} & \ce{C=O}~\SI{1.220}{\angstrom};
-\ce{H_3C-CO}~\SI{1.509}{\angstrom}; 
-\ce{H_2C-CO}~\SI{1.513}{\angstrom}; 
+\ce{H_3C-CO}~\SI{1.509}{\angstrom};
+\ce{H_2C-CO}~\SI{1.513}{\angstrom};
 \ce{H_3C-CH_2}~\SI{1.517}{\angstrom};
 $\angle\ce{OCC(H_3)}~\ang{121.9}$;
-$\angle\ce{OCC(H_2)}~\ang{122.1}$; 
-$\angle\ce{CC(O)C}~\ang{116.0}$; 
+$\angle\ce{OCC(H_2)}~\ang{122.1}$;
+$\angle\ce{CC(O)C}~\ang{116.0}$;
 $\angle\ce{C(O)CC}~\ang{113.4}$;
-%$\tau_{\ce{OCCC}}\approx\ang{0}$ 
+%$\tau_{\ce{OCCC}}\approx\ang{0}$
 \\
 \midrule\cmpd{Isopentane} & \DrawIsoPentane{} & \(\SymGroup{C}{1}\) & \num{-197.311142} & \num{0.161457} & \\
 \midrule\cmpd{Me2CHOMe} & \DrawMeCHMeOMe{} & \(\SymGroup{C}{1}\) & \num{-233.195233} & \num{0.137450} &  \\
@@ -153,15 +154,15 @@ $\angle\ce{C(O)CC}~\ang{113.4}$;
 \begin{center}
   \begin{equation*} \underbrace{\text{\chemfig{[:-30]X*6(---Y---)}} \qquad \text{\chemfig{[:-30]*6(-X----Y-)}}}_{\text{как бы это всё поизяЧнее сделать?}} \end{equation*}
 + \chemfig{H_3C-[:-30]X-[:+30]CH_3} + \chemfig{H_3C-[:-30]Y-[:+30]CH_3} + 4\(\cdot\) \chemfig{H_3C-[:-30]-[:+30]CH_3} \(\longrightarrow\)
-  
-  \(\longrightarrow\) 
+
+  \(\longrightarrow\)
     2\(\cdot\)\chemfig{H_3C-[:+30]X-[:-30]-[:+30]CH_3} +     2\(\cdot\)\chemfig{H_3C-[:+30]-[:-30]-[:+30]CH_3} + 2\(\cdot\)\chemfig{H_3C-[:+30]Y-[:-30]-[:+30]CH_3}
 \end{center}
 
 Для оценки взаимного влияния различных типов замещения в насыщенных шестичленных циклах используются энергетические эффекты реакций \emph{позиционного диспропорционирования} дизамещённых аналогов циклогексана
 \begin{center}
   \chemfig{*6(-X---Y--)} + \chemfig{*6(------)} \(\longrightarrow\) \chemfig{*6(-X-----)} + \chemfig{*6(----Y--)}
-  
+
   \chemfig{X*6(--Y----)} + \chemfig{*6(------)} \(\longrightarrow\) \chemfig{X*6(------)} + \chemfig{Y*6(------)}
 \end{center}
 
@@ -172,21 +173,21 @@ B таблице~\ref{tab:Cycle:Six:Opt} на с.~\pageref{tab:Cycle:Six:Opt}--\
 \end{center}
 
 \begin{longtabu} to \textwidth {rcl|SS|X[l]}
-\multicolumn{6}{p{\textwidth}}{Таблица\label{tab:Cycle:Six:Opt}~\arabic{table}. Строение молекул циклогексана и его аналогов по данным неэмпирических расчётов} \\ 
+\multicolumn{6}{p{\textwidth}}{Таблица\label{tab:Cycle:Six:Opt}~\arabic{table}. Строение молекул циклогексана и его аналогов по данным неэмпирических расчётов} \\
 \toprule \multicolumn{3}{c|}{Структура / конформация}  & \(E_{2}\),~\si{\hartree} & \(E_{ZPE}\),~\si{\hartree} & Геометрия \\ \midrule \endfirsthead
 \multicolumn{6}{l}{\emph{продолжение таблицы}~\thetable:} \\
 \midrule\multicolumn{3}{c|}{Структура / конформация} & \(E_{2}\),~\si{\hartree} & \(E_{ZPE}\),~\si{\hartree} & Геометрия \\ \midrule \endhead
 \multicolumn{6}{l}{\emph{продолжение на следующей странице}}\endfoot
 \bottomrule\endlastfoot
-\cmpd{Cyclohexane} & \chemfig{?-[:+160]-[:-120]<[:+20]-[:-20,,,,line width=\boldbondwidth]>[:+60]?} & \SymGroup{D}{3d}~(\ConfName{C}) &  \num{-235.344605} & \num{0.171358} & \ce{C-C}~\SI{1.526}{\angstrom}; $\angle\ce{CCC}~\ang{110.7}$; $\tau=\pm\ang{56.9}$ \\ 
+\cmpd{Cyclohexane} & \chemfig{?-[:+160]-[:-120]<[:+20]-[:-20,,,,line width=\boldbondwidth]>[:+60]?} & \SymGroup{D}{3d}~(\ConfName{C}) &  \num{-235.344605} & \num{0.171358} & \ce{C-C}~\SI{1.526}{\angstrom}; $\angle\ce{CCC}~\ang{110.7}$; $\tau=\pm\ang{56.9}$ \\
 \bottomrule\multicolumn{6}{l}{Монозамещённые (\emph{пентаметиленовые}) производные \ce{(CH2)5X} }\\\toprule
 \cmpd{Pyran} & \chemfig{?-[:+160]-[:-120]O<[:+20]-[:-20,,,,line width=\boldbondwidth]>[:+60]?} & \SymGroup{C}{s}~(\ConfName{C}) &  \num{-271.229641} & \num{0.147833} & $\angle\ce{COC}~\ang{110.9}$; $\angle\ce{OCC}~\ang{111.9}$; $\angle\ce{CC_3C}~\ang{109.9}$; $\angle\ce{CC_4C}~\ang{109.1}$; \\
 \midrule\cmpd{Thiopyran} & \chemfig{?-[:+160]-[:-120]S<[:+20]-[:-20,,,,line width=\boldbondwidth]>[:+60]?} & & \num{-593.841537}  & \num{0.143971} & \chemfig{[-30,1.5]*6(@{6}-@{1}S-@{2}-@{3}-@{4}-@{5}-)} \\
 \midrule\cmpd{Cyclohexanone} & \chemfig{?-[:+160]-[:-120]C(=[:-135,0.875]O)<[:+20]-[:-20,,,,line width=\boldbondwidth]>[:+60]?} & & & & \ce{C-C} \\
 \midrule\cmpd{MeCyclohexaneEq} & \chemfig{?-[:+160]-[:-120](-[:+155]H_3C)(-[:-90,0.75]H)<[:+20]-[:-20,,,,line width=\boldbondwidth]>[:+60]?} & & & & \ce{C-C} \\
-\midrule\cmpd{NMePiperidineEq} & \chemfig{?-[:+160]-[:-120]N(-[:+155]H_3C)<[:+20]-[:-20,,,,line width=\boldbondwidth]>[:+60]?} & & & & \ce{C-C} \\ 
+\midrule\cmpd{NMePiperidineEq} & \chemfig{?-[:+160]-[:-120]N(-[:+155]H_3C)<[:+20]-[:-20,,,,line width=\boldbondwidth]>[:+60]?} & & & & \ce{C-C} \\
 \bottomrule\multicolumn{6}{l}{Симметричные 1,3-дизамещённые производные~(\ce{X}=\ce{Y}) }\\\toprule
-\cmpd{Dioxane13} & \chemfig{?-[:+160]-[:-120]O<[:+20]-[:-20,,,,line width=\boldbondwidth]O>[:+60]?} & \SymGroup{C}{s}~(\ConfName{C}) & & & \ce{C-C} \\ 
+\cmpd{Dioxane13} & \chemfig{?-[:+160]-[:-120]O<[:+20]-[:-20,,,,line width=\boldbondwidth]O>[:+60]?} & \SymGroup{C}{s}~(\ConfName{C}) & & & \ce{C-C} \\
 \midrule\cmpd{Dithiane13} & \chemfig{?-[:+160]-[:-120]S<[:+20]-[:-20,,,,line width=\boldbondwidth]S>[:+60]?} & & & & \ce{C-C} \\
 \midrule\cmpd{N2Me2Diazine13} & \chemfig{?-[:+160]-[:-120]N(-[:+160]H_3C)<[:+20]-[:-20,,,,line width=\boldbondwidth]N(-[:+20]CH_3)>[:+60]?} & & & & \ce{C-C} \\
 \bottomrule\multicolumn{6}{l}{Симметричные 1,4-дизамещённые производные~(\ce{X}=\ce{Y}) } \\\toprule
@@ -210,7 +211,7 @@ B таблице~\ref{tab:Cycle:Six:Opt} на с.~\pageref{tab:Cycle:Six:Opt}--\
 \toprule\cmpd{STrioxane} & \chemfig{O?-[:+160]-[:-120]O<[:+20]-[:-20,,,,line width=\boldbondwidth]O>[:+60]?} & \SymGroup{C}{3v}~(\ConfName{C}) & \num{} & & \ce{C-O} \\
 \midrule\cmpd{STrithiane} & \chemfig{S?-[:+160]-[:-120]S<[:+20]-[:-20,,,,line width=\boldbondwidth]S>[:+60]?} & & & & \ce{C-S} \\
 \bottomrule\multicolumn{6}{l}{Несимметричные 1,3,5-тризамещённые производные~(\ce{X}=\ce{Y}) } \\
-\toprule\cmpd{Thiodioxane35} & \chemfig{S?-[:+160]-[:-120]O<[:+20]-[:-20,,,,line width=\boldbondwidth]O>[:+60]?} & \SymGroup{C}{s}~(\ConfName{C}) & & & \ce{C-C} \\ 
+\toprule\cmpd{Thiodioxane35} & \chemfig{S?-[:+160]-[:-120]O<[:+20]-[:-20,,,,line width=\boldbondwidth]O>[:+60]?} & \SymGroup{C}{s}~(\ConfName{C}) & & & \ce{C-C} \\
 \midrule\cmpd{Oxa5dithiane13} & \chemfig{O?-[:+160]-[:-120]S<[:+20]-[:-20,,,,line width=\boldbondwidth]S>[:+60]?} & & & & \ce{C-C} \\
 \midrule\cmpd{N2Me2Oxa5diazine13} & \chemfig{O?-[:+160]-[:-120]N(-[:+160]H_3C)<[:+20]-[:-20,,,,line width=\boldbondwidth]N(-[:+20]CH_3)>[:+60]?} & & & & \ce{C-C} \\
 \midrule\cmpd{N2Me2Thia5diazine13} & \chemfig{S?-[:+160]-[:-120]N(-[:+160]H_3C)<[:+20]-[:-20,,,,line width=\boldbondwidth]N(-[:+20]CH_3)>[:+60]?} & & & & \ce{C-C} \\
@@ -228,12 +229,12 @@ B таблице~\ref{tab:Cycle:Six:Opt} на с.~\pageref{tab:Cycle:Six:Opt}--\
 \namebond{1}{2}{\small\ang{60.5}}  %
 \namebond{2}{3}{\small\ang{-57.4}} %
 \namebond{3}{4}{\small\ang{53.4}}  %
-\namebond{5}{4}{\small\num{1.526}} % 
-\namebond{6}{5}{\small\num{1.520}} % 
+\namebond{5}{4}{\small\num{1.526}} %
+\namebond{6}{5}{\small\num{1.520}} %
 \namebond{6}{1}{\small\num{1.422}} %
 \quad
 \chemfig{[,1.75]*6(@{6}-@{1}S-@{2}-@{3}-@{4}-@{5}-)}
-\namebond{1}{2}{\small\ang{56.3}} 
+\namebond{1}{2}{\small\ang{56.3}}
 \namebond{2}{3}{\small\ang{-62.1}}
 \namebond{3}{4}{\small\ang{59.6}}
 \namebond{5}{4}{\small\num{1.525}}

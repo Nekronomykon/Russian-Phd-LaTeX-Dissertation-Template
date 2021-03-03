@@ -21,7 +21,7 @@
   \pgfkeyslet{/pgfplots/table/create col/next content}\entryval %
 } %
 ]{Erel}\ScanMeOAc
-\pgfplotstablesave[columns={Tau,Etot,Erel}]{\ScanMeOAc}{Results/ScanMeOAc.save.dat} 
+\pgfplotstablesave[columns={Tau,Etot,Erel}]{\ScanMeOAc}{Results/ScanMeOAc.save.dat}
 %
 % Methyl thioacetate
 %
@@ -44,7 +44,7 @@ create col/assign/.code={%
   \edef\pgfmathaccuma{\entryval} %
   \pgfkeyslet{/pgfplots/table/create col/next content}\entryval %
 }]{Erel}\ScanMeSAc %
-\pgfplotstablesave[columns={Tau,Etot,Erel}]{\ScanMeSAc}{Results/ScanMeSAc.save.dat} 
+\pgfplotstablesave[columns={Tau,Etot,Erel}]{\ScanMeSAc}{Results/ScanMeSAc.save.dat}
 %
 % Methylthionacetate
 %
@@ -68,7 +68,7 @@ create col/assign/.code={%
   \pgfkeyslet{/pgfplots/table/create col/next content}\entryval %
 } %
 ]{Erel}\ScanMeOCSMe
-\pgfplotstablesave[columns={Tau,Etot,Erel}]{\ScanMeOCSMe}{Results/ScanMeOCSMe.save.dat} 
+\pgfplotstablesave[columns={Tau,Etot,Erel}]{\ScanMeOCSMe}{Results/ScanMeOCSMe.save.dat}
 %
 % Methyldithioacetate
 %
@@ -92,10 +92,13 @@ create col/assign/.code={%
   \pgfkeyslet{/pgfplots/table/create col/next content}\entryval %
 } %
 ]{Erel}\ScanMeSCSMe
-\pgfplotstablesave[columns={Tau,Etot,Erel}]{\ScanMeSCSMe}{Results/ScanMeSCSMe.save.dat} 
+\pgfplotstablesave[columns={Tau,Etot,Erel}]{\ScanMeSCSMe}{Results/ScanMeSCSMe.save.dat}
 
 \begin{figure}
-  \caption{Потенциалы внутреннего вращения аналогов сложных эфиров\label{fig:Internal:Rotation:Esters} [переделать координаты, чтобы угол был \ce{H3C-C-Y-CH3}, иначе тут всё слева неправильно, а сам торсионный угол тут \ce{X=C-Y-CH3}]}
+  \caption{Потенциалы внутреннего вращения аналогов сложных
+  эфиров\label{fig:Internal:Rotation:Esters} [переделать координаты, чтобы угол
+  был \ce{H3C-C-Y-CH3}, иначе тут всё слева неправильно, а сам торсионный угол
+  тут \ce{X=C-Y-CH3}, да и числа явно провираются. И что делать с легендой?]}
   \centerfloat{
     \begin{tikzpicture}
       \begin{axis}[legend style={draw=none},
@@ -104,13 +107,13 @@ create col/assign/.code={%
         xtick={-180,-120,...,180},
         ylabel={$\Delta\Func{E}$,~\si{\kilo\joule\per\mole}},
         ymin=-1, ymax=64]
-        \addplot [black,thick,smooth,domain=-180:180] table [x=Tau,y=Erel] 
+        \addplot [black,thick,smooth,domain=-180:180] table [x=Tau,y=Erel]
         {Results/ScanMeOAc.save.dat};\addlegendentry{\chemfig{[,0.675]-[:+30](=[:+90]O)-[:-30]O-[:+30]}~\cmpd{MeOAc}};
-        \addplot [blue,thick,smooth,domain=-180:180] table [x=Tau,y=Erel] 
+        \addplot [blue,thick,smooth,domain=-180:180] table [x=Tau,y=Erel]
         {Results/ScanMeSAc.save.dat};\addlegendentry{\chemfig{[,0.675]-[:+30](=[:+90]O)-[:-30]S-[:+30]}~\cmpd{MeSAc}};
-        \addplot [red,thick,smooth,domain=-180:180] table [x=Tau,y=Erel] 
+        \addplot [red,thick,smooth,domain=-180:180] table [x=Tau,y=Erel]
         {Results/ScanMeOCSMe.save.dat};\addlegendentry{\chemfig{[,0.675]-[:+30](=[:+90]S)-[:-30]O-[:+30]}~\cmpd{MeOCSMe}};
-        \addplot [green,thick,smooth,domain=-180:180] table [x=Tau,y=Erel] 
+        \addplot [green,thick,smooth,domain=-180:180] table [x=Tau,y=Erel]
         {Results/ScanMeSCSMe.save.dat};\addlegendentry{\chemfig{[,0.675]-[:+30](=[:+90]S)-[:-30]S-[:+30]}~\cmpd{MeSCSMe}};
       \end{axis}
     \end{tikzpicture}
