@@ -8,7 +8,7 @@
 \newcommand{\AGroup}[1]{{\ensuremath{\mathbb #1}}}
 %% ------------------------------------------------| ????
 \usepackage{epigraph}
-\renewcommand{\epigraphwidth}{7cm}
+\renewcommand{\epigraphwidth}{8.75cm}
 %\usepackage{pxfonts}
 \usepackage{pifont}
 \newcommand{\CycleFirst}{\ding{172}}
@@ -19,7 +19,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% Пакет, обеспечивающий адекватную расстановку "русских" кавычек
 \usepackage[russian]{quotmark}
-%% Теперь для точной расстановки русских кавычек по ГОСТ можно использовать 
+%% Теперь для точной расстановки русских кавычек по ГОСТ можно использовать
 %% вложенные команды tqt:
 %% \tqt{а \tqt{б} в} = ,,а <<б>> в''
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -91,7 +91,8 @@
     \node[shift=(\anglestart:#2+1pt)#4,anchor=\anglestart+180,rotate=\anglestart+90,inner sep=0pt, outer sep=0pt]at(#4){#6};}
 }
 %%
-\newcommand{\ChemPicture}[1]{\begin{tikzpicture}\node (ChemFormula) at (0,0){\chemfig{#1}};\end{tikzpicture}}%
+\newcommand{\ChemPicture}[2]{\begin{tikzpicture}\node (ChemFormula) at
+(0,0){\chemfig[#1]{#2}};\end{tikzpicture}}%
 %%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% Немного математических символов
