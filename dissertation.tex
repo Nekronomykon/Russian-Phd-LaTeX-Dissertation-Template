@@ -8,6 +8,9 @@
 %% --> ScrewDriver te Blackheadborough:
 \newcommand\hmmax{0} % default 3
 \newcommand\bmmax{0} % default 4
+%% Does it work here?
+\AtEveryBibitem{\clearfield{month}}
+\AtEveryCitekey{\clearfield{month}}
 %% an evil hack to prevent "Too many math alphabets..." error
 %%
 \input{common/setup}            % общие настройки шаблона
